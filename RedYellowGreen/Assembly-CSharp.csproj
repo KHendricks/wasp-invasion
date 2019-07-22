@@ -62,7 +62,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Assets\FarlandSkies\Demo\Scripts\Player\FPSWalkerEnhanced.cs" />
+    <Compile Include="Assets\Assets\FarlandSkies\Demo\Scripts\Player\SmoothMouseLook.cs" />
+    <Compile Include="Assets\Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxChanger.cs" />
+    <Compile Include="Assets\Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxRotator.cs" />
+    <Compile Include="Assets\Scripts\CameraRotate.cs" />
     <Compile Include="Assets\Scripts\MenuButtons.cs" />
+    <Compile Include="Assets\Simple Scene Fade Load System\Demo (You don't have to import this folder)\DemoScript.cs" />
+    <Compile Include="Assets\Simple Scene Fade Load System\Scripts\Fader.cs" />
+    <Compile Include="Assets\Simple Scene Fade Load System\Scripts\Initiate.cs" />
+    <None Include="Assets\Simple Scene Fade Load System\ReadMeFirst.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/kyle/git/RedYellowGreen/RedYellowGreen/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

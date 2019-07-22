@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuButtons : MonoBehaviour
@@ -18,7 +19,7 @@ public class MenuButtons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(currentlyWaiting);
+
     }
 
     // Button is defaulted to:
@@ -34,22 +35,23 @@ public class MenuButtons : MonoBehaviour
 
         // This is so the button can't be pressed again and change the direction
         gameObject.GetComponent<Button>().interactable = false;
-        TimeDelay(3);
 
+        ChangeSceneDelay(.5f);
     }
 
-    void TimeDelay(int x)
+    void ChangeSceneDelay(float x)
     {
         if (!currentlyWaiting)
         {
-            StartCoroutine(TimeDelayHelper(x));
+            StartCoroutine(ChangeSceneDelayHelper(x));
         }
     }
 
-    IEnumerator TimeDelayHelper(int x)
+    IEnumerator ChangeSceneDelayHelper(float x)
     {
         currentlyWaiting = true;
         yield return new WaitForSeconds(x);
         currentlyWaiting = false;
+        Initiate.Fade("LevelOne", Color.black, 1f);
     }
 }
