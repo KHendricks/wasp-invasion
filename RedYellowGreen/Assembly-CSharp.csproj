@@ -62,12 +62,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Assets\FarlandSkies\Demo\Scripts\Player\FPSWalkerEnhanced.cs" />
-    <Compile Include="Assets\Assets\FarlandSkies\Demo\Scripts\Player\SmoothMouseLook.cs" />
-    <Compile Include="Assets\Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxChanger.cs" />
-    <Compile Include="Assets\Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxRotator.cs" />
+    <Compile Include="Assets\Art\FarlandSkies\Demo\Scripts\Player\FPSWalkerEnhanced.cs" />
+    <Compile Include="Assets\Art\FarlandSkies\Demo\Scripts\Player\SmoothMouseLook.cs" />
+    <Compile Include="Assets\Art\FarlandSkies\Demo\Scripts\Skybox\SkyboxChanger.cs" />
+    <Compile Include="Assets\Art\FarlandSkies\Demo\Scripts\Skybox\SkyboxRotator.cs" />
+    <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CameraRotate.cs" />
+    <Compile Include="Assets\Scripts\Countdown.cs" />
+    <Compile Include="Assets\Scripts\LightController.cs" />
     <Compile Include="Assets\Scripts\MenuButtons.cs" />
+    <Compile Include="Assets\Scripts\PlayerControls.cs" />
     <Compile Include="Assets\Simple Scene Fade Load System\Demo (You don't have to import this folder)\DemoScript.cs" />
     <Compile Include="Assets\Simple Scene Fade Load System\Scripts\Fader.cs" />
     <Compile Include="Assets\Simple Scene Fade Load System\Scripts\Initiate.cs" />
