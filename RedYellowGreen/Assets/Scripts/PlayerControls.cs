@@ -5,52 +5,78 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour
 {
     private Animator anim;
-    private float moveSpeed, dirX;
+    private float playerSpeed, runSpeed, walkSpeed, dirX;
     private float jumpHeight;
     private bool canJump;
+    private GameObject scriptManager;
+
+    public string movementState;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
-        moveSpeed = 1.5f;
+        scriptManager = GameObject.Find("ScriptManager");
+
+        playerSpeed = 0;
+        runSpeed = 1.5f;
+        walkSpeed = .5f;
         jumpHeight = 200;
+
+        movementState = "Stopped";
         canJump = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Movement();
+        if (scriptManager.GetComponent<Countdown>().timerFinished)
+        {
+            Movement();
+        }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
         }
-        /*
-        if (dirX != 0)
-        {
-            if (dirX > 0)
-                gameObject.GetComponent<SpriteRenderer>().flipX = false;
-            else if (dirX < 0)
-                gameObject.GetComponent<SpriteRenderer>().flipX = true;
-
-            anim.SetBool("isRunning", true);
-        }
-        else
-        {
-            anim.SetBool("isRunning", false);
-        }
-        */
-
     }
 
-    void Movement()
+    public void Movement()
     {
-        dirX = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
+        dirX = playerSpeed * Time.deltaTime;
         transform.position = new Vector3(transform.position.x + dirX,
                                             transform.position.y,
                                             transform.position.z);
+    }
+
+    public void WalkRight()
+    {
+        movementState = "Walking";
+        playerSpeed = walkSpeed;
+    }
+
+    public void WalkLeft()
+    {
+        movementState = "Walking";
+        playerSpeed = -walkSpeed;
+    }
+
+    public void RunRight()
+    {
+        movementState = "Running";
+        playerSpeed = runSpeed;
+    }
+
+    public void RunLeft()
+    {
+        movementState = "Running";
+        playerSpeed = -runSpeed;
+    }
+
+    public void StopMoving()
+    {
+        movementState = "Stopped";
+        playerSpeed = 0;
     }
 
     void Jump()

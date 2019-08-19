@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LightController : MonoBehaviour
 {
-    public GameObject stopLight;
+    private GameObject stopLight, player;
 
     private bool timerFinished, stopLightReady;
     private int currentIndex;
@@ -19,6 +19,9 @@ public class LightController : MonoBehaviour
 // Start is called before the first frame update
 void Start()
     {
+        stopLight = GameObject.Find("Stoplight");
+        player = GameObject.Find("Player");
+
         stopLight.SetActive(false);
         int timer = gameObject.GetComponent<Countdown>().timer;
         timerFinished = gameObject.GetComponent<Countdown>().timerFinished;
@@ -40,6 +43,8 @@ void Start()
                 stopLightReady = false;
                 StartCoroutine(StoplightDelay(Random.Range(3, 8)));
                 ChangeLight();
+
+                CheckPlayerStatus();
             }
         }
     }
@@ -69,5 +74,17 @@ void Start()
 
         currentIndex = newLightIndex;
         stopLight.GetComponent<Image>().color = colorList[currentIndex];
+    }
+
+    void CheckPlayerStatus()
+    {
+        // Red Light - Player must be stopped
+        if (currentIndex == 0)
+        {
+            if (player.GetComponent<PlayerControls>().movementState != "Stopped")
+            {
+                Debug.Log("Game Over");
+            }
+        }
     }
 }
