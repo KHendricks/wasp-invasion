@@ -120,12 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &307189143 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1920097643365187269, guid: 2599e2cf6d29b42098a88f6ea664980c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1920097643595819858}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &387347049
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,7 +434,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f635e3591564af9bd08a8ca99d1b84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopLight: {fileID: 307189143}
 --- !u!114 &1592731510 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1920097644231314468, guid: 2599e2cf6d29b42098a88f6ea664980c,

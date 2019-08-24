@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControls : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PlayerControls : MonoBehaviour
     private bool canJump;
     private GameObject scriptManager;
 
+    public GameObject[] playerLives;
+    public int lives;
     public string movementState;
 
     // Start is called before the first frame update
@@ -18,10 +21,16 @@ public class PlayerControls : MonoBehaviour
         anim = GetComponent<Animator>();
         scriptManager = GameObject.Find("ScriptManager");
 
+        playerLives = new GameObject[3];
+        playerLives[0] = GameObject.Find("Lives - 1");
+        playerLives[1] = GameObject.Find("Lives - 2");
+        playerLives[2] = GameObject.Find("Lives - 3");
+
         playerSpeed = 0;
         runSpeed = 1.5f;
         walkSpeed = .5f;
         jumpHeight = 200;
+        lives = 3;
 
         movementState = "Stopped";
         canJump = true;
@@ -79,7 +88,7 @@ public class PlayerControls : MonoBehaviour
         playerSpeed = 0;
     }
 
-    void Jump()
+    public void Jump()
     {
         if (canJump)
         {
