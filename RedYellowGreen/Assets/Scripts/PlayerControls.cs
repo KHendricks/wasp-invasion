@@ -104,4 +104,9 @@ public class PlayerControls : MonoBehaviour
             canJump = true;
         }
     }
+
+    public string GetMovementState()
+    {
+        return movementState;
+    }
 }

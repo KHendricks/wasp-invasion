@@ -22,31 +22,25 @@ public class PlayerStatusCheck : MonoBehaviour
 
         injuredTimerRunning = false;
         checkStatusRunning = false;
+
+        // If lives are disabled, hide the lives UI
+        if (!gameObject.GetComponent<Options>().GetLivesEnabledStatus())
+        {
+            player.GetComponent<PlayerControls>().playerLives[2].SetActive(false);
+            player.GetComponent<PlayerControls>().playerLives[1].SetActive(false);
+            player.GetComponent<PlayerControls>().playerLives[0].SetActive(false);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("A");
-        if (gameObject.GetComponent<Countdown>().timerFinished)
-        {
-            Debug.Log("B");
-            if (gameObject.GetComponent<LightController>().GetStopLightReadyStatus())
-            {
-                Debug.Log("C");
 
-                if (!checkStatusRunning)
-                {
-                    StartCoroutine(CheckStatus(1f));
-                }
-            }
-        }
     }
 
     void CheckPlayerStatus()
     {
         Debug.Log(gameObject.GetComponent<LightController>().GetCurrentIndex());
-        Debug.Log((int)StopLightColors.red + " " + (int)StopLightColors.yellow + " " + (int)StopLightColors.green);
         // Red Light - Player must be stopped
         if (gameObject.GetComponent<LightController>().GetCurrentIndex() == (int)StopLightColors.red)
         {
@@ -170,6 +164,14 @@ public class PlayerStatusCheck : MonoBehaviour
 
     }
 
+    public void CheckStatus()
+    {
+        if (!checkStatusRunning)
+        {
+            StartCoroutine(CheckStatus(1f));
+        }
+    }
+
     IEnumerator CheckStatus(float timer)
     {
         checkStatusRunning = true;
@@ -177,5 +179,4 @@ public class PlayerStatusCheck : MonoBehaviour
         checkStatusRunning = false;
         CheckPlayerStatus();
     }
-
 }

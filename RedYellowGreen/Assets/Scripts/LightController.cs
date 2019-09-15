@@ -6,13 +6,14 @@ using UnityEngine.UI;
 public class LightController : MonoBehaviour
 {
     private GameObject stopLight, player;
-    private bool timerFinished, stopLightReady;
+    public bool timerFinished, stopLightReady;
     private int currentIndex;
     private Color32[] colorList = {
             new Color32(255, 0, 0, 255),    // Red
             new Color32(0, 255, 0, 255),    // Green
             new Color32(255, 255, 0, 255)   // Yellow
         };
+    private string lightState;
         
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,7 @@ public class LightController : MonoBehaviour
         stopLightReady = true;
         currentIndex = 0;
         stopLight.GetComponent<Image>().color = colorList[currentIndex];
+        lightState = "Red";
     }
 
     // Update is called once per frame
@@ -40,6 +42,12 @@ public class LightController : MonoBehaviour
             {
                 StartCoroutine(StoplightDelay(Random.Range(3, 8)));
                 ChangeLight();
+
+                // If lives are enabled allow player to lose lives
+                if (gameObject.GetComponent<Options>().GetLivesEnabledStatus())
+                {
+                    gameObject.GetComponent<PlayerStatusCheck>().CheckStatus();
+                }
             }
         }
     }
@@ -69,6 +77,19 @@ public class LightController : MonoBehaviour
 
         currentIndex = newLightIndex;
         stopLight.GetComponent<Image>().color = colorList[currentIndex];
+
+        if (currentIndex == 0)
+        {
+            lightState = "Red";
+        }
+        else if (currentIndex == 1)
+        {
+            lightState = "Green";
+        }
+        else if (currentIndex == 2)
+        {
+            lightState = "Yellow";
+        }
     }
 
     public bool GetStopLightReadyStatus()
@@ -79,5 +100,10 @@ public class LightController : MonoBehaviour
     public int GetCurrentIndex()
     {
         return currentIndex;
+    }
+
+    public string GetLightState()
+    {
+        return lightState;
     }
 }
