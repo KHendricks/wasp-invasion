@@ -42,6 +42,7 @@ public class LightController : MonoBehaviour
             {
                 StartCoroutine(StoplightDelay(Random.Range(3, 8)));
                 ChangeLight();
+                gameObject.GetComponent<PointController>().EnablePoints();
 
                 // If lives are enabled allow player to lose lives
                 if (gameObject.GetComponent<Options>().GetLivesEnabledStatus())
@@ -49,6 +50,10 @@ public class LightController : MonoBehaviour
                     gameObject.GetComponent<PlayerStatusCheck>().CheckStatus();
                 }
             }
+
+            // Start adding/subtracting points to the counter after a 
+            // delay specified in the PointController 
+            gameObject.GetComponent<PointController>().AddPoint();
         }
     }
 
@@ -63,6 +68,7 @@ public class LightController : MonoBehaviour
     {
         stopLightReady = false;
         yield return new WaitForSeconds(timeRemaining);
+        gameObject.GetComponent<PointController>().SetEnableAddPoint(false);
         stopLightReady = true;
     }
 

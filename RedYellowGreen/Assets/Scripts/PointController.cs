@@ -9,6 +9,8 @@ public class PointController : MonoBehaviour
     private long playerScore;
     private bool pointAddDelayRunning;
     private GameObject pointText;
+    private bool enablePointsRunning;
+    private bool enableAddPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +20,10 @@ public class PointController : MonoBehaviour
         playerScore = 0;
         pointText.GetComponent<Text>().text = playerScore.ToString();
 
+        pointText.SetActive(false);
         pointAddDelayRunning = false;
+        enablePointsRunning = false;
+        enableAddPoint = false;
     }
 
     // Update is called once per frame
@@ -26,19 +31,25 @@ public class PointController : MonoBehaviour
     {
         if (gameObject.GetComponent<Countdown>().timerFinished)
         {
-            if (!pointAddDelayRunning)
+            // Enable point text UI after timer is done
+            if (!pointText.activeSelf)
             {
-                AddPoint();
+                pointText.SetActive(true);
             }
+
+            AddPoint();
         }
     }
 
-    void AddPoint()
+    public void AddPoint()
     {
         string lightState = gameObject.GetComponent<LightController>().GetLightState();
         string playerState = player.GetComponent<PlayerControls>().GetMovementState();
 
-        StartCoroutine(AddPointDelay(.5f, lightState, playerState));
+        if (!pointAddDelayRunning && enableAddPoint)
+        {
+            StartCoroutine(AddPointDelay(.5f, lightState, playerState));
+        }
     }
 
     IEnumerator AddPointDelay(float timeDelay, string lightState, string playerState)
@@ -60,5 +71,31 @@ public class PointController : MonoBehaviour
         }
 
         pointAddDelayRunning = false;
+    }
+
+    public void EnablePoints()
+    {
+        if (!enablePointsRunning)
+        {
+            StartCoroutine(EnablePoints(1f));
+        }
+    }
+
+    IEnumerator EnablePoints(float timer)
+    {
+        enablePointsRunning = true;
+        yield return new WaitForSeconds(timer);
+        enablePointsRunning = false;
+        enableAddPoint = true;
+    }
+
+    public void SetEnableAddPoint(bool val)
+    {
+        enableAddPoint = val;
+    }
+
+    public bool GetEnableAddPoint()
+    {
+        return enableAddPoint;
     }
 }

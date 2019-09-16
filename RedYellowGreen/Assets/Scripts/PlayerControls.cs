@@ -10,6 +10,7 @@ public class PlayerControls : MonoBehaviour
     private float jumpHeight;
     private bool canJump;
     private GameObject scriptManager;
+    private Animator playerAnimator;
 
     public GameObject[] playerLives;
     public int lives;
@@ -20,7 +21,7 @@ public class PlayerControls : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         scriptManager = GameObject.Find("ScriptManager");
-
+        playerAnimator = gameObject.GetComponent<Animator>();
         playerLives = new GameObject[3];
         playerLives[0] = GameObject.Find("Lives - 1");
         playerLives[1] = GameObject.Find("Lives - 2");
@@ -62,30 +63,66 @@ public class PlayerControls : MonoBehaviour
     {
         movementState = "Walking";
         playerSpeed = walkSpeed;
+
+        // Sets player animation to walk right
+        playerAnimator.SetBool("isSlowFlying", true);
+        playerAnimator.SetBool("isFastFlying", false);
+        playerAnimator.SetBool("isIdle", false);
+        if (gameObject.GetComponent<SpriteRenderer>().flipX == true)
+        {
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+        }
     }
 
     public void WalkLeft()
     {
         movementState = "Walking";
         playerSpeed = -walkSpeed;
+        playerAnimator.SetBool("isSlowFlying", true);
+        playerAnimator.SetBool("isFastFlying", false);
+        playerAnimator.SetBool("isIdle", false);
+        if (gameObject.GetComponent<SpriteRenderer>().flipX == false)
+        {
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        }
     }
 
     public void RunRight()
     {
         movementState = "Running";
         playerSpeed = runSpeed;
+
+        playerAnimator.SetBool("isSlowFlying", false);
+        playerAnimator.SetBool("isFastFlying", true);
+        playerAnimator.SetBool("isIdle", false);
+        if (gameObject.GetComponent<SpriteRenderer>().flipX == true)
+        {
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+        }
     }
 
     public void RunLeft()
     {
         movementState = "Running";
         playerSpeed = -runSpeed;
+
+        playerAnimator.SetBool("isSlowFlying", false);
+        playerAnimator.SetBool("isFastFlying", true);
+        playerAnimator.SetBool("isIdle", false);
+        if (gameObject.GetComponent<SpriteRenderer>().flipX == false)
+        {
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        }
     }
 
     public void StopMoving()
     {
         movementState = "Stopped";
         playerSpeed = 0;
+
+        playerAnimator.SetBool("isSlowFlying", false);
+        playerAnimator.SetBool("isFastFlying", false);
+        playerAnimator.SetBool("isIdle", true);
     }
 
     public void Jump()
