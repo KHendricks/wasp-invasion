@@ -43,12 +43,6 @@ public class LightController : MonoBehaviour
                 StartCoroutine(StoplightDelay(Random.Range(3, 8)));
                 ChangeLight();
                 gameObject.GetComponent<PointController>().EnablePoints();
-
-                // If lives are enabled allow player to lose lives
-                if (gameObject.GetComponent<Options>().GetLivesEnabledStatus())
-                {
-                    gameObject.GetComponent<PlayerStatusCheck>().CheckStatus();
-                }
             }
 
             // Start adding/subtracting points to the counter after a 

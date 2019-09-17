@@ -22,14 +22,6 @@ public class PlayerStatusCheck : MonoBehaviour
 
         injuredTimerRunning = false;
         checkStatusRunning = false;
-
-        // If lives are disabled, hide the lives UI
-        //if (!gameObject.GetComponent<Options>().GetLivesEnabledStatus())
-        //{
-        //    player.GetComponent<PlayerControls>().playerLives[2].SetActive(false);
-        //    player.GetComponent<PlayerControls>().playerLives[1].SetActive(false);
-        //    player.GetComponent<PlayerControls>().playerLives[0].SetActive(false);
-        //}
     }
 
     // Update is called once per frame

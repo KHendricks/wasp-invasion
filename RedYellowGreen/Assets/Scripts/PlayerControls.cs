@@ -11,6 +11,8 @@ public class PlayerControls : MonoBehaviour
     private bool canJump;
     private GameObject scriptManager;
     private Animator playerAnimator;
+    private float[] flightLevels;
+    private int currentFlightIndex;
 
     public GameObject[] playerLives;
     public int lives;
@@ -33,6 +35,14 @@ public class PlayerControls : MonoBehaviour
         jumpHeight = 200;
         lives = 3;
 
+        currentFlightIndex = 0;
+        flightLevels = new float[3];
+        flightLevels[0] = -.5f;
+        flightLevels[1] = -.2f;
+        flightLevels[2] = .2f;
+
+
+
         movementState = "Stopped";
         canJump = true;
     }
@@ -47,7 +57,7 @@ public class PlayerControls : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Jump();
+            FlyUp();
         }
     }
 
@@ -125,7 +135,26 @@ public class PlayerControls : MonoBehaviour
         playerAnimator.SetBool("isIdle", true);
     }
 
-    public void Jump()
+    public void FlyUp()
+    {
+        Debug.Log("HERE");
+        if (currentFlightIndex == 2)
+        {
+            currentFlightIndex = 0;
+        }
+        else
+        {
+            currentFlightIndex++;
+        }
+
+        Vector3 newPosition = new Vector3(gameObject.transform.position.x,
+                                            Mathf.Lerp(flightLevels[currentFlightIndex], gameObject.transform.position.y, Time.deltaTime * 3),
+                                            gameObject.transform.position.z);
+
+        gameObject.transform.position = newPosition;
+    }
+
+    public void OldJump()
     {
         if (canJump)
         {

@@ -20,7 +20,7 @@ public class PointController : MonoBehaviour
         playerScore = 0;
         pointText.GetComponent<Text>().text = playerScore.ToString();
 
-        pointText.SetActive(false);
+        pointText.SetActive(true);
         pointAddDelayRunning = false;
         enablePointsRunning = false;
         enableAddPoint = false;
@@ -31,12 +31,6 @@ public class PointController : MonoBehaviour
     {
         if (gameObject.GetComponent<Countdown>().timerFinished)
         {
-            // Enable point text UI after timer is done
-            if (!pointText.activeSelf)
-            {
-                pointText.SetActive(true);
-            }
-
             AddPoint();
         }
     }
