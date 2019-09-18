@@ -13,6 +13,7 @@ public class PlayerControls : MonoBehaviour
     private Animator playerAnimator;
     private float[] flightLevels;
     private int currentFlightIndex;
+    private bool isLerping;
 
     public GameObject[] playerLives;
     public int lives;
@@ -41,10 +42,9 @@ public class PlayerControls : MonoBehaviour
         flightLevels[1] = -.2f;
         flightLevels[2] = .2f;
 
-
-
         movementState = "Stopped";
         canJump = true;
+        isLerping = false;
     }
 
     // Update is called once per frame
@@ -58,6 +58,11 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             FlyUp();
+        }
+
+        if (isLerping)
+        {
+
         }
     }
 
@@ -137,21 +142,23 @@ public class PlayerControls : MonoBehaviour
 
     public void FlyUp()
     {
-        Debug.Log("HERE");
-        if (currentFlightIndex == 2)
-        {
-            currentFlightIndex = 0;
-        }
-        else
+        Debug.Log(currentFlightIndex);
+        if (currentFlightIndex < 2 )
         {
             currentFlightIndex++;
         }
 
         Vector3 newPosition = new Vector3(gameObject.transform.position.x,
-                                            Mathf.Lerp(flightLevels[currentFlightIndex], gameObject.transform.position.y, Time.deltaTime * 3),
+                                            flightLevels[currentFlightIndex],
                                             gameObject.transform.position.z);
 
-        gameObject.transform.position = newPosition;
+        StartCoroutine(FlyUpMovement(newPosition, 1f));
+        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, newPosition, Time.deltaTime * 2);
+    }
+
+    IEnumerator FlyUpMovement(Vector3 newPosition, float delay)
+    {
+        yield return null;
     }
 
     public void OldJump()
