@@ -188,7 +188,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -1113,12 +1113,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1587614271}
-  - component: {fileID: 1587614275}
   - component: {fileID: 1587614270}
   - component: {fileID: 1587614274}
   - component: {fileID: 1587614272}
   - component: {fileID: 1587614273}
   - component: {fileID: 1587614276}
+  - component: {fileID: 1587614275}
   m_Layer: 0
   m_Name: ScriptManager
   m_TagString: Untagged
@@ -1202,7 +1202,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1587614269}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 960b79212acfb40bc8dbcc5b6f368000, type: 3}
+  m_Script: {fileID: 11500000, guid: c383b28cdb41442bb96444d93697708d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1587614276
@@ -5494,6 +5494,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1920097643158582104, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 1920097643158582110, guid: 2599e2cf6d29b42098a88f6ea664980c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5568,8 +5573,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 8190224309547076705, guid: 89697f607ad3c43b08975f1341876530,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1920097643158582105, guid: 2599e2cf6d29b42098a88f6ea664980c,
         type: 3}
       propertyPath: m_Size.x
@@ -5579,6 +5583,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920097643158582105, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 779521859, guid: 2599e2cf6d29b42098a88f6ea664980c, type: 3}
       propertyPath: m_IsActive
@@ -5599,18 +5608,15 @@ PrefabInstance:
     - target: {fileID: 166422474, guid: 2599e2cf6d29b42098a88f6ea664980c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 8190224309547076705, guid: 89697f607ad3c43b08975f1341876530,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 578638552, guid: 2599e2cf6d29b42098a88f6ea664980c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6267321987840023197, guid: 89697f607ad3c43b08975f1341876530,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1736867916, guid: 2599e2cf6d29b42098a88f6ea664980c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4244292635471947804, guid: 89697f607ad3c43b08975f1341876530,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1457969136, guid: 2599e2cf6d29b42098a88f6ea664980c, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
@@ -5671,6 +5677,16 @@ PrefabInstance:
     - target: {fileID: 1262140594, guid: 2599e2cf6d29b42098a88f6ea664980c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: FlyUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920097643158582108, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920097644499959422, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1592272700, guid: 2599e2cf6d29b42098a88f6ea664980c, type: 3}

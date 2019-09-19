@@ -15,7 +15,7 @@ public class PointController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.FindWithTag("Player");
         pointText = GameObject.Find("PointText");
         playerScore = 0;
         pointText.GetComponent<Text>().text = playerScore.ToString();

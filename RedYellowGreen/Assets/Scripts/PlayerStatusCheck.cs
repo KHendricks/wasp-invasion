@@ -13,7 +13,7 @@ public class PlayerStatusCheck : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.FindWithTag("Player");
         walkLeft = GameObject.Find("Walk - Left").GetComponent<Button>();
         walkRight = GameObject.Find("Walk - Right").GetComponent<Button>();
         runLeft = GameObject.Find("Run - Left").GetComponent<Button>();

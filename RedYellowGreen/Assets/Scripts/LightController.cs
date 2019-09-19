@@ -19,7 +19,7 @@ public class LightController : MonoBehaviour
     void Start()
     {
         stopLight = GameObject.Find("Stoplight");
-        player = GameObject.Find("Player");
+        player = GameObject.FindWithTag("Player");
 
         stopLight.SetActive(false);
         int timer = gameObject.GetComponent<Countdown>().timer;
