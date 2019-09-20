@@ -38,4 +38,9 @@ public class Pause : MonoBehaviour
             pauseButton.SetActive(true);
         }
     }
+
+    public void MainMenu()
+    {
+        Initiate.Fade("MainMenu", Color.black, .5f);
+    }
 }
