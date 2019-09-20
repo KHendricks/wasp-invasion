@@ -10,8 +10,7 @@ public class Preferences : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        livesEnabled = false;
-        characterSelected = "Frog";
+        PlayerPrefs.SetString("characterSelected", "Frog");
     }
 
     // Update is called once per frame

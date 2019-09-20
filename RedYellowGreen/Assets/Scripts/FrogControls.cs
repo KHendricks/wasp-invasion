@@ -28,6 +28,10 @@ public class FrogControls : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().sprite =
             Resources.Load<Sprite>("Sprites/frog_still");
 
+        // Adds collider
+        gameObject.AddComponent<PolygonCollider2D>();
+        gameObject.GetComponent<PolygonCollider2D>().offset =  new Vector2(0, .2f);
+
         // Set animator
         gameObject.GetComponent<Animator>().runtimeAnimatorController =
             Resources.Load<RuntimeAnimatorController>("Animators/Frog");

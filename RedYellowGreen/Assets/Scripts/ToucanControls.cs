@@ -32,6 +32,9 @@ public class ToucanControls : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().sprite =
             Resources.Load<Sprite>("Sprites/toucan_base");
 
+        // Adds collider
+        gameObject.AddComponent<PolygonCollider2D>();
+
         // Set animator
         gameObject.GetComponent<Animator>().runtimeAnimatorController = 
             Resources.Load<RuntimeAnimatorController>("Animators/Toucan");

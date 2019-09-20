@@ -34,20 +34,7 @@ public class PlayerControls : MonoBehaviour
         movementState = "Stopped";
         isLerping = false;
 
-        // Decide what movement, animations, and sprites to use based
-        // on selected choice
-        if (scriptManager.GetComponent<Preferences>().GetCharacterSelected() == "Toucan")
-        {
-            gameObject.AddComponent<ToucanControls>();
-        }
-        else if (scriptManager.GetComponent<Preferences>().GetCharacterSelected() == "Frog")
-        {
-            gameObject.AddComponent<FrogControls>();
-        }
-        else if (scriptManager.GetComponent<Preferences>().GetCharacterSelected() == "Wasp")
-        {
-
-        }
+        SelectCharacter();
     }
 
     // Update is called once per frame
@@ -137,5 +124,24 @@ public class PlayerControls : MonoBehaviour
     public string GetMovementState()
     {
         return movementState;
+    }
+
+    void SelectCharacter()
+    {
+        // Decide what movement, animations, and sprites to use based
+        // on selected choice
+        Debug.Log("CHAR: " + PlayerPrefs.GetString("characterSelected"));
+        if (PlayerPrefs.GetString("characterSelected") == "Toucan")
+        {
+            gameObject.AddComponent<ToucanControls>();
+        }
+        else if (PlayerPrefs.GetString("characterSelected") == "Frog")
+        {
+            gameObject.AddComponent<FrogControls>();
+        }
+        else if (PlayerPrefs.GetString("characterSelected") == "Wasp")
+        {
+
+        }
     }
 }
