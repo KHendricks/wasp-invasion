@@ -6,14 +6,21 @@ using UnityEngine.UI;
 
 public class MenuButtons : MonoBehaviour
 {
-    public Rigidbody playButtonRb;
-
+    public GameObject optionsPanel, playButton;
+    private Rigidbody playButtonRb;
     private bool currentlyWaiting = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (!PlayerPrefs.HasKey("isSoundEnabled"))
+        {
+            PlayerPrefs.SetInt("isSoundEnabled", 1);
+        }
 
+        optionsPanel.SetActive(false);
+        playButton = GameObject.Find("PlayButton");
+        playButtonRb = playButton.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -34,7 +41,7 @@ public class MenuButtons : MonoBehaviour
         playButtonRb.velocity = playButtonVel;
 
         // This is so the button can't be pressed again and change the direction
-        gameObject.GetComponent<Button>().interactable = false;
+        playButton.GetComponent<Button>().interactable = false;
 
         ChangeSceneDelay(.5f);
     }
@@ -53,5 +60,17 @@ public class MenuButtons : MonoBehaviour
         yield return new WaitForSeconds(x);
         currentlyWaiting = false;
         Initiate.Fade("LevelOne", Color.black, 1f);
+    }
+
+    public void OptionsButton()
+    {
+        if (optionsPanel.activeSelf)
+        {
+            optionsPanel.SetActive(false);
+        }
+        else
+        {
+            optionsPanel.SetActive(true);
+        }
     }
 }

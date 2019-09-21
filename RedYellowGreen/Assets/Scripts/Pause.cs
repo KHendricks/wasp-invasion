@@ -1,20 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
     private GameObject pausePanel;
     private GameObject pauseButton;
     private GameObject resumeButton;
+    public GameObject optionsPanel;
 
     // Start is called before the first frame update
     void Start()
     {
+        optionsPanel = GameObject.Find("OptionsPanel");
         pausePanel = GameObject.Find("PausePanel");
         pauseButton = GameObject.Find("PauseButton");
 
         pausePanel.SetActive(false);
+        optionsPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -41,6 +45,24 @@ public class Pause : MonoBehaviour
 
     public void MainMenu()
     {
-        Initiate.Fade("MainMenu", Color.black, .5f);
+        SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1f;
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    public void OptionsButton()
+    {
+        if (optionsPanel.activeSelf)
+        {
+            optionsPanel.SetActive(false);
+        }
+        else
+        {
+            optionsPanel.SetActive(true);
+        }
     }
 }
