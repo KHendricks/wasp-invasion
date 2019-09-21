@@ -73,7 +73,7 @@ public class PlayerStatusCheck : MonoBehaviour
         }
     }
 
-    void UpdateLivesUI()
+    public void UpdateLivesUI()
     {
         if (player.GetComponent<PlayerControls>().lives == 3)
         {

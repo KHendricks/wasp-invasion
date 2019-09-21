@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class MenuButtons : MonoBehaviour
 {
-    public GameObject optionsPanel, playButton;
-    private Rigidbody playButtonRb;
+    public GameObject optionsPanel, adventureButton;
+    private Rigidbody adventureButtonRb;
     private bool currentlyWaiting = false;
 
     // Start is called before the first frame update
@@ -19,8 +19,8 @@ public class MenuButtons : MonoBehaviour
         }
 
         optionsPanel.SetActive(false);
-        playButton = GameObject.Find("PlayButton");
-        playButtonRb = playButton.GetComponent<Rigidbody>();
+        adventureButton = GameObject.Find("AdventureButton");
+        adventureButtonRb = adventureButton.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -32,16 +32,16 @@ public class MenuButtons : MonoBehaviour
     // Button is defaulted to:
     // is kinematic = true
     // use gravity = false
-    public void PlayButtonPress()
+    public void AdventureButton()
     {
         // Values are arbitrary. Sometimes the button can move really slowly or
         // very quickly. 
-        Vector3 playButtonVel = new Vector3(Random.Range(-1000, 1000), Random.Range(-1200, 1200), 0);
-        playButtonRb.isKinematic = false;
-        playButtonRb.velocity = playButtonVel;
+        Vector3 adventureButtonVel = new Vector3(Random.Range(-1000, 1000), Random.Range(-1200, 1200), 0);
+        adventureButtonRb.isKinematic = false;
+        adventureButtonRb.velocity = adventureButtonVel;
 
         // This is so the button can't be pressed again and change the direction
-        playButton.GetComponent<Button>().interactable = false;
+        adventureButton.GetComponent<Button>().interactable = false;
 
         ChangeSceneDelay(.5f);
     }

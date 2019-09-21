@@ -144,4 +144,13 @@ public class PlayerControls : MonoBehaviour
 
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            lives -= 1;
+            scriptManager.GetComponent<PlayerStatusCheck>().UpdateLivesUI();
+        }
+    }
 }
