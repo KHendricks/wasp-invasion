@@ -1,12 +1,15 @@
 ﻿<Properties StartupConfiguration="{53BCE6AB-18F9-024E-6385-E8A32AE749D4}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerControls.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LightController.cs">
     <Files>
       <File FileName="Assets/Scripts/Pause.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/MenuButtons.cs" Line="22" Column="59" />
-      <File FileName="Assets/Scripts/PlayerControls.cs" Line="153" Column="13" />
+      <File FileName="Assets/Scripts/PlayerControls.cs" Line="155" Column="6" />
       <File FileName="Assets/Scripts/LightController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Enemy.cs" Line="23" Column="13" />
-      <File FileName="Assets/Scripts/PlayerStatusCheck.cs" Line="76" Column="12" />
+      <File FileName="Assets/Scripts/Enemy.cs" Line="24" Column="10" />
+      <File FileName="Assets/Scripts/WaspEnemy.cs" Line="10" Column="22" />
+      <File FileName="Assets/Scripts/EnemySpawner.cs" Line="43" Column="31" />
+      <File FileName="Assets/Scripts/ToucanControls.cs" Line="26" Column="1" />
+      <File FileName="Assets/Scripts/Countdown.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
