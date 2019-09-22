@@ -10,6 +10,7 @@ public class PlayerControls : MonoBehaviour
     private GameObject scriptManager;
     private Animator Animator;
     private bool isLerping;
+    private bool isInjured;
 
     public GameObject[] playerLives;
     public int lives;
@@ -33,6 +34,7 @@ public class PlayerControls : MonoBehaviour
 
         movementState = "Stopped";
         isLerping = false;
+        isInjured = false;
 
         SelectCharacter();
     }
@@ -120,7 +122,6 @@ public class PlayerControls : MonoBehaviour
         Animator.SetBool("isIdle", true);
     }
 
-
     public string GetMovementState()
     {
         return movementState;
@@ -147,10 +148,26 @@ public class PlayerControls : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (!isInjured)
         {
-            lives -= 1;
-            scriptManager.GetComponent<PlayerStatusCheck>().UpdateLivesUI();
+            if (collision.gameObject.tag == "Enemy")
+            {
+                lives -= 1;
+                scriptManager.GetComponent<PlayerStatusCheck>().UpdateLivesUI();
+                StartCoroutine(InjuredFlash());
+            }
         }
+    }
+
+    IEnumerator InjuredFlash()
+    {
+        isInjured = true;
+
+        yield return new WaitForSeconds(.25f);
+        gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(.25f);
+        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+
+        isInjured = false;
     }
 }

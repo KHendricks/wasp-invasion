@@ -9,14 +9,13 @@ public class WaspEnemy : Enemy
     {
         SetHealth(3);
         SetSpeed(-1.5f);
-        Debug.Log(GetHealth());
+        Destroy(gameObject, 7f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        dirX = Speed * Time.deltaTime;
-        transform.position = new Vector3(transform.position.x + dirX,
+        transform.position = new Vector3(transform.position.x + (GetSpeed() * Time.deltaTime),
                                             transform.position.y,
                                             transform.position.z);
     }

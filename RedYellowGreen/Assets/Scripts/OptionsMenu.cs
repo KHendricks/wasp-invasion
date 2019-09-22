@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour
 {
-    private GameObject soundButton;
+    private GameObject soundButton, musicButton;
     public GameObject optionsPanel;
 
 
@@ -13,12 +13,36 @@ public class OptionsMenu : MonoBehaviour
     void Start()
     {
         soundButton = GameObject.Find("SoundButton");
+        musicButton = GameObject.Find("MusicButton");
+
+        InitialOptionsMenu();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void InitialOptionsMenu()
+    {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            soundButton.GetComponent<Text>().text = "ON";
+        }
+        else if (PlayerPrefs.GetInt("isSoundEnabled") == 0)
+        {
+            soundButton.GetComponent<Text>().text = "OFF";
+        }
+
+        if (PlayerPrefs.GetInt("isMusicEnabled") == 1)
+        {
+            musicButton.GetComponent<Text>().text = "ON";
+        }
+        else if (PlayerPrefs.GetInt("isMusicEnabled") == 0)
+        {
+            musicButton.GetComponent<Text>().text = "OFF";
+        }
     }
 
     public void SoundUpdate()
@@ -32,6 +56,20 @@ public class OptionsMenu : MonoBehaviour
         {
             soundButton.GetComponent<Text>().text = "ON";
             PlayerPrefs.SetInt("isSoundEnabled", 1);
+        }
+    }
+
+    public void MusicUpdate()
+    {
+        if (musicButton.GetComponent<Text>().text == "ON")
+        {
+            musicButton.GetComponent<Text>().text = "OFF";
+            PlayerPrefs.SetInt("isMusicEnabled", 0);
+        }
+        else if (musicButton.GetComponent<Text>().text == "OFF")
+        {
+            musicButton.GetComponent<Text>().text = "ON";
+            PlayerPrefs.SetInt("isMusicEnabled", 1);
         }
     }
 

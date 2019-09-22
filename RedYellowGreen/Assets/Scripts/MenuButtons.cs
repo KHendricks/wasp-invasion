@@ -18,6 +18,23 @@ public class MenuButtons : MonoBehaviour
             PlayerPrefs.SetInt("isSoundEnabled", 1);
         }
 
+        if (!PlayerPrefs.HasKey("isMusicEnabled"))
+        {
+            PlayerPrefs.SetInt("isMusicEnabled", 1);
+        }
+
+        if (!PlayerPrefs.HasKey("hiScore"))
+        {
+            PlayerPrefs.SetInt("hiScore", 0);
+        }
+
+        if (!PlayerPrefs.HasKey("loScore"))
+        {
+            PlayerPrefs.SetInt("loScore", 0);
+        }
+
+        PlayerPrefs.SetInt("score", 0);
+
         optionsPanel.SetActive(false);
         adventureButton = GameObject.Find("AdventureButton");
         adventureButtonRb = adventureButton.GetComponent<Rigidbody>();

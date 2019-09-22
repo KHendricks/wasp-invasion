@@ -98,6 +98,22 @@ public class PlayerStatusCheck : MonoBehaviour
             player.GetComponent<PlayerControls>().playerLives[2].SetActive(false);
             player.GetComponent<PlayerControls>().playerLives[1].SetActive(false);
             player.GetComponent<PlayerControls>().playerLives[0].SetActive(false);
+
+            PlayerPrefs.SetInt("score", gameObject.GetComponent<PointController>().GetPlayerScore());
+
+            if (PlayerPrefs.GetInt("hiScore") < 
+                gameObject.GetComponent<PointController>().GetPlayerScore())
+            {
+                PlayerPrefs.SetInt("hiScore", gameObject.GetComponent<PointController>().GetPlayerScore());
+            }
+
+            if (PlayerPrefs.GetInt("loScore") >
+                gameObject.GetComponent<PointController>().GetPlayerScore())
+            {
+                PlayerPrefs.SetInt("loScore", gameObject.GetComponent<PointController>().GetPlayerScore());
+            }
+
+            Initiate.Fade("GameOver", Color.black, 1f);
         }
     }
 

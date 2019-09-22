@@ -5,8 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     private int health;
-    private int speed;
-
+    private float speed;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +42,7 @@ public class Enemy : MonoBehaviour
         this.speed = speed;
     }
 
-    public int GetSpeed()
+    public float GetSpeed()
     {
         return this.speed;
     }

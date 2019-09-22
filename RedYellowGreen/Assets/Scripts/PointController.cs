@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PointController : MonoBehaviour
 {
     private GameObject player;
-    private long playerScore;
+    private int playerScore;
     private bool pointAddDelayRunning;
     private GameObject pointText;
     private bool enablePointsRunning;
@@ -91,5 +91,10 @@ public class PointController : MonoBehaviour
     public bool GetEnableAddPoint()
     {
         return enableAddPoint;
+    }
+
+    public int GetPlayerScore()
+    {
+        return playerScore;
     }
 }

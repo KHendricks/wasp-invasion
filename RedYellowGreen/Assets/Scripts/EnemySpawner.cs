@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
 
     private float[] flightLevels;
     private float spawnOffset;
+    private bool isWaspSpawning;
 
     // Start is called before the first frame update
     void Start()
@@ -22,16 +23,27 @@ public class EnemySpawner : MonoBehaviour
         flightLevels[2] = .2f;
         spawnOffset = 7f;
 
-        InvokeRepeating("SpawnWasp", 5f, 2);
+        isWaspSpawning = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (!isWaspSpawning)
+        {
+            StartCoroutine(SpawnWasp());
+        }
     }
 
-    void SpawnWasp()
+    IEnumerator SpawnWasp()
+    {
+        isWaspSpawning = true;
+        yield return new WaitForSeconds(Random.Range(5, 10));
+        SpawnWaspEntity();
+        isWaspSpawning = false;
+    }
+
+    void SpawnWaspEntity()
     {
         int spawnIndex;
         spawnIndex = Random.Range(0, 3);
