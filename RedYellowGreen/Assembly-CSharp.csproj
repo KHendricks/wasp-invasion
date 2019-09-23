@@ -85,6 +85,8 @@
     <Compile Include="Assets\Scripts\PlayerStatusCheck.cs" />
     <Compile Include="Assets\Scripts\PointController.cs" />
     <Compile Include="Assets\Scripts\Preferences.cs" />
+    <Compile Include="Assets\Scripts\ShootingStar.cs" />
+    <Compile Include="Assets\Scripts\Tips.cs" />
     <Compile Include="Assets\Scripts\ToucanControls.cs" />
     <Compile Include="Assets\Scripts\WaspEnemy.cs" />
     <Compile Include="Assets\Simple Scene Fade Load System\Demo (You don't have to import this folder)\DemoScript.cs" />
