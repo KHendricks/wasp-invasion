@@ -35,8 +35,8 @@ public class EnemySpawner : MonoBehaviour
         waspSpawnOffset = 7f;
 
         isStarSpawning = false;
-        starSpawnOffsetX = 10;
-        starSpawnOffsetY = 10;
+        starSpawnOffsetX = 0;
+        starSpawnOffsetY = 2;
 
         // Spawns a shooting star if the players score keeps decrementing
         scoreBucket = new ArrayList();
@@ -50,12 +50,6 @@ public class EnemySpawner : MonoBehaviour
         {
             StartCoroutine(SpawnWasp());
         }
-
-        if (!isStarSpawning)
-        {
-
-        }
-
     }
 
     void CheckScore()
@@ -63,7 +57,6 @@ public class EnemySpawner : MonoBehaviour
         scoreBucket.Add(System.Convert.ToInt32(pointText.GetComponent<Text>().text));
         if (scoreBucket.Count > 1)
         {
-            Debug.Log("YO");
             if ((int)scoreBucket[scoreBucket.Count - 2] > (int)scoreBucket[scoreBucket.Count - 1])
             {
                 SpawnShootingStar();
@@ -83,18 +76,35 @@ public class EnemySpawner : MonoBehaviour
     {
         int spawnIndex;
         spawnIndex = Random.Range(0, 3);
-        Instantiate(waspEnemy, 
+        if (player.GetComponent<SpriteRenderer>().flipX)
+        {
+            waspSpawnOffset *= -1;
+        }
+
+        GameObject wasp =
+                    Instantiate(waspEnemy, 
                     new Vector3(player.transform.position.x + waspSpawnOffset, flightLevels[spawnIndex], 0), 
                     Quaternion.identity);
+
+        if (waspSpawnOffset < 0)
+        {
+            wasp.GetComponent<SpriteRenderer>().flipX = false;
+        }
     }
 
+    // Star only spawns when player is stopped and should be moving
+    // This mechanic is intended
     void SpawnShootingStar()
     {
         scoreBucket.Clear();
-        Instantiate(shootingStar,
-                    new Vector3(player.transform.position.x + starSpawnOffsetX,
-                                player.transform.position.y + starSpawnOffsetY, 
-                                0),
-                    Quaternion.identity);
+
+        if (player.GetComponent<PlayerControls>().GetMovementState() == "Stopped")
+        {
+            Instantiate(shootingStar,
+                        new Vector3(player.transform.position.x + starSpawnOffsetX,
+                                    player.transform.position.y + starSpawnOffsetY,
+                                    0),
+                        Quaternion.identity);
+        }
     }
 }

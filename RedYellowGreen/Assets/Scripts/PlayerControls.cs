@@ -170,4 +170,9 @@ public class PlayerControls : MonoBehaviour
 
         isInjured = false;
     }
+
+    public float GetRunSpeed()
+    {
+        return runSpeed;
+    }
 }
