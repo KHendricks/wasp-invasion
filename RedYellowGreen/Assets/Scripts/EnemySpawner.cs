@@ -16,6 +16,7 @@ public class EnemySpawner : MonoBehaviour
     private float starSpawnOffsetX, starSpawnOffsetY;
     private bool isWaspSpawning;
     private bool isStarSpawning;
+    private bool waspSpawnOverride;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +41,9 @@ public class EnemySpawner : MonoBehaviour
 
         // Spawns a shooting star if the players score keeps decrementing
         scoreBucket = new ArrayList();
+        waspSpawnOverride = false;
         InvokeRepeating("CheckScore", 5f, 2);
+
     }
 
     // Update is called once per frame
@@ -80,6 +83,11 @@ public class EnemySpawner : MonoBehaviour
         {
             waspSpawnOffset *= -1;
         }
+
+        // if (wasSpawnOverride)
+        // {
+                //waspSpawnOffset *= -1;
+        // }
 
         GameObject wasp =
                     Instantiate(waspEnemy, 

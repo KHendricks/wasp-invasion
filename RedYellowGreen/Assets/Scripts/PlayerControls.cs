@@ -11,6 +11,7 @@ public class PlayerControls : MonoBehaviour
     private Animator Animator;
     private bool isLerping;
     private bool isInjured;
+    private GameObject playerShield;
 
     public GameObject[] playerLives;
     public int lives;
@@ -19,6 +20,9 @@ public class PlayerControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerShield = GameObject.Find("PlayerShield");
+        playerShield.SetActive(false);
+
         anim = GetComponent<Animator>();
         scriptManager = GameObject.Find("ScriptManager");
         Animator = gameObject.GetComponent<Animator>();
@@ -157,6 +161,15 @@ public class PlayerControls : MonoBehaviour
                 StartCoroutine(InjuredFlash());
             }
         }
+
+        if (collision.gameObject.tag == "Powerup")
+        {
+            if (collision.gameObject.name.Contains("Shield"))
+            {
+                playerShield.SetActive(true);
+            }
+        }
+
     }
 
     IEnumerator InjuredFlash()

@@ -82,9 +82,13 @@
     <Compile Include="Assets\Scripts\OptionsMenu.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\PlayerControls.cs" />
+    <Compile Include="Assets\Scripts\PlayerShield.cs" />
     <Compile Include="Assets\Scripts\PlayerStatusCheck.cs" />
     <Compile Include="Assets\Scripts\PointController.cs" />
+    <Compile Include="Assets\Scripts\Powerup.cs" />
+    <Compile Include="Assets\Scripts\PowerupSpawner.cs" />
     <Compile Include="Assets\Scripts\Preferences.cs" />
+    <Compile Include="Assets\Scripts\ShieldPowerup.cs" />
     <Compile Include="Assets\Scripts\ShootingStar.cs" />
     <Compile Include="Assets\Scripts\Tips.cs" />
     <Compile Include="Assets\Scripts\ToucanControls.cs" />
@@ -99,6 +103,7 @@
     <None Include="Assets\Art\opp1_jungle_tiles\environment\tiles\readme guides IMPORTANT.txt" />
     <None Include="Assets\Simple Scene Fade Load System\ReadMeFirst.txt" />
     <None Include="Assets\GE Common Assets\Readme.txt" />
+    <None Include="Assets\Art\Shikashi's Fantasy Icons Pack\Shikashi's Fantasy Icons Pack.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/kyle/Git/RedYellowGreen/RedYellowGreen/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
