@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour
 {
+    private GameObject musicController;
     private GameObject soundButton, musicButton;
     public GameObject optionsPanel;
-
+    private GameObject buttonPressSound;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,16 @@ public class OptionsMenu : MonoBehaviour
         soundButton = GameObject.Find("SoundButton");
         musicButton = GameObject.Find("MusicButton");
 
+        try
+        {
+            musicController = GameObject.FindWithTag("MusicController");
+        }
+        catch (System.Exception e)
+        {
+            Debug.Log("Can't assign music controller to object");
+        }
+
+        buttonPressSound = GameObject.Find("ButtonPress");
         InitialOptionsMenu();
     }
 
@@ -47,6 +58,11 @@ public class OptionsMenu : MonoBehaviour
 
     public void SoundUpdate()
     {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
         if (soundButton.GetComponent<Text>().text == "ON")
         {
             soundButton.GetComponent<Text>().text = "OFF";
@@ -61,20 +77,33 @@ public class OptionsMenu : MonoBehaviour
 
     public void MusicUpdate()
     {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
         if (musicButton.GetComponent<Text>().text == "ON")
         {
             musicButton.GetComponent<Text>().text = "OFF";
+
+            musicController.GetComponent<AudioSource>().Stop();
             PlayerPrefs.SetInt("isMusicEnabled", 0);
         }
         else if (musicButton.GetComponent<Text>().text == "OFF")
         {
             musicButton.GetComponent<Text>().text = "ON";
+            musicController.GetComponent<AudioSource>().Play();
             PlayerPrefs.SetInt("isMusicEnabled", 1);
         }
     }
 
     public void Back()
     {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
         optionsPanel.SetActive(false);
     }
 }

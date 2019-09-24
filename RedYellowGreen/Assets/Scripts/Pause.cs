@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
+    private GameObject buttonPressSound;
     private GameObject pausePanel;
     private GameObject pauseButton;
     private GameObject resumeButton;
@@ -19,6 +20,8 @@ public class Pause : MonoBehaviour
 
         pausePanel.SetActive(false);
         optionsPanel.SetActive(false);
+        buttonPressSound = GameObject.Find("ButtonPress");
+
     }
 
     // Update is called once per frame
@@ -29,6 +32,11 @@ public class Pause : MonoBehaviour
 
     public void PauseResumeGame()
     {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
         if (Time.timeScale == 1f)
         {
             Time.timeScale = 0f;
@@ -45,17 +53,32 @@ public class Pause : MonoBehaviour
 
     public void MainMenu()
     {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1f;
     }
 
     public void ExitGame()
     {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
         Application.Quit();
     }
 
     public void OptionsButton()
     {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
         if (optionsPanel.activeSelf)
         {
             optionsPanel.SetActive(false);

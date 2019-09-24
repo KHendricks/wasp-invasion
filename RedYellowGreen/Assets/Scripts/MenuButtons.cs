@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class MenuButtons : MonoBehaviour
 {
     public GameObject optionsPanel, adventureButton;
+
+    private GameObject buttonPressSound;
+    private GameObject menuMusic;
     private Rigidbody adventureButtonRb;
     private bool currentlyWaiting = false;
 
@@ -38,6 +41,19 @@ public class MenuButtons : MonoBehaviour
         optionsPanel.SetActive(false);
         adventureButton = GameObject.Find("AdventureButton");
         adventureButtonRb = adventureButton.GetComponent<Rigidbody>();
+
+
+        buttonPressSound = GameObject.Find("ButtonPress");
+        menuMusic = GameObject.FindWithTag("MusicController");
+
+        if (PlayerPrefs.GetInt("isMusicEnabled") == 1)
+        {
+            menuMusic.GetComponent<AudioSource>().Play();
+        }
+        else
+        {
+            menuMusic.GetComponent<AudioSource>().Stop();
+        }
     }
 
     // Update is called once per frame
@@ -51,6 +67,11 @@ public class MenuButtons : MonoBehaviour
     // use gravity = false
     public void AdventureButton()
     {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
         // Values are arbitrary. Sometimes the button can move really slowly or
         // very quickly. 
         Vector3 adventureButtonVel = new Vector3(Random.Range(-1000, 1000), Random.Range(-1200, 1200), 0);
@@ -81,6 +102,11 @@ public class MenuButtons : MonoBehaviour
 
     public void OptionsButton()
     {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
         if (optionsPanel.activeSelf)
         {
             optionsPanel.SetActive(false);

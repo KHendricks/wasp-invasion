@@ -14,12 +14,14 @@ public class LightController : MonoBehaviour
             new Color32(255, 255, 0, 255)   // Yellow
         };
     private string lightState;
-        
+    private GameObject lightSound;
+
     // Start is called before the first frame update
     void Start()
     {
         stopLight = GameObject.Find("Stoplight");
         player = GameObject.FindWithTag("Player");
+        lightSound = GameObject.Find("LightSound");
 
         stopLight.SetActive(false);
         int timer = gameObject.GetComponent<Countdown>().timer;
@@ -76,6 +78,11 @@ public class LightController : MonoBehaviour
         } while (currentIndex == newLightIndex);
 
         currentIndex = newLightIndex;
+
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            lightSound.GetComponent<AudioSource>().Play();
+        }
         stopLight.GetComponent<Image>().color = colorList[currentIndex];
 
         if (currentIndex == 0)

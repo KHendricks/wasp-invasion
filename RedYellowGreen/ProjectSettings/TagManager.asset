@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Powerup
   - PlayerShield
+  - MusicController
   layers:
   - Default
   - TransparentFX

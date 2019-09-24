@@ -9,7 +9,7 @@ public class WaspEnemy : Enemy
     {
         SetHealth(3);
         SetSpeed(-1.5f);
-        Destroy(gameObject, 7f);
+        Destroy(gameObject, 15f);
 
         if (!gameObject.GetComponent<SpriteRenderer>().flipX)
         {
@@ -24,5 +24,10 @@ public class WaspEnemy : Enemy
         transform.position = new Vector3(transform.position.x + (GetSpeed() * Time.deltaTime),
                                          transform.position.y,
                                          transform.position.z);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        base.OnCollisionEnter2D(collision);
     }
 }

@@ -12,6 +12,8 @@ public class PlayerControls : MonoBehaviour
     private bool isLerping;
     private bool isInjured;
     private GameObject playerShield;
+    private GameObject buttonPressSound;
+
 
     public GameObject[] playerLives;
     public int lives;
@@ -20,9 +22,6 @@ public class PlayerControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerShield = GameObject.Find("PlayerShield");
-        playerShield.SetActive(false);
-
         anim = GetComponent<Animator>();
         scriptManager = GameObject.Find("ScriptManager");
         Animator = gameObject.GetComponent<Animator>();
@@ -41,6 +40,7 @@ public class PlayerControls : MonoBehaviour
         isInjured = false;
 
         SelectCharacter();
+        buttonPressSound = GameObject.Find("ButtonPress");
     }
 
     // Update is called once per frame
@@ -62,6 +62,11 @@ public class PlayerControls : MonoBehaviour
 
     public void WalkRight()
     {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
         movementState = "Walking";
         Speed = walkSpeed;
 
@@ -77,6 +82,11 @@ public class PlayerControls : MonoBehaviour
 
     public void WalkLeft()
     {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
         movementState = "Walking";
         Speed = -walkSpeed;
         Animator.SetBool("isWalking", true);
@@ -90,6 +100,11 @@ public class PlayerControls : MonoBehaviour
 
     public void RunRight()
     {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
         movementState = "Running";
         Speed = runSpeed;
 
@@ -104,6 +119,11 @@ public class PlayerControls : MonoBehaviour
 
     public void RunLeft()
     {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
         movementState = "Running";
         Speed = -runSpeed;
 
@@ -118,6 +138,11 @@ public class PlayerControls : MonoBehaviour
 
     public void StopMoving()
     {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
         movementState = "Stopped";
         Speed = 0;
 
