@@ -13,6 +13,7 @@ public class PlayerControls : MonoBehaviour
     private bool isInjured;
     private GameObject playerShield;
     private GameObject buttonPressSound;
+    private GameObject injuredSound;
 
 
     public GameObject[] playerLives;
@@ -41,6 +42,7 @@ public class PlayerControls : MonoBehaviour
 
         SelectCharacter();
         buttonPressSound = GameObject.Find("ButtonPress");
+        injuredSound = GameObject.Find("InjuredSound");
     }
 
     // Update is called once per frame
@@ -181,6 +183,11 @@ public class PlayerControls : MonoBehaviour
         {
             if (collision.gameObject.tag == "Enemy")
             {
+                if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+                {
+                    injuredSound.GetComponent<AudioSource>().Play();
+                }
+
                 lives -= 1;
                 scriptManager.GetComponent<PlayerStatusCheck>().UpdateLivesUI();
                 StartCoroutine(InjuredFlash());

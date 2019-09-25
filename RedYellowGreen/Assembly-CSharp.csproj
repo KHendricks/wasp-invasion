@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CameraRotate.cs" />
     <Compile Include="Assets\Scripts\Countdown.cs" />
+    <Compile Include="Assets\Scripts\DestroyPlatform.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\FrogControls.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Assets\Scripts\Preferences.cs" />
     <Compile Include="Assets\Scripts\ShieldPowerup.cs" />
     <Compile Include="Assets\Scripts\ShootingStar.cs" />
+    <Compile Include="Assets\Scripts\SpawnPlatform.cs" />
     <Compile Include="Assets\Scripts\Tips.cs" />
     <Compile Include="Assets\Scripts\ToucanControls.cs" />
     <Compile Include="Assets\Scripts\WaspEnemy.cs" />

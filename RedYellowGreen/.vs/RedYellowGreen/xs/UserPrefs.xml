@@ -1,11 +1,15 @@
 ﻿<Properties StartupConfiguration="{53BCE6AB-18F9-024E-6385-E8A32AE749D4}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerControls.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemySpawner.cs">
     <Files>
       <File FileName="Assets/Scripts/MenuButtons.cs" Line="110" Column="9" />
-      <File FileName="Assets/Scripts/OptionsMenu.cs" Line="106" Column="9" />
+      <File FileName="Assets/Scripts/OptionsMenu.cs" Line="61" Column="1" />
       <File FileName="Assets/Scripts/WaspEnemy.cs" Line="31" Column="42" />
       <File FileName="Assets/Scripts/Enemy.cs" Line="22" Column="11" />
-      <File FileName="Assets/Scripts/PlayerControls.cs" Line="16" Column="1" />
+      <File FileName="Assets/Scripts/PlayerControls.cs" Line="43" Column="27" />
+      <File FileName="Assets/Scripts/GameOver.cs" Line="49" Column="9" />
+      <File FileName="Assets/Scripts/DestroyPlatform.cs" Line="24" Column="33" />
+      <File FileName="Assets/Scripts/SpawnPlatform.cs" Line="17" Column="9" />
+      <File FileName="Assets/Scripts/EnemySpawner.cs" Line="18" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
