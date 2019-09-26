@@ -9,6 +9,7 @@ public class ToucanControls : MonoBehaviour
     private GameObject[] livesUi;
     private float[] flightLevels;
     private int currentFlightIndex;
+    private GameObject buttonPressSound;
 
     // Start is called before the first frame update
     void Start()
@@ -28,12 +29,11 @@ public class ToucanControls : MonoBehaviour
         flightLevels[1] = -.2f;
         flightLevels[2] = .2f;
 
+        buttonPressSound = GameObject.Find("ButtonPress");
+
         // Set sprite
         gameObject.GetComponent<SpriteRenderer>().sprite =
             Resources.Load<Sprite>("Sprites/toucan_base");
-
-        // Adds collider
-        gameObject.AddComponent<PolygonCollider2D>();
 
         // Set animator
         gameObject.GetComponent<Animator>().runtimeAnimatorController = 
@@ -63,20 +63,30 @@ public class ToucanControls : MonoBehaviour
 
     public void FlyUp()
     {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
         if (currentFlightIndex < 2)
         {
             currentFlightIndex++;
         }
 
         Vector3 newPosition = new Vector3(player.transform.position.x,
-                                            flightLevels[currentFlightIndex],
-                                            player.transform.position.z);
+                                          flightLevels[currentFlightIndex],
+                                          player.transform.position.z);
 
         player.transform.position = newPosition;
     }
 
     public void FlyDown()
     {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
         if (currentFlightIndex > 0)
         {
             currentFlightIndex--;

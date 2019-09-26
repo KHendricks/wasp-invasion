@@ -455,6 +455,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf72de94bcb148609d4cc59d2a69be4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundButton: {fileID: 5845132933438391647}
+  musicButton: {fileID: 8035228771835063898}
   optionsPanel: {fileID: 5845132934964418754}
 --- !u!1 &5845132934964418754
 GameObject:

@@ -40,7 +40,6 @@ public class PlayerControls : MonoBehaviour
         isLerping = false;
         isInjured = false;
 
-        SelectCharacter();
         buttonPressSound = GameObject.Find("ButtonPress");
         injuredSound = GameObject.Find("InjuredSound");
     }
@@ -156,25 +155,6 @@ public class PlayerControls : MonoBehaviour
     public string GetMovementState()
     {
         return movementState;
-    }
-
-    void SelectCharacter()
-    {
-        // Decide what movement, animations, and sprites to use based
-        // on selected choice
-        Debug.Log("CHAR: " + PlayerPrefs.GetString("characterSelected"));
-        if (PlayerPrefs.GetString("CharacterSelected") == "Toucan")
-        {
-            gameObject.AddComponent<ToucanControls>();
-        }
-        else if (PlayerPrefs.GetString("CharacterSelected") == "Frog")
-        {
-            gameObject.AddComponent<FrogControls>();
-        }
-        else if (PlayerPrefs.GetString("CharacterSelected") == "Wasp")
-        {
-
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

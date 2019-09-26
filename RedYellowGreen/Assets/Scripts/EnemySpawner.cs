@@ -16,6 +16,7 @@ public class EnemySpawner : MonoBehaviour
     private float waspSpawnOffset;
     private float starSpawnOffsetX, starSpawnOffsetY;
     private bool isWaspSpawning;
+    private bool spawningThreeWasps;
 
     // Start is called before the first frame update
     void Start()
@@ -36,17 +37,17 @@ public class EnemySpawner : MonoBehaviour
         isWaspSpawning = false;
         waspSpawnOffset = 7f;
 
-        isStarSpawning = false;
         starSpawnOffsetX = 0;
         starSpawnOffsetY = 2;
 
         // Spawns a shooting star if the players score keeps decrementing
         scoreBucket = new ArrayList();
-        waspSpawnOverride = false;
         InvokeRepeating("CheckScore", 5f, 2);
 
         // Set initial spawn timer for wasps
         SetSpawnTimer(5, 10);
+
+        spawningThreeWasps = false;
     }
 
     // Update is called once per frame
@@ -78,52 +79,159 @@ public class EnemySpawner : MonoBehaviour
     IEnumerator SpawnWasp()
     {
         isWaspSpawning = true;
-        Debug.Log("BEFORE: " + Time.time);
+        float timeToSpawn = Time.time;
         yield return new WaitForSeconds(Random.Range(spawnTimer[0], spawnTimer[1]));
-        Debug.Log("AFTER: " + Time.time);
+        Debug.Log("Time to Spawn: " + (Time.time - timeToSpawn));
         SpawnWaspEntity();
         isWaspSpawning = false;
     }
 
     void SpawnWaspEntity()
     {
-        int spawnIndex;
-        spawnIndex = Random.Range(0, 3);
-        if (player.GetComponent<SpriteRenderer>().flipX)
-        {
-            waspSpawnOffset *= -1;
-        }
+        Debug.Log("TIME: " + (Time.time - startTime));
 
         // Spawn Wasp(s) based on difficutly.
         // Spawn a single wasp based on direction of player
         if (Time.time - startTime < 45)
         {
-            GameObject wasp =
-                        Instantiate(waspEnemy,
-                        new Vector3(player.transform.position.x + waspSpawnOffset, flightLevels[spawnIndex], 0),
-                        Quaternion.identity);
-
-            if (waspSpawnOffset < 0)
-            {
-                wasp.GetComponent<SpriteRenderer>().flipX = false;
-            }
+            SetSpawnTimer(5, 10);
+            SpawnSingleWasp();
         }
 
         // Speed up spawn rate of a single wasp
         else if (Time.time - startTime < 90)
         {
             SetSpawnTimer(1, 6);
+            SpawnSingleWasp();
+        }
 
-            GameObject wasp =
-            Instantiate(waspEnemy,
-            new Vector3(player.transform.position.x + waspSpawnOffset, flightLevels[spawnIndex], 0),
-            Quaternion.identity);
+        // Spawn two wasps slowly
+        else if (Time.time - startTime < 180)
+        {
+            SetSpawnTimer(5, 10);
 
-            if (waspSpawnOffset < 0)
+            int firstSpawnIndex = Random.Range(0, 3);
+            int secondSpawnIndex;
+            do
             {
-                wasp.GetComponent<SpriteRenderer>().flipX = false;
+                secondSpawnIndex = Random.Range(0, 3);
+            } while (firstSpawnIndex == secondSpawnIndex);
+
+            SpawnSingleWasp(firstSpawnIndex);
+            SpawnSingleWasp(secondSpawnIndex);
+        }
+
+        // Spawn two wasps quickly
+        else if (Time.time - startTime < 300)
+        {
+            SetSpawnTimer(1, 5);
+
+            int firstSpawnIndex = Random.Range(0, 3);
+            int secondSpawnIndex;
+            do
+            {
+                secondSpawnIndex = Random.Range(0, 3);
+            } while (firstSpawnIndex == secondSpawnIndex);
+
+            SpawnSingleWasp(firstSpawnIndex);
+            SpawnSingleWasp(secondSpawnIndex);
+        }
+
+        // Time to make the game hard
+        else
+        {
+            SetSpawnTimer(1, 3);
+
+            int spawnType = Random.Range(0, 5);
+
+            if (spawnType == 0)
+            {
+                SpawnSingleWasp();
+            }
+            else
+            {
+                if (!spawningThreeWasps)
+                {
+                    StartCoroutine(SpawnThreeWasps(.7f));
+                }
             }
         }
+    }
+
+    GameObject SpawnSingleWasp()
+    {
+        if (player.GetComponent<SpriteRenderer>().flipX)
+        {
+            waspSpawnOffset *= -1;
+        }
+        else
+        {
+            waspSpawnOffset = Mathf.Abs(waspSpawnOffset);
+        }
+
+        GameObject wasp = Instantiate(waspEnemy,
+                                      new Vector3(player.transform.position.x + waspSpawnOffset,
+                                                  flightLevels[Random.Range(0, 3)],
+                                                  0),
+                                      Quaternion.identity);
+
+        if (waspSpawnOffset < 0)
+        {
+            wasp.GetComponent<SpriteRenderer>().flipX = false;
+        }
+
+        return wasp;
+    }
+
+    GameObject SpawnSingleWasp(int spawnIndex)
+    {
+        if (player.GetComponent<SpriteRenderer>().flipX)
+        {
+            waspSpawnOffset *= -1;
+        }
+        else
+        {
+            waspSpawnOffset = Mathf.Abs(waspSpawnOffset);
+        }
+
+        GameObject wasp = Instantiate(waspEnemy,
+                                      new Vector3(player.transform.position.x + waspSpawnOffset,
+                                                  flightLevels[spawnIndex],
+                                                  0),
+                                      Quaternion.identity);
+
+        if (waspSpawnOffset < 0)
+        {
+            wasp.GetComponent<SpriteRenderer>().flipX = false;
+        }
+
+        return wasp;
+    }
+
+    IEnumerator SpawnThreeWasps(float delay)
+    {
+        spawningThreeWasps = true;
+        int[] spawnIndexes = new int[3];
+        spawnIndexes[0] = Random.Range(0, 3);
+
+        do
+        {
+            spawnIndexes[1] = Random.Range(0, 3);
+        } while (spawnIndexes[0] == spawnIndexes[1]);
+
+        do
+        {
+            spawnIndexes[2] = Random.Range(0, 3);
+        } while (spawnIndexes[2] == spawnIndexes[0] ||
+                 spawnIndexes[2] == spawnIndexes[1]);
+
+        SpawnSingleWasp(spawnIndexes[0]);
+        yield return new WaitForSeconds(delay);
+        SpawnSingleWasp(spawnIndexes[1]);
+        yield return new WaitForSeconds(delay);
+        SpawnSingleWasp(spawnIndexes[2]);
+
+        spawningThreeWasps = false;
     }
 
     // Star only spawns when player is stopped and should be moving

@@ -6,16 +6,13 @@ using UnityEngine.UI;
 public class OptionsMenu : MonoBehaviour
 {
     private GameObject musicController;
-    private GameObject soundButton, musicButton;
+    public GameObject soundButton, musicButton;
     public GameObject optionsPanel;
     private GameObject buttonPressSound;
 
     // Start is called before the first frame update
     void Start()
     {
-        soundButton = GameObject.Find("SoundButton");
-        musicButton = GameObject.Find("MusicButton");
-
         try
         {
             musicController = GameObject.FindWithTag("MusicController");

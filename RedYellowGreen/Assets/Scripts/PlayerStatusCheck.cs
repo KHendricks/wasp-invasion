@@ -14,9 +14,7 @@ public class PlayerStatusCheck : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        walkLeft = GameObject.Find("Walk - Left").GetComponent<Button>();
         walkRight = GameObject.Find("Walk - Right").GetComponent<Button>();
-        runLeft = GameObject.Find("Run - Left").GetComponent<Button>();
         runRight = GameObject.Find("Run - Right").GetComponent<Button>();
         stop = GameObject.Find("Stop Moving").GetComponent<Button>();
 
@@ -143,25 +141,19 @@ public class PlayerStatusCheck : MonoBehaviour
         switch (lightColor)
         {
             case (int)StopLightColors.red:
-                walkLeft.interactable = false;
                 walkRight.interactable = false;
-                runLeft.interactable = false;
                 runRight.interactable = false;
                 stop.interactable = true;
                 break;
 
             case (int)StopLightColors.yellow:
-                walkLeft.interactable = true;
                 walkRight.interactable = true;
-                runLeft.interactable = false;
                 runRight.interactable = false;
                 stop.interactable = false;
                 break;
 
             case (int)StopLightColors.green:
-                walkLeft.interactable = false;
                 walkRight.interactable = false;
-                runLeft.interactable = true;
                 runRight.interactable = true;
                 stop.interactable = false;
                 break;

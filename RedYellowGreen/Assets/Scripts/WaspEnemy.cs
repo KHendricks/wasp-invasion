@@ -8,8 +8,8 @@ public class WaspEnemy : Enemy
     void Start()
     {
         SetHealth(3);
-        SetSpeed(-1.5f);
-        Destroy(gameObject, 15f);
+        SetSpeed(-2f);
+        Destroy(gameObject, 30f);
 
         if (!gameObject.GetComponent<SpriteRenderer>().flipX)
         {
