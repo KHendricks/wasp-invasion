@@ -7,6 +7,8 @@ public class EnemySpawner : MonoBehaviour
 {
     private GameObject player;
     private GameObject waspEnemy;
+    private GameObject hearts;
+    private GameObject extraPoints;
     private GameObject shootingStar;
     private GameObject pointText;
     private float startTime;
@@ -28,6 +30,8 @@ public class EnemySpawner : MonoBehaviour
 
         waspEnemy = (GameObject)Resources.Load("Prefabs/Wasp", typeof(GameObject));
         shootingStar = (GameObject)Resources.Load("Prefabs/ShootingStar", typeof(GameObject));
+        hearts = (GameObject)Resources.Load("Prefabs/ExtraLife", typeof(GameObject));
+        extraPoints = (GameObject)Resources.Load("Prefabs/ExtraPoints", typeof(GameObject));
 
         flightLevels = new float[3];
         flightLevels[0] = -.5f;
@@ -41,13 +45,16 @@ public class EnemySpawner : MonoBehaviour
         starSpawnOffsetY = 2;
 
         // Spawns a shooting star if the players score keeps decrementing
-        scoreBucket = new ArrayList();
-        InvokeRepeating("CheckScore", 5f, 2);
+        // scoreBucket = new ArrayList();
+        // InvokeRepeating("CheckScore", 5f, 2);
 
         // Set initial spawn timer for wasps
         SetSpawnTimer(5, 10);
-
         spawningThreeWasps = false;
+
+        // Spawn Bonus Points
+        InvokeRepeating("SpawnHearts", 5f, 17);
+        InvokeRepeating("SpawnExtraPoints", 5f, 10);
     }
 
     // Update is called once per frame
@@ -56,6 +63,37 @@ public class EnemySpawner : MonoBehaviour
         if (!isWaspSpawning)
         {
             StartCoroutine(SpawnWasp());
+        }
+    }
+
+    void SpawnHearts()
+    {
+        int chance = Random.Range(0, 3);
+
+        if (chance == 0)
+        {
+            if (player.GetComponent<PlayerControls>().lives < 3)
+            {
+                GameObject heart = Instantiate(hearts,
+                                               new Vector3(player.transform.position.x + waspSpawnOffset,
+                                                           flightLevels[Random.Range(0, 3)],
+                                                           0),
+                                               Quaternion.identity);
+            }
+        }
+    }
+
+    void SpawnExtraPoints()
+    {
+        int chance = Random.Range(0, 5);
+
+        if (chance <= 2)
+        {
+            GameObject points = Instantiate(extraPoints,
+                                           new Vector3(player.transform.position.x + waspSpawnOffset,
+                                                       flightLevels[Random.Range(0, 3)],
+                                                       0),
+                                           Quaternion.identity);
         }
     }
 
@@ -81,15 +119,12 @@ public class EnemySpawner : MonoBehaviour
         isWaspSpawning = true;
         float timeToSpawn = Time.time;
         yield return new WaitForSeconds(Random.Range(spawnTimer[0], spawnTimer[1]));
-        Debug.Log("Time to Spawn: " + (Time.time - timeToSpawn));
         SpawnWaspEntity();
         isWaspSpawning = false;
     }
 
     void SpawnWaspEntity()
     {
-        Debug.Log("TIME: " + (Time.time - startTime));
-
         // Spawn Wasp(s) based on difficutly.
         // Spawn a single wasp based on direction of player
         if (Time.time - startTime < 45)

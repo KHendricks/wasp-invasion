@@ -15,7 +15,6 @@ public class PlayerControls : MonoBehaviour
     private GameObject buttonPressSound;
     private GameObject injuredSound;
 
-
     public GameObject[] playerLives;
     public int lives;
     public string movementState;
@@ -98,6 +97,24 @@ public class PlayerControls : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
     }
+
+    public void UpdateMovement()
+    {
+        if (movementState == "Running")
+        {
+            WalkRight();
+        }
+        else if (movementState == "Walking")
+        {
+            RunRight();
+        }
+        else
+        {
+            RunRight();
+        }
+    }
+
+
 
     public void RunRight()
     {

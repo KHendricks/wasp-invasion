@@ -97,4 +97,10 @@ public class PointController : MonoBehaviour
     {
         return playerScore;
     }
+
+    public void AddPoints(int val)
+    {
+        playerScore += val;
+        pointText.GetComponent<Text>().text = playerScore.ToString();
+    }
 }

@@ -1,11 +1,16 @@
 ﻿<Properties StartupConfiguration="{53BCE6AB-18F9-024E-6385-E8A32AE749D4}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/OptionsMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerControls.cs">
     <Files>
       <File FileName="Assets/Scripts/MenuButtons.cs" Line="110" Column="9" />
-      <File FileName="Assets/Scripts/ToucanControls.cs" Line="89" Column="9" />
-      <File FileName="Assets/Scripts/PlayerControls.cs" Line="141" Column="1" />
+      <File FileName="Assets/Scripts/ToucanControls.cs" Line="66" Column="1" />
+      <File FileName="Assets/Scripts/PlayerControls.cs" Line="101" Column="31" />
       <File FileName="Assets/Scripts/PlayerStatusCheck.cs" Line="17" Column="1" />
-      <File FileName="Assets/Scripts/OptionsMenu.cs" Line="46" Column="1" />
+      <File FileName="Assets/Scripts/OptionsMenu.cs" Line="15" Column="6" />
+      <File FileName="Assets/Scripts/EnemySpawner.cs" Line="55" Column="30" />
+      <File FileName="Assets/Scripts/ExtraLife.cs" Line="13" Column="52" />
+      <File FileName="Assets/Scripts/ExtraPoints.cs" Line="13" Column="50" />
+      <File FileName="Assets/Scripts/PointController.cs" Line="104" Column="70" />
+      <File FileName="Assets/Scripts/SwipeManager.cs" Line="76" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
