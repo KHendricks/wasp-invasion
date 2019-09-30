@@ -39,12 +39,20 @@ public class Pause : MonoBehaviour
 
         if (Time.timeScale == 1f)
         {
+            foreach (GameObject wasp in GameObject.FindGameObjectsWithTag("Enemy"))
+            {
+                wasp.GetComponent<AudioSource>().Pause();
+            }
             Time.timeScale = 0f;
             pausePanel.SetActive(true);
             pauseButton.SetActive(false);
         }
         else
         {
+            foreach (GameObject wasp in GameObject.FindGameObjectsWithTag("Enemy"))
+            {
+                wasp.GetComponent<AudioSource>().UnPause();
+            }
             Time.timeScale = 1f;
             pausePanel.SetActive(false);
             pauseButton.SetActive(true);

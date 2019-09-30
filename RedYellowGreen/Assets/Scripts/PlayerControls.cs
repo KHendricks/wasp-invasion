@@ -17,7 +17,7 @@ public class PlayerControls : MonoBehaviour
 
     public GameObject[] playerLives;
     public int lives;
-    public string movementState;
+    public string prevMovementState, movementState;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +35,7 @@ public class PlayerControls : MonoBehaviour
         walkSpeed = .5f;
         lives = 3;
 
+        prevMovementState = "";
         movementState = "Stopped";
         isLerping = false;
         isInjured = false;
@@ -48,6 +49,38 @@ public class PlayerControls : MonoBehaviour
     {
         if (scriptManager.GetComponent<Countdown>().timerFinished)
         {
+            if (SwipeManager.IsSwipingUp())
+            {
+                gameObject.GetComponent<ToucanControls>().FlyUp();
+
+                // This is to handle the stop button
+                if (prevMovementState == "Running")
+                    RunRight();
+                else if (prevMovementState == "Walking")
+                    WalkRight();
+                else
+                    StopMoving();
+            }
+            else if (SwipeManager.IsSwipingDown())
+            {
+                gameObject.GetComponent<ToucanControls>().FlyDown();
+
+                // This is to handle the stop button
+                if (prevMovementState == "Running")
+                    RunRight();
+                else if (prevMovementState == "Walking")
+                    WalkRight();
+                else
+                    StopMoving();
+            }
+            if (SwipeManager.IsSwipingLeft())
+            {
+                WalkRight();
+            }
+            else if (SwipeManager.IsSwipingRight())
+            {
+                RunRight();
+            }
             Movement();
         }
     }
@@ -66,7 +99,7 @@ public class PlayerControls : MonoBehaviour
         {
             buttonPressSound.GetComponent<AudioSource>().Play();
         }
-
+        prevMovementState = movementState;
         movementState = "Walking";
         Speed = walkSpeed;
 
@@ -123,6 +156,7 @@ public class PlayerControls : MonoBehaviour
             buttonPressSound.GetComponent<AudioSource>().Play();
         }
 
+        prevMovementState = movementState;
         movementState = "Running";
         Speed = runSpeed;
 
@@ -161,6 +195,7 @@ public class PlayerControls : MonoBehaviour
             buttonPressSound.GetComponent<AudioSource>().Play();
         }
 
+        prevMovementState = movementState;
         movementState = "Stopped";
         Speed = 0;
 

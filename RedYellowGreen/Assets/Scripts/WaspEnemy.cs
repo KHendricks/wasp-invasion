@@ -7,8 +7,13 @@ public class WaspEnemy : Enemy
     // Start is called before the first frame update
     void Start()
     {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            gameObject.GetComponent<AudioSource>().Play();
+        }
+
         SetHealth(3);
-        SetSpeed(-2f);
+        SetSpeed(-1.5f);
         Destroy(gameObject, 30f);
 
         if (!gameObject.GetComponent<SpriteRenderer>().flipX)
