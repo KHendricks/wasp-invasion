@@ -16,6 +16,15 @@ public class OptionsMenu : MonoBehaviour
         try
         {
             musicController = GameObject.FindWithTag("MusicController");
+
+            if (PlayerPrefs.GetInt("isMusicEnabled") == 1)
+            {
+                musicController.GetComponent<AudioSource>().Play();
+            }
+            else if (PlayerPrefs.GetInt("isMusicEnabled") == 0)
+            {
+                musicController.GetComponent<AudioSource>().Stop();
+            }
         }
         catch (System.Exception e)
         {

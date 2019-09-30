@@ -39,7 +39,7 @@ public class EnemySpawner : MonoBehaviour
         flightLevels[2] = .2f;
 
         isWaspSpawning = false;
-        waspSpawnOffset = 7f;
+        waspSpawnOffset = 3.5f;
 
         starSpawnOffsetX = 0;
         starSpawnOffsetY = 2;

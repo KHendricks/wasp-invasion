@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1920097643158582111}
   - component: {fileID: 2019977004}
   - component: {fileID: 2019976999}
+  - component: {fileID: 5909221480146639366}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -179,6 +180,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a1069c9eb7f465d836000a829e355b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5909221480146639366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920097643158582104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7771c2811ded74d519d051d690800724, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSwipeLength: 0.5
+  triggerSwipeAtMinLength: 0
+  useEightDirections: 0
 --- !u!1001 &900587867315877012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -572,11 +588,57 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 40
       objectReference: {fileID: 0}
-    - target: {fileID: 4167305702899200876, guid: 89c7fc7bcda88434a93413b4251fbb59,
+    - target: {fileID: 175969481231088089, guid: 89c7fc7bcda88434a93413b4251fbb59,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833715167285514444, guid: 89c7fc7bcda88434a93413b4251fbb59,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 2553735427375362579, guid: 89c7fc7bcda88434a93413b4251fbb59,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2553735427478239331, guid: 89c7fc7bcda88434a93413b4251fbb59,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2553735427048058558, guid: 89c7fc7bcda88434a93413b4251fbb59,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 467233092, guid: 89c7fc7bcda88434a93413b4251fbb59, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 506709316, guid: 89c7fc7bcda88434a93413b4251fbb59, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167305703927965716, guid: 89c7fc7bcda88434a93413b4251fbb59,
+        type: 3}
+      propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1920097643158582111}
+      objectReference: {fileID: -634939176177036431, guid: 9a3abf460a85c4f5894ae4d189d55db2,
+        type: 3}
+    - target: {fileID: 4167305704354602246, guid: 89c7fc7bcda88434a93413b4251fbb59,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -634939176177036431, guid: 9a3abf460a85c4f5894ae4d189d55db2,
+        type: 3}
+    - target: {fileID: 4167305703363973010, guid: 89c7fc7bcda88434a93413b4251fbb59,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -634939176177036431, guid: 9a3abf460a85c4f5894ae4d189d55db2,
+        type: 3}
     - target: {fileID: 2553735427690625049, guid: 89c7fc7bcda88434a93413b4251fbb59,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -610,6 +672,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2019976999}
+    - target: {fileID: 4167305702899200876, guid: 89c7fc7bcda88434a93413b4251fbb59,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1920097643158582111}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89c7fc7bcda88434a93413b4251fbb59, type: 3}
 --- !u!224 &1920097644499959394 stripped
