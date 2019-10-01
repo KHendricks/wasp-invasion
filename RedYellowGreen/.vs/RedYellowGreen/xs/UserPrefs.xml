@@ -1,12 +1,9 @@
 ﻿<Properties StartupConfiguration="{53BCE6AB-18F9-024E-6385-E8A32AE749D4}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/WaspSpray.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameOverAd.cs">
     <Files>
-      <File FileName="Assets/Scripts/WaspEnemy.cs" Line="13" Column="10" />
-      <File FileName="Assets/Scripts/OptionsMenu.cs" Line="8" Column="39" />
-      <File FileName="Assets/Scripts/GameOver.cs" Line="35" Column="1" />
+      <File FileName="Assets/Scripts/GameOverAd.cs" Line="47" Column="64" />
       <File FileName="Assets/Scripts/Pause.cs" Line="55" Column="14" />
-      <File FileName="Assets/Scripts/WaspSpray.cs" Line="14" Column="5" />
-      <File FileName="Assets/Scripts/EnemySpawner.cs" Line="42" Column="30" />
+      <File FileName="Assets/Scripts/GameOverMusic.cs" Line="14" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
