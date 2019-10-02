@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
     private GameObject waspEnemy;
     private GameObject hearts;
     private GameObject extraPoints;
+    private GameObject poisonApple;
     private GameObject shootingStar;
     private GameObject pointText;
     private float startTime;
@@ -19,6 +20,7 @@ public class EnemySpawner : MonoBehaviour
     private float starSpawnOffsetX, starSpawnOffsetY;
     private bool isWaspSpawning;
     private bool spawningThreeWasps;
+    public bool stopSpawning;
 
     // Start is called before the first frame update
     void Start()
@@ -32,12 +34,14 @@ public class EnemySpawner : MonoBehaviour
         shootingStar = (GameObject)Resources.Load("Prefabs/ShootingStar", typeof(GameObject));
         hearts = (GameObject)Resources.Load("Prefabs/ExtraLife", typeof(GameObject));
         extraPoints = (GameObject)Resources.Load("Prefabs/ExtraPoints", typeof(GameObject));
+        poisonApple = (GameObject)Resources.Load("Prefabs/PoisonApple", typeof(GameObject));
 
         flightLevels = new float[3];
         flightLevels[0] = -.5f;
         flightLevels[1] = -.2f;
         flightLevels[2] = .2f;
 
+        stopSpawning = true;
         isWaspSpawning = false;
         waspSpawnOffset = 3.5f;
 
@@ -60,7 +64,7 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isWaspSpawning)
+        if (stopSpawning && !isWaspSpawning)
         {
             StartCoroutine(SpawnWasp());
         }
@@ -85,15 +89,23 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnExtraPoints()
     {
-        int chance = Random.Range(0, 5);
+        int chance = Random.Range(0, 10);
 
-        if (chance <= 2)
+        if (chance <= 5)
         {
             GameObject points = Instantiate(extraPoints,
                                            new Vector3(player.transform.position.x + waspSpawnOffset,
                                                        flightLevels[Random.Range(0, 3)],
                                                        0),
                                            Quaternion.identity);
+        }
+        else if (chance == 9)
+        {
+            GameObject points = Instantiate(poisonApple,
+                               new Vector3(player.transform.position.x + waspSpawnOffset,
+                                           flightLevels[Random.Range(0, 3)],
+                                           0),
+                               Quaternion.identity);
         }
     }
 
@@ -127,21 +139,21 @@ public class EnemySpawner : MonoBehaviour
     {
         // Spawn Wasp(s) based on difficutly.
         // Spawn a single wasp based on direction of player
-        if (Time.time - startTime < 20)
+        if (Time.time - startTime < 30)
         {
             SetSpawnTimer(5, 10);
             SpawnSingleWasp();
         }
 
         // Speed up spawn rate of a single wasp
-        else if (Time.time - startTime < 40)
+        else if (Time.time - startTime < 55)
         {
             SetSpawnTimer(1, 6);
             SpawnSingleWasp();
         }
 
         // Spawn two wasps slowly
-        else if (Time.time - startTime < 60)
+        else if (Time.time - startTime < 80)
         {
             SetSpawnTimer(5, 10);
 
@@ -157,7 +169,7 @@ public class EnemySpawner : MonoBehaviour
         }
 
         // Spawn two wasps quickly
-        else if (Time.time - startTime < 80)
+        else if (Time.time - startTime < 105)
         {
             SetSpawnTimer(1, 5);
 
@@ -173,22 +185,13 @@ public class EnemySpawner : MonoBehaviour
         }
 
         // Time to make the game hard
-        else if (Time.time - startTime < 100)
+        else if (Time.time - startTime < 130)
         {
-            SetSpawnTimer(1, 4);
+            SetSpawnTimer(1, 5);
 
-            int spawnType = Random.Range(0, 5);
-
-            if (spawnType == 0)
+            if (!spawningThreeWasps)
             {
-                SpawnSingleWasp();
-            }
-            else
-            {
-                if (!spawningThreeWasps)
-                {
-                    StartCoroutine(SpawnThreeWasps(.9f));
-                }
+                StartCoroutine(SpawnThreeWasps(.9f));
             }
         }
 

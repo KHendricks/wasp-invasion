@@ -143,6 +143,7 @@
     <Compile Include="Assets\Scripts\PlayerShield.cs" />
     <Compile Include="Assets\Scripts\PlayerStatusCheck.cs" />
     <Compile Include="Assets\Scripts\PointController.cs" />
+    <Compile Include="Assets\Scripts\PoisonApple.cs" />
     <Compile Include="Assets\Scripts\Powerup.cs" />
     <Compile Include="Assets\Scripts\PowerupSpawner.cs" />
     <Compile Include="Assets\Scripts\Preferences.cs" />

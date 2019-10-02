@@ -390,24 +390,21 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 435ebfde710d44efeb1962eedded25e2, type: 3}
-    m_FontSize: 40
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 0
     m_MaxSize: 80
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: You are an animal of the jungle, restricted to move by the colorful sky
-    button. The sky button permits you to move up and down no matter the color but
-    when you must move to the side and it turns green you must move VERY FAST, when
-    it turns yellow you must move SLOWLY, and when it turns red you must STOP. There
-    are many dangerous enemies in the jungle, be as nimble as you can to avoid them
-    while listening to the magic sky button. Doing so just might make you the best
-    animal in the jungle.
+  m_Text: "Swipe right on green. \nSwipe lift on yellow. \nTap the screen on red.
+    \nAvoid the wasps at all costs! \nIf you lose a life, look out for the heart!
+    It will restore all lives lost. \nAn apple a day doesn\u2019t keep the wasps away,
+    but it will give you a higher score."
 --- !u!114 &1304953283670825782
 MonoBehaviour:
   m_ObjectHideFlags: 0
