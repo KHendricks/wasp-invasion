@@ -12,7 +12,7 @@ public class ExtraPoints : MonoBehaviour
     {
         pickupSound = GameObject.Find("MunchSound");
         scriptManager = GameObject.Find("ScriptManager");
-        Destroy(gameObject, 20);
+        Destroy(gameObject, 60);
     }
 
     // Update is called once per frame
@@ -31,7 +31,7 @@ public class ExtraPoints : MonoBehaviour
             }
 
             gameObject.SetActive(false);
-            scriptManager.GetComponent<PointController>().AddPoints(20);
+            scriptManager.GetComponent<PointController>().AddPoints(5);
         }
     }
 }

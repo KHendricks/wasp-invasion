@@ -141,6 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerLives: []
   lives: 0
+  prevMovementState: 
   movementState: 
 --- !u!61 &2019977004
 BoxCollider2D:
@@ -591,12 +592,12 @@ PrefabInstance:
     - target: {fileID: 175969481231088089, guid: 89c7fc7bcda88434a93413b4251fbb59,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4833715167285514444, guid: 89c7fc7bcda88434a93413b4251fbb59,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2553735427375362579, guid: 89c7fc7bcda88434a93413b4251fbb59,
         type: 3}

@@ -127,21 +127,21 @@ public class EnemySpawner : MonoBehaviour
     {
         // Spawn Wasp(s) based on difficutly.
         // Spawn a single wasp based on direction of player
-        if (Time.time - startTime < 45)
+        if (Time.time - startTime < 20)
         {
             SetSpawnTimer(5, 10);
             SpawnSingleWasp();
         }
 
         // Speed up spawn rate of a single wasp
-        else if (Time.time - startTime < 90)
+        else if (Time.time - startTime < 40)
         {
             SetSpawnTimer(1, 6);
             SpawnSingleWasp();
         }
 
         // Spawn two wasps slowly
-        else if (Time.time - startTime < 180)
+        else if (Time.time - startTime < 60)
         {
             SetSpawnTimer(5, 10);
 
@@ -157,7 +157,7 @@ public class EnemySpawner : MonoBehaviour
         }
 
         // Spawn two wasps quickly
-        else if (Time.time - startTime < 300)
+        else if (Time.time - startTime < 80)
         {
             SetSpawnTimer(1, 5);
 
@@ -173,9 +173,9 @@ public class EnemySpawner : MonoBehaviour
         }
 
         // Time to make the game hard
-        else
+        else if (Time.time - startTime < 100)
         {
-            SetSpawnTimer(1, 3);
+            SetSpawnTimer(1, 4);
 
             int spawnType = Random.Range(0, 5);
 
@@ -187,8 +187,19 @@ public class EnemySpawner : MonoBehaviour
             {
                 if (!spawningThreeWasps)
                 {
-                    StartCoroutine(SpawnThreeWasps(.7f));
+                    StartCoroutine(SpawnThreeWasps(.9f));
                 }
+            }
+        }
+
+        // Time to make the game really hard
+        else
+        {
+            SetSpawnTimer(1, 2);
+
+            if (!spawningThreeWasps)
+            {
+                StartCoroutine(SpawnThreeWasps(.7f));
             }
         }
     }

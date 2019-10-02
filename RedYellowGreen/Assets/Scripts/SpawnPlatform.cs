@@ -38,7 +38,7 @@ public class SpawnPlatform : MonoBehaviour
     {
         GameObject platform =
             Instantiate(newPlatform,
-                        new Vector3(gameObject.transform.parent.transform.position.x + 10,
+                        new Vector3(gameObject.transform.parent.transform.position.x + 19,
                                     gameObject.transform.parent.transform.position.y,
                                     gameObject.transform.parent.transform.position.z),
                         Quaternion.identity);
@@ -48,8 +48,8 @@ public class SpawnPlatform : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            BeginSpawn();
             Destroy(gameObject);
+            BeginSpawn();
         }
     }
 }

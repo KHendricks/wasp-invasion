@@ -23,7 +23,7 @@ public class ToucanControls : MonoBehaviour
         livesUi[2] = GameObject.Find("Lives - 3");
 
         // Set flight heights
-        currentFlightIndex = 0;
+        currentFlightIndex = 1;
         flightLevels = new float[3];
         flightLevels[0] = -.5f;
         flightLevels[1] = -.2f;
