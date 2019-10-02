@@ -10,7 +10,7 @@ public class Pause : MonoBehaviour
     private GameObject pauseButton;
     private GameObject resumeButton;
     public GameObject optionsPanel;
-
+    public float startTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +22,13 @@ public class Pause : MonoBehaviour
         optionsPanel.SetActive(false);
         buttonPressSound = GameObject.Find("ButtonPress");
 
+        startTime = Time.time;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(Time.time);   
     }
 
     public void PauseResumeGame()

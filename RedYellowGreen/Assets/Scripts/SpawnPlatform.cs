@@ -5,10 +5,11 @@ using UnityEngine;
 public class SpawnPlatform : MonoBehaviour
 {
     private GameObject newPlatform;
-
+    private GameObject scriptManager;
     // Start is called before the first frame update
     void Start()
     {
+        scriptManager = GameObject.Find("ScriptManager");
         int groundSelection;
         if (!PlayerPrefs.HasKey("GroundSelected"))
         {
@@ -36,12 +37,26 @@ public class SpawnPlatform : MonoBehaviour
 
     void BeginSpawn()
     {
-        GameObject platform =
-            Instantiate(newPlatform,
-                        new Vector3(gameObject.transform.parent.transform.position.x + 19,
-                                    gameObject.transform.parent.transform.position.y,
-                                    gameObject.transform.parent.transform.position.z),
-                        Quaternion.identity);
+        if (scriptManager.GetComponent<Pause>().startTime - Time.time < 600)
+        {
+            GameObject platform =
+                Instantiate(newPlatform,
+                            new Vector3(gameObject.transform.parent.transform.position.x + 19,
+                                        gameObject.transform.parent.transform.position.y,
+                                        gameObject.transform.parent.transform.position.z),
+                            Quaternion.identity);
+        }
+        // You made it to the end of the game
+        else
+        {
+            GameObject endPlatform = (GameObject)Resources.Load("Prefabs/EndGround", typeof(GameObject));
+            GameObject platform =
+                Instantiate(endPlatform,
+                new Vector3(gameObject.transform.parent.transform.position.x + 19,
+                            gameObject.transform.parent.transform.position.y,
+                            gameObject.transform.parent.transform.position.z),
+                Quaternion.identity);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -4812,6 +4812,11 @@ PrefabInstance:
       propertyPath: m_textAlignment
       value: 514
       objectReference: {fileID: 0}
+    - target: {fileID: 1920097643158582105, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2270296381212924168, guid: 2599e2cf6d29b42098a88f6ea664980c,
         type: 3}
       propertyPath: m_LocalScale.x
