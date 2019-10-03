@@ -6,59 +6,77 @@ using UnityEngine;
 public class TextPopup : MonoBehaviour
 {
     private float startTime;
-    private GameObject difficutlyText;
+    private GameObject difficultyText;
     private GameObject enemySpawner;
 
     // Start is called before the first frame update
     void Start()
     {
-        difficutlyText = GameObject.Find("DifficultyText");
+        difficultyText = GameObject.Find("DifficultyText");
         enemySpawner = GameObject.Find("EnemySpawner");
-        difficutlyText.SetActive(false);
+        difficultyText.SetActive(false);
 
         StartCoroutine(DifficultyPopupMessage(5,
                                               "Buzz buzz\nDo you hear something?"));
         StartCoroutine(DifficultyPopupMessage(27, 
                                               "Did you know that wasps and toucans\nare mortal enemies?"));
-        StartCoroutine(DifficultyPopupMessage(52,
+        StartCoroutine(DifficultyPopupMessage(152,
                                               "The wasps are annoyed."));
-        StartCoroutine(DifficultyPopupMessage(77,
+        StartCoroutine(DifficultyPopupMessage(177,
                                               "Have you been stealing their apples?"));
-        StartCoroutine(DifficultyPopupMessage(102,
+        StartCoroutine(DifficultyPopupMessage(1102,
                                               "Do you know what else wasps\nhate besides toucans?"));
-        StartCoroutine(DifficultyPopupMessage(127,
+        StartCoroutine(DifficultyPopupMessage(1127,
                                               "WASPS HATE EVERYTHING..."));
+    }
+
+    public void SendPopupText(float delay, string message)
+    {
+        StartCoroutine(VictoryPopupMessage(delay, message));
+    }
+
+    IEnumerator VictoryPopupMessage(float delay, string message)
+    {
+        yield return new WaitForSeconds(delay);
+        difficultyText.SetActive(true);
+        StartCoroutine(LerpUp());
+        difficultyText.GetComponent<TextMeshProUGUI>().text = message;
+
+        yield return new WaitForSeconds(2.5f);
+        difficultyText.transform.localScale = new Vector3(.5f, .5f, .5f);
+        difficultyText.GetComponent<TextMeshProUGUI>().text = "";
+        difficultyText.SetActive(false);
     }
 
     IEnumerator DifficultyPopupMessage(float delay, string message)
     {
         yield return new WaitForSeconds(delay);
         enemySpawner.GetComponent<EnemySpawner>().stopSpawning = false;
-        difficutlyText.SetActive(true);
+        difficultyText.SetActive(true);
         StartCoroutine(LerpUp());
-        difficutlyText.GetComponent<TextMeshProUGUI>().text = message;
+        difficultyText.GetComponent<TextMeshProUGUI>().text = message;
 
         yield return new WaitForSeconds(2.5f);
         enemySpawner.GetComponent<EnemySpawner>().stopSpawning = true;
-        difficutlyText.transform.localScale = new Vector3(.5f, .5f, .5f);
-        difficutlyText.GetComponent<TextMeshProUGUI>().text = "";
-        difficutlyText.SetActive(false);
+        difficultyText.transform.localScale = new Vector3(.5f, .5f, .5f);
+        difficultyText.GetComponent<TextMeshProUGUI>().text = "";
+        difficultyText.SetActive(false);
     }
 
     IEnumerator LerpUp()
     {
         float progress = 0;
-        Vector3 initialScale = difficutlyText.transform.localScale;
+        Vector3 initialScale = difficultyText.transform.localScale;
         Vector3 finalScale = new Vector3(1.2f, 1.2f, 1.2f);
         float timeScale = 3f;
 
         while (progress <= 1)
         {
-            difficutlyText.transform.localScale = Vector3.Lerp(initialScale, finalScale, progress);
+            difficultyText.transform.localScale = Vector3.Lerp(initialScale, finalScale, progress);
             progress += Time.deltaTime * timeScale; ;
             yield return null;
         }
 
-        difficutlyText.transform.localScale = finalScale;
+        difficultyText.transform.localScale = finalScale;
     }
 }

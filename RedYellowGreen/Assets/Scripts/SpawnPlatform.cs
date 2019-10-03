@@ -32,12 +32,11 @@ public class SpawnPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     void BeginSpawn()
     {
-        if (scriptManager.GetComponent<Pause>().startTime - Time.time < 600)
+        if (Time.time - scriptManager.GetComponent<Pause>().startTime < 900)
         {
             GameObject platform =
                 Instantiate(newPlatform,
@@ -49,6 +48,7 @@ public class SpawnPlatform : MonoBehaviour
         // You made it to the end of the game
         else
         {
+            Debug.Log("End of game. You played for 15 minutes, you win.");
             GameObject endPlatform = (GameObject)Resources.Load("Prefabs/EndGround", typeof(GameObject));
             GameObject platform =
                 Instantiate(endPlatform,

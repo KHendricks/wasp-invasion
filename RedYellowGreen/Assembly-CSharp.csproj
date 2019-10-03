@@ -154,6 +154,7 @@
     <Compile Include="Assets\Scripts\TextPopup.cs" />
     <Compile Include="Assets\Scripts\Tips.cs" />
     <Compile Include="Assets\Scripts\ToucanControls.cs" />
+    <Compile Include="Assets\Scripts\Victory.cs" />
     <Compile Include="Assets\Scripts\WaspEnemy.cs" />
     <Compile Include="Assets\Scripts\WaspSpray.cs" />
     <Compile Include="Assets\Simple Scene Fade Load System\Demo (You don't have to import this folder)\DemoScript.cs" />
