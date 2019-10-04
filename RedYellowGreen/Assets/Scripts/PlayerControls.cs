@@ -246,6 +246,7 @@ public class PlayerControls : MonoBehaviour
         yield return new WaitForSeconds(.25f);
         gameObject.GetComponent<SpriteRenderer>().color = Color.white;
 
+        yield return new WaitForSeconds(1.5f);
         gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
         isInjured = false;
     }

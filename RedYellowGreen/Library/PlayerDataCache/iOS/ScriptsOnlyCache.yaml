@@ -12,7 +12,6 @@ ScriptsOnlyBuild:
     - ExtraPoints
     - GameOver
     - GameOverAd
-    - GoogleMobileAds.Common.MobileAdsEventExecutor
     - LightController
     - MenuButtons
     - MobileAdsInit
@@ -43,10 +42,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -102,7 +99,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9528}
     - Class: 114
-      Script: {instanceID: 10122}
+      Script: {instanceID: 10116}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -181,29 +178,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9728}
     - Class: 114
-      Script: {instanceID: 9804}
+      Script: {instanceID: 9802}
     - Class: 114
-      Script: {instanceID: 9986}
+      Script: {instanceID: 9980}
     - Class: 114
-      Script: {instanceID: 10130}
+      Script: {instanceID: 10126}
     - Class: 114
-      Script: {instanceID: 10204}
+      Script: {instanceID: 10200}
     - Class: 114
-      Script: {instanceID: 10228}
+      Script: {instanceID: 10224}
     - Class: 114
-      Script: {instanceID: 10270}
+      Script: {instanceID: 10266}
     - Class: 114
-      Script: {instanceID: 10348}
+      Script: {instanceID: 10344}
     - Class: 114
-      Script: {instanceID: 10398}
+      Script: {instanceID: 10394}
     - Class: 114
-      Script: {instanceID: 10414}
+      Script: {instanceID: 10410}
     - Class: 114
-      Script: {instanceID: 10528}
+      Script: {instanceID: 10524}
     - Class: 114
-      Script: {instanceID: 10748}
+      Script: {instanceID: 10744}
     - Class: 114
-      Script: {instanceID: 10828}
+      Script: {instanceID: 10820}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -296,49 +293,49 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9728}
     - Class: 114
-      Script: {instanceID: 9808}
+      Script: {instanceID: 9806}
     - Class: 114
-      Script: {instanceID: 9874}
+      Script: {instanceID: 9872}
     - Class: 114
-      Script: {instanceID: 9912}
+      Script: {instanceID: 9906}
     - Class: 114
-      Script: {instanceID: 9986}
+      Script: {instanceID: 9980}
     - Class: 114
-      Script: {instanceID: 10104}
+      Script: {instanceID: 10098}
     - Class: 114
-      Script: {instanceID: 10206}
+      Script: {instanceID: 10122}
     - Class: 114
-      Script: {instanceID: 10222}
+      Script: {instanceID: 10202}
     - Class: 114
-      Script: {instanceID: 10228}
+      Script: {instanceID: 10218}
     - Class: 114
-      Script: {instanceID: 10270}
+      Script: {instanceID: 10224}
     - Class: 114
-      Script: {instanceID: 10280}
+      Script: {instanceID: 10266}
     - Class: 114
-      Script: {instanceID: 10346}
+      Script: {instanceID: 10276}
     - Class: 114
-      Script: {instanceID: 10374}
+      Script: {instanceID: 10342}
     - Class: 114
-      Script: {instanceID: 10414}
+      Script: {instanceID: 10370}
     - Class: 114
-      Script: {instanceID: 10522}
+      Script: {instanceID: 10410}
     - Class: 114
-      Script: {instanceID: 10528}
+      Script: {instanceID: 10518}
+    - Class: 114
+      Script: {instanceID: 10524}
+    - Class: 114
+      Script: {instanceID: 10534}
     - Class: 114
       Script: {instanceID: 10538}
     - Class: 114
-      Script: {instanceID: 10542}
+      Script: {instanceID: 10552}
     - Class: 114
-      Script: {instanceID: 10556}
+      Script: {instanceID: 10564}
     - Class: 114
-      Script: {instanceID: 10568}
+      Script: {instanceID: 10650}
     - Class: 114
-      Script: {instanceID: 10654}
-    - Class: 114
-      Script: {instanceID: 10748}
-    - Class: 114
-      Script: {instanceID: 16524}
+      Script: {instanceID: 10744}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1002,6 +999,12 @@ ScriptsOnlyBuild:
     className: GameOverAd
   - hash:
       serializedVersion: 2
+      Hash: d24a9a4fbb9372753c85f31b3fdefe7b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Stats
+  - hash:
+      serializedVersion: 2
       Hash: 13512dd40bb81914e2bfeec1ba9ed1c5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1282,15 +1285,9 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: d24a9a4fbb9372753c85f31b3fdefe7b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Stats
   platform: 9
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/LevelOne.unity
   - Assets/Scenes/GameOver.unity
-  playerPath: /Users/kyle/Git/RedYellowGreen/iOSBuild/iOSBuild
+  playerPath: /Users/kyle/Git/RedYellowGreen/iOSBuild

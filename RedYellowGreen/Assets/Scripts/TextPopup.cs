@@ -20,13 +20,13 @@ public class TextPopup : MonoBehaviour
                                               "Buzz buzz\nDo you hear something?"));
         StartCoroutine(DifficultyPopupMessage(27, 
                                               "Did you know that wasps and toucans\nare mortal enemies?"));
-        StartCoroutine(DifficultyPopupMessage(152,
+        StartCoroutine(DifficultyPopupMessage(52,
                                               "The wasps are annoyed."));
-        StartCoroutine(DifficultyPopupMessage(177,
+        StartCoroutine(DifficultyPopupMessage(77,
                                               "Have you been stealing their apples?"));
-        StartCoroutine(DifficultyPopupMessage(1102,
+        StartCoroutine(DifficultyPopupMessage(102,
                                               "Do you know what else wasps\nhate besides toucans?"));
-        StartCoroutine(DifficultyPopupMessage(1127,
+        StartCoroutine(DifficultyPopupMessage(127,
                                               "WASPS HATE EVERYTHING..."));
     }
 
