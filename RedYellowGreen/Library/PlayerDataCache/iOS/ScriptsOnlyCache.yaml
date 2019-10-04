@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - ExtraPoints
     - GameOver
     - GameOverAd
+    - GoogleMobileAds.Common.MobileAdsEventExecutor
     - LightController
     - MenuButtons
     - MobileAdsInit
@@ -20,14 +21,17 @@ ScriptsOnlyBuild:
     - PlayerControls
     - PlayerStatusCheck
     - PointController
+    - PoisonApple
     - Preferences
     - ShieldPowerup
     - ShootingStar
     - SpawnPlatform
+    - Stats
     - SwipeManager
     - TextPopup
     - Tips
     - ToucanControls
+    - Victory
     - WaspEnemy
     - WaspSpray
     Unity.TextMeshPro.dll:
@@ -39,9 +43,13 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
+    UnityEditor.TestRunner.dll:
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -94,7 +102,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9528}
     - Class: 114
-      Script: {instanceID: 10116}
+      Script: {instanceID: 10122}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -173,29 +181,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9728}
     - Class: 114
-      Script: {instanceID: 9802}
+      Script: {instanceID: 9804}
     - Class: 114
-      Script: {instanceID: 9980}
+      Script: {instanceID: 9986}
     - Class: 114
-      Script: {instanceID: 10124}
+      Script: {instanceID: 10130}
     - Class: 114
-      Script: {instanceID: 10198}
+      Script: {instanceID: 10204}
     - Class: 114
-      Script: {instanceID: 10222}
+      Script: {instanceID: 10228}
     - Class: 114
-      Script: {instanceID: 10264}
+      Script: {instanceID: 10270}
     - Class: 114
-      Script: {instanceID: 10342}
+      Script: {instanceID: 10348}
     - Class: 114
-      Script: {instanceID: 10392}
+      Script: {instanceID: 10398}
     - Class: 114
-      Script: {instanceID: 10408}
+      Script: {instanceID: 10414}
     - Class: 114
-      Script: {instanceID: 10522}
+      Script: {instanceID: 10528}
     - Class: 114
-      Script: {instanceID: 10738}
+      Script: {instanceID: 10748}
     - Class: 114
-      Script: {instanceID: 10814}
+      Script: {instanceID: 10828}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -288,43 +296,49 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9728}
     - Class: 114
-      Script: {instanceID: 9806}
+      Script: {instanceID: 9808}
     - Class: 114
-      Script: {instanceID: 9872}
+      Script: {instanceID: 9874}
     - Class: 114
-      Script: {instanceID: 9906}
+      Script: {instanceID: 9912}
     - Class: 114
-      Script: {instanceID: 9980}
+      Script: {instanceID: 9986}
     - Class: 114
-      Script: {instanceID: 10098}
+      Script: {instanceID: 10104}
     - Class: 114
-      Script: {instanceID: 10200}
-    - Class: 114
-      Script: {instanceID: 10216}
+      Script: {instanceID: 10206}
     - Class: 114
       Script: {instanceID: 10222}
     - Class: 114
-      Script: {instanceID: 10264}
+      Script: {instanceID: 10228}
     - Class: 114
-      Script: {instanceID: 10274}
+      Script: {instanceID: 10270}
     - Class: 114
-      Script: {instanceID: 10340}
+      Script: {instanceID: 10280}
     - Class: 114
-      Script: {instanceID: 10368}
+      Script: {instanceID: 10346}
     - Class: 114
-      Script: {instanceID: 10408}
+      Script: {instanceID: 10374}
     - Class: 114
-      Script: {instanceID: 10516}
+      Script: {instanceID: 10414}
     - Class: 114
       Script: {instanceID: 10522}
     - Class: 114
-      Script: {instanceID: 10532}
+      Script: {instanceID: 10528}
     - Class: 114
-      Script: {instanceID: 10548}
+      Script: {instanceID: 10538}
     - Class: 114
-      Script: {instanceID: 10644}
+      Script: {instanceID: 10542}
     - Class: 114
-      Script: {instanceID: 10738}
+      Script: {instanceID: 10556}
+    - Class: 114
+      Script: {instanceID: 10568}
+    - Class: 114
+      Script: {instanceID: 10654}
+    - Class: 114
+      Script: {instanceID: 10748}
+    - Class: 114
+      Script: {instanceID: 16524}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -608,18 +622,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements
-    className: CallbackExecutor
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements.Editor
-    className: Placeholder
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1018,7 +1020,7 @@ ScriptsOnlyBuild:
     className: GameOverMusic
   - hash:
       serializedVersion: 2
-      Hash: b99086363ea8ccad6413064bcfdbb0c7
+      Hash: 1e17ad02f4c100fa365ece54a288ffb1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Pause
@@ -1126,7 +1128,7 @@ ScriptsOnlyBuild:
     className: WaspEnemy
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 7067f83093eb3aa14f771bd8b9e280d0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemySpawner
@@ -1198,10 +1200,22 @@ ScriptsOnlyBuild:
     className: MobileAdsInit
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Victory
+  - hash:
+      serializedVersion: 2
       Hash: 9af6ee11c44f905b53d0fee6ee7fc972
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Tips
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PoisonApple
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -1268,9 +1282,15 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: d24a9a4fbb9372753c85f31b3fdefe7b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Stats
   platform: 9
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/LevelOne.unity
   - Assets/Scenes/GameOver.unity
-  playerPath: /Users/kyle/Git/RedYellowGreen/iOSBuild
+  playerPath: /Users/kyle/Git/RedYellowGreen/iOSBuild/iOSBuild

@@ -9,10 +9,12 @@ public class PlayerStatusCheck : MonoBehaviour
     private GameObject player;
     private Button walkLeft, walkRight, runLeft, runRight, stop;
     private enum StopLightColors { red = 0, green, yellow };
+    float startTime;
 
     // Start is called before the first frame update
     void Start()
     {
+        startTime = Time.time;
         player = GameObject.FindWithTag("Player");
 //        walkRight = GameObject.Find("Walk - Right").GetComponent<Button>();
 //        runRight = GameObject.Find("Run - Right").GetComponent<Button>();
@@ -110,6 +112,9 @@ public class PlayerStatusCheck : MonoBehaviour
             {
                 PlayerPrefs.SetInt("loScore", gameObject.GetComponent<PointController>().GetPlayerScore());
             }
+
+            int totalTimePlayed = (int)(Time.time - startTime);
+            PlayerPrefs.SetInt("timePlayed", PlayerPrefs.GetInt("timePlayed") + totalTimePlayed);
 
             Initiate.Fade("GameOver", Color.black, 1f);
         }

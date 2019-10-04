@@ -24,6 +24,7 @@ public class ExtraLife : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            PlayerPrefs.SetInt("heartCount", PlayerPrefs.GetInt("heartCount") + 1);
             if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
             {
                 pickupSound.GetComponent<AudioSource>().Play();

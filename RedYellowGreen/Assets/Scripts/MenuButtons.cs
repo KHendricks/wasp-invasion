@@ -36,6 +36,21 @@ public class MenuButtons : MonoBehaviour
             PlayerPrefs.SetInt("loScore", 0);
         }
 
+        if (!PlayerPrefs.HasKey("appleCount"))
+        {
+            PlayerPrefs.SetInt("appleCount", 0);
+        }
+
+        if (!PlayerPrefs.HasKey("timePlayed"))
+        {
+            PlayerPrefs.SetInt("timePlayed", 0);
+        }
+
+        if (!PlayerPrefs.HasKey("heartCount"))
+        {
+            PlayerPrefs.SetInt("heartCount", 0);
+        }
+
         PlayerPrefs.SetInt("score", 0);
 
         optionsPanel.SetActive(false);

@@ -7,6 +7,7 @@ public class GameOver : MonoBehaviour
 {
     private GameObject loScoreText, hiScoreText, scoreText;
     private GameObject buttonPressSound;
+    private GameObject musicController;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,16 @@ public class GameOver : MonoBehaviour
                                                 PlayerPrefs.GetInt("hiScore").ToString();
         loScoreText.GetComponent<Text>().text = loScoreText.GetComponent<Text>().text +
                                                 PlayerPrefs.GetInt("loScore").ToString();
+
+        musicController = GameObject.FindWithTag("MusicController");
+        if (PlayerPrefs.GetInt("isMusicEnabled") == 1)
+        {
+            musicController.GetComponent<AudioSource>().Play();
+        }
+        else if (PlayerPrefs.GetInt("isMusicEnabled") == 0)
+        {
+            musicController.GetComponent<AudioSource>().Stop();
+        }
     }
 
     // Update is called once per frame

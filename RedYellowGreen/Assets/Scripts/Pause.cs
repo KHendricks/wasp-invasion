@@ -66,6 +66,9 @@ public class Pause : MonoBehaviour
             buttonPressSound.GetComponent<AudioSource>().Play();
         }
 
+        int totalTimePlayed = (int)(Time.time - startTime);
+        PlayerPrefs.SetInt("timePlayed", PlayerPrefs.GetInt("timePlayed") + totalTimePlayed);
+
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1f;
     }
@@ -76,6 +79,9 @@ public class Pause : MonoBehaviour
         {
             buttonPressSound.GetComponent<AudioSource>().Play();
         }
+
+        int totalTimePlayed = (int)(Time.time - startTime);
+        PlayerPrefs.SetInt("timePlayed", PlayerPrefs.GetInt("timePlayed") + totalTimePlayed);
 
         Application.Quit();
     }

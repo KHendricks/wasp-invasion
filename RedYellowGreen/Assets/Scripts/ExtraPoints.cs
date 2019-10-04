@@ -29,7 +29,7 @@ public class ExtraPoints : MonoBehaviour
             {
                 pickupSound.GetComponent<AudioSource>().Play();
             }
-
+            PlayerPrefs.SetInt("appleCount", PlayerPrefs.GetInt("appleCount") + 1);
             gameObject.SetActive(false);
             scriptManager.GetComponent<PointController>().AddPoints(5);
         }

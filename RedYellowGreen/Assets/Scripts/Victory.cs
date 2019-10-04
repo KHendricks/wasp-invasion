@@ -10,6 +10,8 @@ public class Victory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetInt("hasBeatTheGame", 1);
+
         enemySpawner = GameObject.Find("EnemySpawner");
         enemySpawner.GetComponent<EnemySpawner>().stopSpawning = false;
 
