@@ -1,0 +1,420 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:2:1-24:12
+MERGED from [:androidx.arch.core.core-runtime-2.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/d6f3e0b6f34f83806483a7b86da155d9/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.asynclayoutinflater.asynclayoutinflater-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/83a464623b89fa10fe6a1065c57b11c7/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.browser.browser-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/23d8b1307a794717a865ac169e720cca/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.coordinatorlayout.coordinatorlayout-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/167487724ee7bb3d49a2f55595c186ea/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.core.core-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a5f09153ac36b8e1f2fe618ca2d880e6/AndroidManifest.xml:17:1-24:12
+MERGED from [:androidx.cursoradapter.cursoradapter-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/64b8ad251afd53ae852927cac45f8d67/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.customview.customview-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/e14a7e9b573c8834b8b555a3b6a25f03/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.documentfile.documentfile-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/c3758194b63dad3ef5451a12a2baa00d/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.drawerlayout.drawerlayout-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/196af6a75bb7c547949575a2c5bcd819/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.fragment.fragment-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/38f0befe57de5c2ebcc1982c2d54f1c7/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.interpolator.interpolator-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/be22c9e2512a1c2eb6c029cd3c650bf6/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.legacy.legacy-support-core-ui-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/d993d246d888848810718b0e945c693b/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.legacy.legacy-support-core-utils-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a3e68a7686c6dd6a4c1dd98078872894/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.lifecycle.lifecycle-livedata-2.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/bf5a9534740422eafaadf353c506a81d/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.lifecycle.lifecycle-livedata-core-2.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/3b56dc9dadaf863565d6d2d0f40d2695/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.lifecycle.lifecycle-runtime-2.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/7d1efdf2720fbe2cf7fd4cf9cb34d819/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.lifecycle.lifecycle-viewmodel-2.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/d10e1656da4baf3c50c29e9ab3a656b3/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.loader.loader-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fc021407c7b38e1f07adcb133e59dea9/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.localbroadcastmanager.localbroadcastmanager-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/e8770129e49594b887491fd5c26426fe/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.print.print-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/f93a71f155b57310805b1e5faeefd1e8/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.slidingpanelayout.slidingpanelayout-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/c3592a8fd4313fb5940ba1924e1610ae/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.swiperefreshlayout.swiperefreshlayout-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/3c54fb1318eb6efdb5fa93da86e387ea/AndroidManifest.xml:17:1-22:12
+MERGED from [:androidx.versionedparcelable.versionedparcelable-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/c2888357107c4750d3f19f2b2de19e25/AndroidManifest.xml:17:1-25:12
+MERGED from [:androidx.viewpager.viewpager-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/9dd5098155d4dde5093ba5627b6744dd/AndroidManifest.xml:17:1-22:12
+MERGED from [:com.google.android.gms.play-services-ads-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/f97df50fe521724741f80e9add844c60/AndroidManifest.xml:17:1-25:12
+MERGED from [:com.google.android.gms.play-services-ads-base-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/e44b69de8650ae5b7ff5c54456d10d4e/AndroidManifest.xml:2:1-9:12
+MERGED from [:com.google.android.gms.play-services-ads-identifier-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/33f8a05526eb33d354f9cb430467632f/AndroidManifest.xml:17:1-24:12
+MERGED from [:com.google.android.gms.play-services-ads-lite-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fb01ef0d89647f930005b983b104a87b/AndroidManifest.xml:17:1-27:12
+MERGED from [:com.google.android.gms.play-services-basement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/f3927344f2ffda7371eae58dd1caced4/AndroidManifest.xml:17:1-28:12
+MERGED from [:com.google.android.gms.play-services-gass-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34a12ba620744678355ab6a4be493b07/AndroidManifest.xml:2:1-9:12
+MERGED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:17:1-55:12
+MERGED from [:com.google.android.gms.play-services-measurement-base-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/1ebae5170b103d3a52d136230ffd9e80/AndroidManifest.xml:2:1-9:12
+MERGED from [:com.google.android.gms.play-services-measurement-impl-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a8b6d475eef1a820c334687805df21bb/AndroidManifest.xml:17:1-40:12
+MERGED from [:com.google.android.gms.play-services-measurement-sdk-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/bffb10511a3e51f3f702d924afb1056d/AndroidManifest.xml:17:1-25:12
+MERGED from [:com.google.android.gms.play-services-measurement-sdk-api-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34960f8bc168bd5d12d53cac0f043cfe/AndroidManifest.xml:17:1-40:12
+MERGED from [:com.google.android.gms.play-services-stats-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/5020742c7d3de0e2a634c5553c1ad906/AndroidManifest.xml:2:1-9:12
+MERGED from [:googlemobileads-unity:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/ca456bad92bcaaf3ec979e52004fb89f/AndroidManifest.xml:7:1-18:12
+MERGED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-19:12
+INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:2:1-24:12
+	package
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:2:70-102
+		INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml
+		INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:2:1-24:12
+		INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:2:103-149
+	android:versionCode
+		INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:2:1-24:12
+		INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:2:11-69
+	android:installLocation
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:2:150-190
+supports-screens
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:3:3-163
+	android:largeScreens
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:3:78-105
+	android:smallScreens
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:3:21-48
+	android:normalScreens
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:3:49-77
+	android:xlargeScreens
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:3:106-134
+	android:anyDensity
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:3:135-160
+application
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:4:3-17:17
+MERGED from [:androidx.core.core-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a5f09153ac36b8e1f2fe618ca2d880e6/AndroidManifest.xml:22:5-89
+MERGED from [:androidx.core.core-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a5f09153ac36b8e1f2fe618ca2d880e6/AndroidManifest.xml:22:5-89
+MERGED from [:androidx.versionedparcelable.versionedparcelable-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/c2888357107c4750d3f19f2b2de19e25/AndroidManifest.xml:22:5-23:19
+MERGED from [:androidx.versionedparcelable.versionedparcelable-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/c2888357107c4750d3f19f2b2de19e25/AndroidManifest.xml:22:5-23:19
+MERGED from [:com.google.android.gms.play-services-ads-base-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/e44b69de8650ae5b7ff5c54456d10d4e/AndroidManifest.xml:7:5-20
+MERGED from [:com.google.android.gms.play-services-ads-base-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/e44b69de8650ae5b7ff5c54456d10d4e/AndroidManifest.xml:7:5-20
+MERGED from [:com.google.android.gms.play-services-ads-identifier-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/33f8a05526eb33d354f9cb430467632f/AndroidManifest.xml:22:5-20
+MERGED from [:com.google.android.gms.play-services-ads-identifier-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/33f8a05526eb33d354f9cb430467632f/AndroidManifest.xml:22:5-20
+MERGED from [:com.google.android.gms.play-services-ads-lite-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fb01ef0d89647f930005b983b104a87b/AndroidManifest.xml:22:3-26:17
+MERGED from [:com.google.android.gms.play-services-ads-lite-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fb01ef0d89647f930005b983b104a87b/AndroidManifest.xml:22:3-26:17
+MERGED from [:com.google.android.gms.play-services-basement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/f3927344f2ffda7371eae58dd1caced4/AndroidManifest.xml:22:5-26:19
+MERGED from [:com.google.android.gms.play-services-basement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/f3927344f2ffda7371eae58dd1caced4/AndroidManifest.xml:22:5-26:19
+MERGED from [:com.google.android.gms.play-services-gass-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34a12ba620744678355ab6a4be493b07/AndroidManifest.xml:7:5-20
+MERGED from [:com.google.android.gms.play-services-gass-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34a12ba620744678355ab6a4be493b07/AndroidManifest.xml:7:5-20
+MERGED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:28:5-53:19
+MERGED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:28:5-53:19
+MERGED from [:com.google.android.gms.play-services-measurement-base-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/1ebae5170b103d3a52d136230ffd9e80/AndroidManifest.xml:7:5-20
+MERGED from [:com.google.android.gms.play-services-measurement-base-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/1ebae5170b103d3a52d136230ffd9e80/AndroidManifest.xml:7:5-20
+MERGED from [:com.google.android.gms.play-services-measurement-impl-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a8b6d475eef1a820c334687805df21bb/AndroidManifest.xml:28:5-38:19
+MERGED from [:com.google.android.gms.play-services-measurement-impl-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a8b6d475eef1a820c334687805df21bb/AndroidManifest.xml:28:5-38:19
+MERGED from [:com.google.android.gms.play-services-measurement-sdk-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/bffb10511a3e51f3f702d924afb1056d/AndroidManifest.xml:22:5-23:19
+MERGED from [:com.google.android.gms.play-services-measurement-sdk-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/bffb10511a3e51f3f702d924afb1056d/AndroidManifest.xml:22:5-23:19
+MERGED from [:com.google.android.gms.play-services-measurement-sdk-api-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34960f8bc168bd5d12d53cac0f043cfe/AndroidManifest.xml:28:5-38:19
+MERGED from [:com.google.android.gms.play-services-measurement-sdk-api-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34960f8bc168bd5d12d53cac0f043cfe/AndroidManifest.xml:28:5-38:19
+MERGED from [:com.google.android.gms.play-services-stats-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/5020742c7d3de0e2a634c5553c1ad906/AndroidManifest.xml:7:5-20
+MERGED from [:com.google.android.gms.play-services-stats-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/5020742c7d3de0e2a634c5553c1ad906/AndroidManifest.xml:7:5-20
+MERGED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:9:5-17:19
+MERGED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:9:5-17:19
+	android:appComponentFactory
+		ADDED from [:androidx.core.core-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a5f09153ac36b8e1f2fe618ca2d880e6/AndroidManifest.xml:22:18-86
+	android:label
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:4:90-122
+	android:icon
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:4:58-89
+	android:theme
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:4:16-57
+activity#com.unity3d.player.UnityPlayerActivity
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:5:5-12:16
+	android:screenOrientation
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:5:102-146
+	android:label
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:5:69-101
+	android:launchMode
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:5:147-178
+	android:hardwareAccelerated
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:5:361-396
+	android:configChanges
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:5:179-360
+	android:name
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:5:15-68
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:6:7-9:23
+action#android.intent.action.MAIN
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:7:9-61
+	android:name
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:7:17-58
+category#android.intent.category.LAUNCHER
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:8:9-69
+	android:name
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:8:19-66
+meta-data#unityplayer.UnityActivity
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:10:7-82
+	android:value
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:10:59-79
+	android:name
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:10:18-58
+meta-data#android.notch_support
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:11:7-78
+	android:value
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:11:55-75
+	android:name
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:11:18-54
+meta-data#unity.build-id
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:13:5-101
+	android:value
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:13:46-98
+	android:name
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:13:16-45
+meta-data#unity.splash-mode
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:14:5-69
+	android:value
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:14:49-66
+	android:name
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:14:16-48
+meta-data#unity.splash-enable
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:15:5-74
+	android:value
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:15:51-71
+	android:name
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:15:16-50
+meta-data#notch.config
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:16:5-81
+	android:value
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:16:44-78
+	android:name
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:16:16-43
+uses-feature#0x00020000
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:18:3-52
+	android:glEsVersion
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:18:17-49
+uses-feature#android.hardware.vulkan
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:19:3-83
+	android:required
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:19:56-80
+	android:name
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:19:17-55
+uses-permission#android.permission.INTERNET
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:20:3-65
+MERGED from [:com.google.android.gms.play-services-ads-lite-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fb01ef0d89647f930005b983b104a87b/AndroidManifest.xml:20:3-65
+MERGED from [:com.google.android.gms.play-services-ads-lite-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fb01ef0d89647f930005b983b104a87b/AndroidManifest.xml:20:3-65
+MERGED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:23:5-67
+MERGED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:23:5-67
+MERGED from [:com.google.android.gms.play-services-measurement-impl-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a8b6d475eef1a820c334687805df21bb/AndroidManifest.xml:23:5-67
+MERGED from [:com.google.android.gms.play-services-measurement-impl-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a8b6d475eef1a820c334687805df21bb/AndroidManifest.xml:23:5-67
+MERGED from [:com.google.android.gms.play-services-measurement-sdk-api-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34960f8bc168bd5d12d53cac0f043cfe/AndroidManifest.xml:23:5-67
+MERGED from [:com.google.android.gms.play-services-measurement-sdk-api-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34960f8bc168bd5d12d53cac0f043cfe/AndroidManifest.xml:23:5-67
+MERGED from [:googlemobileads-unity:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/ca456bad92bcaaf3ec979e52004fb89f/AndroidManifest.xml:16:5-67
+MERGED from [:googlemobileads-unity:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/ca456bad92bcaaf3ec979e52004fb89f/AndroidManifest.xml:16:5-67
+	android:name
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:20:20-62
+uses-feature#android.hardware.touchscreen
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:21:3-88
+	android:required
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:21:61-85
+	android:name
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:21:17-60
+uses-feature#android.hardware.touchscreen.multitouch
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:22:3-99
+	android:required
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:22:72-96
+	android:name
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:22:17-71
+uses-feature#android.hardware.touchscreen.multitouch.distinct
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:23:3-108
+	android:required
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:23:81-105
+	android:name
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:23:17-80
+uses-sdk
+INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml
+INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml
+MERGED from [:androidx.arch.core.core-runtime-2.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/d6f3e0b6f34f83806483a7b86da155d9/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.arch.core.core-runtime-2.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/d6f3e0b6f34f83806483a7b86da155d9/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.asynclayoutinflater.asynclayoutinflater-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/83a464623b89fa10fe6a1065c57b11c7/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.asynclayoutinflater.asynclayoutinflater-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/83a464623b89fa10fe6a1065c57b11c7/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.browser.browser-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/23d8b1307a794717a865ac169e720cca/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.browser.browser-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/23d8b1307a794717a865ac169e720cca/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.coordinatorlayout.coordinatorlayout-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/167487724ee7bb3d49a2f55595c186ea/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.coordinatorlayout.coordinatorlayout-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/167487724ee7bb3d49a2f55595c186ea/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.core.core-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a5f09153ac36b8e1f2fe618ca2d880e6/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.core.core-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a5f09153ac36b8e1f2fe618ca2d880e6/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.cursoradapter.cursoradapter-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/64b8ad251afd53ae852927cac45f8d67/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.cursoradapter.cursoradapter-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/64b8ad251afd53ae852927cac45f8d67/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.customview.customview-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/e14a7e9b573c8834b8b555a3b6a25f03/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.customview.customview-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/e14a7e9b573c8834b8b555a3b6a25f03/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.documentfile.documentfile-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/c3758194b63dad3ef5451a12a2baa00d/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.documentfile.documentfile-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/c3758194b63dad3ef5451a12a2baa00d/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.drawerlayout.drawerlayout-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/196af6a75bb7c547949575a2c5bcd819/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.drawerlayout.drawerlayout-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/196af6a75bb7c547949575a2c5bcd819/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.fragment.fragment-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/38f0befe57de5c2ebcc1982c2d54f1c7/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.fragment.fragment-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/38f0befe57de5c2ebcc1982c2d54f1c7/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.interpolator.interpolator-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/be22c9e2512a1c2eb6c029cd3c650bf6/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.interpolator.interpolator-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/be22c9e2512a1c2eb6c029cd3c650bf6/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.legacy.legacy-support-core-ui-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/d993d246d888848810718b0e945c693b/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.legacy.legacy-support-core-ui-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/d993d246d888848810718b0e945c693b/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.legacy.legacy-support-core-utils-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a3e68a7686c6dd6a4c1dd98078872894/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.legacy.legacy-support-core-utils-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a3e68a7686c6dd6a4c1dd98078872894/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.lifecycle.lifecycle-livedata-2.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/bf5a9534740422eafaadf353c506a81d/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.lifecycle.lifecycle-livedata-2.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/bf5a9534740422eafaadf353c506a81d/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.lifecycle.lifecycle-livedata-core-2.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/3b56dc9dadaf863565d6d2d0f40d2695/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.lifecycle.lifecycle-livedata-core-2.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/3b56dc9dadaf863565d6d2d0f40d2695/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.lifecycle.lifecycle-runtime-2.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/7d1efdf2720fbe2cf7fd4cf9cb34d819/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.lifecycle.lifecycle-runtime-2.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/7d1efdf2720fbe2cf7fd4cf9cb34d819/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.lifecycle.lifecycle-viewmodel-2.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/d10e1656da4baf3c50c29e9ab3a656b3/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.lifecycle.lifecycle-viewmodel-2.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/d10e1656da4baf3c50c29e9ab3a656b3/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.loader.loader-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fc021407c7b38e1f07adcb133e59dea9/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.loader.loader-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fc021407c7b38e1f07adcb133e59dea9/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.localbroadcastmanager.localbroadcastmanager-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/e8770129e49594b887491fd5c26426fe/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.localbroadcastmanager.localbroadcastmanager-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/e8770129e49594b887491fd5c26426fe/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.print.print-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/f93a71f155b57310805b1e5faeefd1e8/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.print.print-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/f93a71f155b57310805b1e5faeefd1e8/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.slidingpanelayout.slidingpanelayout-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/c3592a8fd4313fb5940ba1924e1610ae/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.slidingpanelayout.slidingpanelayout-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/c3592a8fd4313fb5940ba1924e1610ae/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.swiperefreshlayout.swiperefreshlayout-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/3c54fb1318eb6efdb5fa93da86e387ea/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.swiperefreshlayout.swiperefreshlayout-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/3c54fb1318eb6efdb5fa93da86e387ea/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.versionedparcelable.versionedparcelable-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/c2888357107c4750d3f19f2b2de19e25/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.versionedparcelable.versionedparcelable-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/c2888357107c4750d3f19f2b2de19e25/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.viewpager.viewpager-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/9dd5098155d4dde5093ba5627b6744dd/AndroidManifest.xml:20:5-44
+MERGED from [:androidx.viewpager.viewpager-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/9dd5098155d4dde5093ba5627b6744dd/AndroidManifest.xml:20:5-44
+MERGED from [:com.google.android.gms.play-services-ads-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/f97df50fe521724741f80e9add844c60/AndroidManifest.xml:21:5-23:52
+MERGED from [:com.google.android.gms.play-services-ads-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/f97df50fe521724741f80e9add844c60/AndroidManifest.xml:21:5-23:52
+MERGED from [:com.google.android.gms.play-services-ads-base-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/e44b69de8650ae5b7ff5c54456d10d4e/AndroidManifest.xml:5:5-44
+MERGED from [:com.google.android.gms.play-services-ads-base-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/e44b69de8650ae5b7ff5c54456d10d4e/AndroidManifest.xml:5:5-44
+MERGED from [:com.google.android.gms.play-services-ads-identifier-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/33f8a05526eb33d354f9cb430467632f/AndroidManifest.xml:20:5-44
+MERGED from [:com.google.android.gms.play-services-ads-identifier-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/33f8a05526eb33d354f9cb430467632f/AndroidManifest.xml:20:5-44
+MERGED from [:com.google.android.gms.play-services-ads-lite-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fb01ef0d89647f930005b983b104a87b/AndroidManifest.xml:18:3-42
+MERGED from [:com.google.android.gms.play-services-ads-lite-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fb01ef0d89647f930005b983b104a87b/AndroidManifest.xml:18:3-42
+MERGED from [:com.google.android.gms.play-services-basement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/f3927344f2ffda7371eae58dd1caced4/AndroidManifest.xml:20:5-44
+MERGED from [:com.google.android.gms.play-services-basement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/f3927344f2ffda7371eae58dd1caced4/AndroidManifest.xml:20:5-44
+MERGED from [:com.google.android.gms.play-services-gass-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34a12ba620744678355ab6a4be493b07/AndroidManifest.xml:5:5-44
+MERGED from [:com.google.android.gms.play-services-gass-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34a12ba620744678355ab6a4be493b07/AndroidManifest.xml:5:5-44
+MERGED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:20:5-44
+MERGED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:20:5-44
+MERGED from [:com.google.android.gms.play-services-measurement-base-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/1ebae5170b103d3a52d136230ffd9e80/AndroidManifest.xml:5:5-44
+MERGED from [:com.google.android.gms.play-services-measurement-base-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/1ebae5170b103d3a52d136230ffd9e80/AndroidManifest.xml:5:5-44
+MERGED from [:com.google.android.gms.play-services-measurement-impl-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a8b6d475eef1a820c334687805df21bb/AndroidManifest.xml:20:5-44
+MERGED from [:com.google.android.gms.play-services-measurement-impl-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a8b6d475eef1a820c334687805df21bb/AndroidManifest.xml:20:5-44
+MERGED from [:com.google.android.gms.play-services-measurement-sdk-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/bffb10511a3e51f3f702d924afb1056d/AndroidManifest.xml:20:5-44
+MERGED from [:com.google.android.gms.play-services-measurement-sdk-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/bffb10511a3e51f3f702d924afb1056d/AndroidManifest.xml:20:5-44
+MERGED from [:com.google.android.gms.play-services-measurement-sdk-api-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34960f8bc168bd5d12d53cac0f043cfe/AndroidManifest.xml:20:5-44
+MERGED from [:com.google.android.gms.play-services-measurement-sdk-api-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34960f8bc168bd5d12d53cac0f043cfe/AndroidManifest.xml:20:5-44
+MERGED from [:com.google.android.gms.play-services-stats-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/5020742c7d3de0e2a634c5553c1ad906/AndroidManifest.xml:5:5-44
+MERGED from [:com.google.android.gms.play-services-stats-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/5020742c7d3de0e2a634c5553c1ad906/AndroidManifest.xml:5:5-44
+MERGED from [:googlemobileads-unity:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/ca456bad92bcaaf3ec979e52004fb89f/AndroidManifest.xml:12:5-14:41
+MERGED from [:googlemobileads-unity:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/ca456bad92bcaaf3ec979e52004fb89f/AndroidManifest.xml:12:5-14:41
+MERGED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:7:5-47
+MERGED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:7:5-47
+INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml
+INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [:com.google.android.gms.play-services-ads-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/f97df50fe521724741f80e9add844c60/AndroidManifest.xml:23:9-49
+	android:targetSdkVersion
+		INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml
+		INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml
+		MERGED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml
+		INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:com.google.android.gms.play-services-ads-lite-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fb01ef0d89647f930005b983b104a87b/AndroidManifest.xml:21:3-77
+MERGED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:24:5-79
+MERGED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:24:5-79
+MERGED from [:com.google.android.gms.play-services-measurement-impl-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a8b6d475eef1a820c334687805df21bb/AndroidManifest.xml:24:5-79
+MERGED from [:com.google.android.gms.play-services-measurement-impl-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a8b6d475eef1a820c334687805df21bb/AndroidManifest.xml:24:5-79
+MERGED from [:com.google.android.gms.play-services-measurement-sdk-api-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34960f8bc168bd5d12d53cac0f043cfe/AndroidManifest.xml:24:5-79
+MERGED from [:com.google.android.gms.play-services-measurement-sdk-api-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34960f8bc168bd5d12d53cac0f043cfe/AndroidManifest.xml:24:5-79
+	android:name
+		ADDED from [:com.google.android.gms.play-services-ads-lite-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fb01ef0d89647f930005b983b104a87b/AndroidManifest.xml:21:20-74
+activity#com.google.android.gms.ads.AdActivity
+ADDED from [:com.google.android.gms.play-services-ads-lite-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fb01ef0d89647f930005b983b104a87b/AndroidManifest.xml:24:5-254
+	android:exported
+		ADDED from [:com.google.android.gms.play-services-ads-lite-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fb01ef0d89647f930005b983b104a87b/AndroidManifest.xml:24:178-202
+	android:configChanges
+		ADDED from [:com.google.android.gms.play-services-ads-lite-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fb01ef0d89647f930005b983b104a87b/AndroidManifest.xml:24:68-177
+	android:theme
+		ADDED from [:com.google.android.gms.play-services-ads-lite-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fb01ef0d89647f930005b983b104a87b/AndroidManifest.xml:24:203-251
+	android:name
+		ADDED from [:com.google.android.gms.play-services-ads-lite-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fb01ef0d89647f930005b983b104a87b/AndroidManifest.xml:24:15-67
+provider#com.google.android.gms.ads.MobileAdsInitProvider
+ADDED from [:com.google.android.gms.play-services-ads-lite-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fb01ef0d89647f930005b983b104a87b/AndroidManifest.xml:25:5-197
+	android:authorities
+		ADDED from [:com.google.android.gms.play-services-ads-lite-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fb01ef0d89647f930005b983b104a87b/AndroidManifest.xml:25:79-145
+	android:exported
+		ADDED from [:com.google.android.gms.play-services-ads-lite-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fb01ef0d89647f930005b983b104a87b/AndroidManifest.xml:25:146-170
+	android:initOrder
+		ADDED from [:com.google.android.gms.play-services-ads-lite-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fb01ef0d89647f930005b983b104a87b/AndroidManifest.xml:25:171-194
+	android:name
+		ADDED from [:com.google.android.gms.play-services-ads-lite-18.2.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/fb01ef0d89647f930005b983b104a87b/AndroidManifest.xml:25:15-78
+meta-data#com.google.android.gms.version
+ADDED from [:com.google.android.gms.play-services-basement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/f3927344f2ffda7371eae58dd1caced4/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [:com.google.android.gms.play-services-basement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/f3927344f2ffda7371eae58dd1caced4/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [:com.google.android.gms.play-services-basement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/f3927344f2ffda7371eae58dd1caced4/AndroidManifest.xml:24:13-58
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:25:5-68
+MERGED from [:com.google.android.gms.play-services-measurement-impl-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a8b6d475eef1a820c334687805df21bb/AndroidManifest.xml:25:5-68
+MERGED from [:com.google.android.gms.play-services-measurement-impl-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a8b6d475eef1a820c334687805df21bb/AndroidManifest.xml:25:5-68
+MERGED from [:com.google.android.gms.play-services-measurement-sdk-api-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34960f8bc168bd5d12d53cac0f043cfe/AndroidManifest.xml:25:5-68
+MERGED from [:com.google.android.gms.play-services-measurement-sdk-api-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34960f8bc168bd5d12d53cac0f043cfe/AndroidManifest.xml:25:5-68
+	android:name
+		ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:25:22-65
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:26:5-110
+MERGED from [:com.google.android.gms.play-services-measurement-impl-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a8b6d475eef1a820c334687805df21bb/AndroidManifest.xml:26:5-110
+MERGED from [:com.google.android.gms.play-services-measurement-impl-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a8b6d475eef1a820c334687805df21bb/AndroidManifest.xml:26:5-110
+MERGED from [:com.google.android.gms.play-services-measurement-sdk-api-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34960f8bc168bd5d12d53cac0f043cfe/AndroidManifest.xml:26:5-110
+MERGED from [:com.google.android.gms.play-services-measurement-sdk-api-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34960f8bc168bd5d12d53cac0f043cfe/AndroidManifest.xml:26:5-110
+	android:name
+		ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:26:22-107
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:29:9-33:20
+	android:enabled
+		ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:31:13-35
+	android:exported
+		ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:30:13-85
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:34:9-42:20
+MERGED from [:com.google.android.gms.play-services-measurement-impl-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a8b6d475eef1a820c334687805df21bb/AndroidManifest.xml:29:9-37:20
+MERGED from [:com.google.android.gms.play-services-measurement-impl-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a8b6d475eef1a820c334687805df21bb/AndroidManifest.xml:29:9-37:20
+MERGED from [:com.google.android.gms.play-services-measurement-sdk-api-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34960f8bc168bd5d12d53cac0f043cfe/AndroidManifest.xml:29:9-37:20
+MERGED from [:com.google.android.gms.play-services-measurement-sdk-api-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34960f8bc168bd5d12d53cac0f043cfe/AndroidManifest.xml:29:9-37:20
+	android:enabled
+		ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:36:13-35
+	android:exported
+		ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:37:13-36
+	android:permission
+		ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:38:13-69
+	android:name
+		ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:35:13-100
+intent-filter#action:name:com.android.vending.INSTALL_REFERRER
+ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:39:13-41:29
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:40:17-79
+	android:name
+		ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:40:25-76
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:44:9-47:40
+	android:enabled
+		ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:46:13-35
+	android:exported
+		ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:47:13-37
+	android:name
+		ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:45:13-84
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:48:9-52:72
+	android:enabled
+		ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:50:13-35
+	android:exported
+		ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:51:13-37
+	android:permission
+		ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:52:13-69
+	android:name
+		ADDED from [:com.google.android.gms.play-services-measurement-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/dcd6b2908ca58cee51e31d3d47c68c75/AndroidManifest.xml:49:13-87
+uses-library#org.apache.http.legacy
+ADDED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:10:9-12:40
+	android:required
+		ADDED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:12:13-37
+	android:name
+		ADDED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:11:13-50
+meta-data#com.google.android.gms.ads.APPLICATION_ID
+ADDED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:14:9-16:70
+	android:value
+		ADDED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:16:13-67
+	android:name
+		ADDED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:15:13-69
