@@ -41,7 +41,7 @@ public class EnemySpawner : MonoBehaviour
         flightLevels[1] = -.2f;
         flightLevels[2] = .2f;
 
-        stopSpawning = true;
+        stopSpawning = false;
         isWaspSpawning = false;
         waspSpawnOffset = 3.5f;
 
@@ -64,9 +64,12 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (stopSpawning && !isWaspSpawning)
+        if (!stopSpawning)
         {
-            StartCoroutine(SpawnWasp());
+            if (!isWaspSpawning)
+            {
+                StartCoroutine(SpawnWasp());
+            }
         }
     }
 
@@ -139,21 +142,21 @@ public class EnemySpawner : MonoBehaviour
     {
         // Spawn Wasp(s) based on difficutly.
         // Spawn a single wasp based on direction of player
-        if (Time.time - startTime < 30)
+        if (Time.time - startTime < 35)
         {
             SetSpawnTimer(5, 10);
             SpawnSingleWasp();
         }
 
         // Speed up spawn rate of a single wasp
-        else if (Time.time - startTime < 55)
+        else if (Time.time - startTime < 60)
         {
             SetSpawnTimer(1, 6);
             SpawnSingleWasp();
         }
 
         // Spawn two wasps slowly
-        else if (Time.time - startTime < 80)
+        else if (Time.time - startTime < 85)
         {
             SetSpawnTimer(5, 10);
 
@@ -169,7 +172,7 @@ public class EnemySpawner : MonoBehaviour
         }
 
         // Spawn two wasps quickly
-        else if (Time.time - startTime < 105)
+        else if (Time.time - startTime < 110)
         {
             SetSpawnTimer(1, 5);
 
@@ -185,7 +188,7 @@ public class EnemySpawner : MonoBehaviour
         }
 
         // Time to make the game hard
-        else if (Time.time - startTime < 130)
+        else if (Time.time - startTime < 135)
         {
             SetSpawnTimer(1, 5);
 
@@ -196,13 +199,40 @@ public class EnemySpawner : MonoBehaviour
         }
 
         // Time to make the game really hard
-        else
+        else if (Time.time - startTime < 180 )
         {
-            SetSpawnTimer(1, 2);
+            SetSpawnTimer(2, 2);
 
             if (!spawningThreeWasps)
             {
                 StartCoroutine(SpawnThreeWasps(.7f));
+            }
+        }
+
+        // They're still alive?
+        else
+        {
+            SetSpawnTimer(2, 2);
+
+            int spawnChoice = Random.Range(0, 2);
+            if (spawnChoice == 0)
+            {
+                if (!spawningThreeWasps)
+                {
+                    StartCoroutine(SpawnThreeWasps(.5f));
+                }
+            }
+            else if (spawnChoice == 1)
+            {
+                int firstSpawnIndex = Random.Range(0, 3);
+                int secondSpawnIndex;
+                do
+                {
+                    secondSpawnIndex = Random.Range(0, 3);
+                } while (firstSpawnIndex == secondSpawnIndex);
+
+                SpawnSingleWasp(firstSpawnIndex);
+                SpawnSingleWasp(secondSpawnIndex);
             }
         }
     }

@@ -18,16 +18,18 @@ public class TextPopup : MonoBehaviour
 
         StartCoroutine(DifficultyPopupMessage(5,
                                               "Buzz buzz\nDo you hear something?"));
-        StartCoroutine(DifficultyPopupMessage(27, 
+        StartCoroutine(DifficultyPopupMessage(32, 
                                               "Did you know that wasps and toucans\nare mortal enemies?"));
-        StartCoroutine(DifficultyPopupMessage(52,
+        StartCoroutine(DifficultyPopupMessage(57,
                                               "The wasps are annoyed."));
-        StartCoroutine(DifficultyPopupMessage(77,
+        StartCoroutine(DifficultyPopupMessage(82,
                                               "Have you been stealing their apples?"));
-        StartCoroutine(DifficultyPopupMessage(102,
+        StartCoroutine(DifficultyPopupMessage(107,
                                               "Do you know what else wasps\nhate besides toucans?"));
-        StartCoroutine(DifficultyPopupMessage(127,
+        StartCoroutine(DifficultyPopupMessage(132,
                                               "WASPS HATE EVERYTHING..."));
+        StartCoroutine(DifficultyPopupMessage(177,
+                                              "Oh, you're still alive?"));
     }
 
     public void SendPopupText(float delay, string message)
@@ -41,6 +43,7 @@ public class TextPopup : MonoBehaviour
         difficultyText.SetActive(true);
         StartCoroutine(LerpUp());
         difficultyText.GetComponent<TextMeshProUGUI>().text = message;
+        enemySpawner.GetComponent<EnemySpawner>().stopSpawning = true;
 
         yield return new WaitForSeconds(4f);
         difficultyText.transform.localScale = new Vector3(.5f, .5f, .5f);
@@ -51,13 +54,13 @@ public class TextPopup : MonoBehaviour
     IEnumerator DifficultyPopupMessage(float delay, string message)
     {
         yield return new WaitForSeconds(delay);
-        enemySpawner.GetComponent<EnemySpawner>().stopSpawning = false;
+        enemySpawner.GetComponent<EnemySpawner>().stopSpawning = true;
         difficultyText.SetActive(true);
         StartCoroutine(LerpUp());
         difficultyText.GetComponent<TextMeshProUGUI>().text = message;
 
         yield return new WaitForSeconds(4f);
-        enemySpawner.GetComponent<EnemySpawner>().stopSpawning = true;
+        enemySpawner.GetComponent<EnemySpawner>().stopSpawning = false;
         difficultyText.transform.localScale = new Vector3(.5f, .5f, .5f);
         difficultyText.GetComponent<TextMeshProUGUI>().text = "";
         difficultyText.SetActive(false);
