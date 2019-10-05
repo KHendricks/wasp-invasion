@@ -1,4 +1,4 @@
-#Sat Oct 05 14:53:52 EDT 2019
+#Sat Oct 05 15:03:15 EDT 2019
 base.0=/Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/build/intermediates/transforms/dexMerger/release/0
 path.0=classes.dex
 renamed.0=classes.dex

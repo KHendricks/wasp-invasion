@@ -30,9 +30,9 @@ public class LightController : MonoBehaviour
 
         // Initial Stoplight color
         stopLightReady = true;
-        currentIndex = 0;
-        stopLight.GetComponent<Image>().color = colorList[currentIndex];
-        lightState = "Red";
+        //currentIndex = 0;
+        //stopLight.GetComponent<Image>().color = colorList[currentIndex];
+        //lightState = "Red";
     }
 
     // Update is called once per frame

@@ -41,7 +41,7 @@ MERGED from [:com.google.android.gms.play-services-measurement-sdk-17.0.0:] /Use
 MERGED from [:com.google.android.gms.play-services-measurement-sdk-api-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34960f8bc168bd5d12d53cac0f043cfe/AndroidManifest.xml:17:1-40:12
 MERGED from [:com.google.android.gms.play-services-stats-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/5020742c7d3de0e2a634c5553c1ad906/AndroidManifest.xml:2:1-9:12
 MERGED from [:googlemobileads-unity:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/ca456bad92bcaaf3ec979e52004fb89f/AndroidManifest.xml:7:1-18:12
-MERGED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-19:12
+MERGED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-36:12
 INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:2:1-24:12
 INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:2:1-24:12
 INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/src/main/AndroidManifest.xml:2:1-24:12
@@ -103,8 +103,8 @@ MERGED from [:com.google.android.gms.play-services-measurement-sdk-api-17.0.0:] 
 MERGED from [:com.google.android.gms.play-services-measurement-sdk-api-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/34960f8bc168bd5d12d53cac0f043cfe/AndroidManifest.xml:28:5-38:19
 MERGED from [:com.google.android.gms.play-services-stats-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/5020742c7d3de0e2a634c5553c1ad906/AndroidManifest.xml:7:5-20
 MERGED from [:com.google.android.gms.play-services-stats-17.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/5020742c7d3de0e2a634c5553c1ad906/AndroidManifest.xml:7:5-20
-MERGED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:9:5-17:19
-MERGED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:9:5-17:19
+MERGED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:9:5-34:19
+MERGED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:9:5-34:19
 	android:appComponentFactory
 		ADDED from [:androidx.core.core-1.0.0:] /Users/kyle/.gradle/caches/transforms-2/files-2.1/a5f09153ac36b8e1f2fe618ca2d880e6/AndroidManifest.xml:22:18-86
 	android:label
@@ -418,3 +418,15 @@ ADDED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGree
 		ADDED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:16:13-67
 	android:name
 		ADDED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:15:13-69
+activity#com.unity3d.player.UnityPlayerNativeActivity
+ADDED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:18:9-33:20
+	android:label
+		ADDED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:20:13-42
+	android:name
+		ADDED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:19:13-72
+meta-data#unityplayer.ForwardNativeEventsToDalvik
+ADDED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:30:13-32:40
+	android:value
+		ADDED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:32:17-37
+	android:name
+		ADDED from [:GoogleMobileAdsPlugin] /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/build/intermediates/library_manifest/release/AndroidManifest.xml:31:17-71

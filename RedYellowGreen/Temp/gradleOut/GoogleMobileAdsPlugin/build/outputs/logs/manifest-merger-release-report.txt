@@ -1,12 +1,12 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:2:1-7:12
-INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:2:1-7:12
-INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:2:1-7:12
-INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:2:1-7:12
-INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:2:1-7:12
-INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:2:1-7:12
-INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:2:1-7:12
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:2:1-15:12
+INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:2:1-15:12
+INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:2:1-15:12
+INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:2:1-15:12
+INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:2:1-15:12
+INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:2:1-15:12
+INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:2:1-15:12
 	package
 		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:2:70-100
 		INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml
@@ -22,7 +22,7 @@ INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/Googl
 		INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml
 		INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml
 application
-ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:3:3-6:17
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:3:3-14:17
 uses-library#org.apache.http.legacy
 ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:4:5-84
 	android:required
@@ -35,6 +35,34 @@ ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMo
 		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:5:73-127
 	android:name
 		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:5:16-72
+activity#com.unity3d.player.UnityPlayerNativeActivity
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:6:5-13:16
+	android:label
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:6:75-104
+	android:name
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:6:15-74
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:7:7-10:23
+action#android.intent.action.MAIN
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:8:9-61
+	android:name
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:8:17-58
+category#android.intent.category.LAUNCHER
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:9:9-69
+	android:name
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:9:19-66
+meta-data#unityplayer.UnityActivity
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:11:7-82
+	android:value
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:11:59-79
+	android:name
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:11:18-58
+meta-data#unityplayer.ForwardNativeEventsToDalvik
+ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:12:7-96
+	android:value
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:12:73-93
+	android:name
+		ADDED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml:12:18-72
 uses-sdk
 INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/kyle/Git/RedYellowGreen/RedYellowGreen/Temp/gradleOut/GoogleMobileAdsPlugin/AndroidManifest.xml
