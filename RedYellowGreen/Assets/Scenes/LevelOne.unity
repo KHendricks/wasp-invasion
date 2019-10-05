@@ -1613,6 +1613,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   optionsPanel: {fileID: 0}
+  returnToMenuPanel: {fileID: 1920097643595819859}
+  controlsPanel: {fileID: 1920097643595819860}
+  startTime: 0
 --- !u!114 &1592731510 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1920097644231314468, guid: 2599e2cf6d29b42098a88f6ea664980c,
@@ -4841,5 +4844,162 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1239934960, guid: 2599e2cf6d29b42098a88f6ea664980c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1239934960, guid: 2599e2cf6d29b42098a88f6ea664980c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1239934960, guid: 2599e2cf6d29b42098a88f6ea664980c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1239934960, guid: 2599e2cf6d29b42098a88f6ea664980c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1239934960, guid: 2599e2cf6d29b42098a88f6ea664980c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 910661265, guid: 2599e2cf6d29b42098a88f6ea664980c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1239934962, guid: 2599e2cf6d29b42098a88f6ea664980c, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4724525577828568254, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1587614276}
+    - target: {fileID: 4724525577828568254, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReturnToMenuDeny
+      objectReference: {fileID: 0}
+    - target: {fileID: 898896750037209742, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1587614276}
+    - target: {fileID: 898896750037209742, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReturnToMenuConfirm
+      objectReference: {fileID: 0}
+    - target: {fileID: 5736142875997878952, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_Name
+      value: HelpButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980744554437591286, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1587614276}
+    - target: {fileID: 3980744554437591286, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisplayControls
+      objectReference: {fileID: 0}
+    - target: {fileID: 8470651892268075686, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8470651892268075686, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_Text
+      value: HELP
+      objectReference: {fileID: 0}
+    - target: {fileID: 7719083606564933844, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2006589086420987097, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2006589086420987097, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2006589086420987097, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00007324219
+      objectReference: {fileID: 0}
+    - target: {fileID: 2006589086420987097, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2006589086420987097, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5811697952580388151, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8020652679483925055, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_Name
+      value: ControlsDescText
+      objectReference: {fileID: 0}
+    - target: {fileID: 91852201006900981, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_Text
+      value: HELP
+      objectReference: {fileID: 0}
+    - target: {fileID: 8415845749756812045, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1587614276}
+    - target: {fileID: 8415845749756812045, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisplayControls
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144089535672222129, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Need some help?
+
+        Swipe right on green and left on yellow.
+
+        When it comes to red, tap the screen to stop.
+
+        To avoid the wasps, swipe up or down to dodge.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144089535672222129, guid: 2599e2cf6d29b42098a88f6ea664980c,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 70
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 863740640099326395, guid: 2599e2cf6d29b42098a88f6ea664980c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2599e2cf6d29b42098a88f6ea664980c, type: 3}
+--- !u!1 &1920097643595819859 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8843895870688362373, guid: 2599e2cf6d29b42098a88f6ea664980c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1920097643595819858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1920097643595819860 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7719083606564933844, guid: 2599e2cf6d29b42098a88f6ea664980c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1920097643595819858}
+  m_PrefabAsset: {fileID: 0}

@@ -42,7 +42,7 @@ public class TextPopup : MonoBehaviour
         StartCoroutine(LerpUp());
         difficultyText.GetComponent<TextMeshProUGUI>().text = message;
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(4f);
         difficultyText.transform.localScale = new Vector3(.5f, .5f, .5f);
         difficultyText.GetComponent<TextMeshProUGUI>().text = "";
         difficultyText.SetActive(false);
@@ -56,7 +56,7 @@ public class TextPopup : MonoBehaviour
         StartCoroutine(LerpUp());
         difficultyText.GetComponent<TextMeshProUGUI>().text = message;
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(4f);
         enemySpawner.GetComponent<EnemySpawner>().stopSpawning = true;
         difficultyText.transform.localScale = new Vector3(.5f, .5f, .5f);
         difficultyText.GetComponent<TextMeshProUGUI>().text = "";

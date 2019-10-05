@@ -10,6 +10,9 @@ public class Pause : MonoBehaviour
     private GameObject pauseButton;
     private GameObject resumeButton;
     public GameObject optionsPanel;
+    public GameObject returnToMenuPanel;
+    public GameObject controlsPanel;
+
     public float startTime;
     // Start is called before the first frame update
     void Start()
@@ -66,11 +69,32 @@ public class Pause : MonoBehaviour
             buttonPressSound.GetComponent<AudioSource>().Play();
         }
 
+        returnToMenuPanel.SetActive(true);
+
+    }
+
+    public void ReturnToMenuConfirm()
+    {
         int totalTimePlayed = (int)(Time.time - startTime);
         PlayerPrefs.SetInt("timePlayed", PlayerPrefs.GetInt("timePlayed") + totalTimePlayed);
 
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1f;
+    }
+
+    public void ReturnToMenuDeny()
+    {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
+        returnToMenuPanel.SetActive(false);
     }
 
     public void ExitGame()
@@ -100,6 +124,23 @@ public class Pause : MonoBehaviour
         else
         {
             optionsPanel.SetActive(true);
+        }
+    }
+
+    public void DisplayControls()
+    {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
+        if (controlsPanel.activeSelf)
+        {
+            controlsPanel.SetActive(false);
+        }
+        else
+        {
+            controlsPanel.SetActive(true);
         }
     }
 }
