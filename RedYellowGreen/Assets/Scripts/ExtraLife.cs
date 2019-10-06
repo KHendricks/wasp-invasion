@@ -6,13 +6,14 @@ public class ExtraLife : MonoBehaviour
 {
     private GameObject scriptManager;
     private GameObject pickupSound;
+    private GameObject enemySpawner;
 
     // Start is called before the first frame update
     void Start()
     {
         pickupSound = GameObject.Find("BlipSound");
         scriptManager = GameObject.Find("ScriptManager");
-        Destroy(gameObject, 60);
+        enemySpawner = GameObject.Find("EnemySpawner");
     }
 
     // Update is called once per frame
@@ -34,5 +35,12 @@ public class ExtraLife : MonoBehaviour
             scriptManager.GetComponent<PlayerStatusCheck>().UpdateLivesUI();
             gameObject.SetActive(false);
         }
+    }
+
+    IEnumerator RemoveFromList()
+    {
+        yield return new WaitForSeconds(60f);
+        enemySpawner.GetComponent<EnemySpawner>().objectLocations.Remove(gameObject.transform.position);
+        Destroy(gameObject);
     }
 }

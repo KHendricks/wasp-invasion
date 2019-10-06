@@ -1444,6 +1444,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280828435599728676, guid: 88526658ddcbe4aa18f710518627e41b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 39.80005
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88526658ddcbe4aa18f710518627e41b, type: 3}
 --- !u!1 &190323786
@@ -5029,11 +5034,18 @@ PrefabInstance:
     - target: {fileID: 7038243186625679716, guid: 61d87167fbfb4447992102b1937da629,
         type: 3}
       propertyPath: m_Text
-      value: "Swipe right on green - Swipe left on yellow - Tap the screen on red\n\nAvoid
-        the wasps at all costs! A wasp will stay in its lane, so swipe up or down
-        to dodge it.\n\nIf you lose a life, look out for the heart! It will restore
-        all lives lost. \n\nAn apple a day doesn\u2019t keep the wasps away, but it
-        will give you a higher score. That is, unless it is poisoned."
+      value: "Swipe right on green - Swipe left on yellow - Tap the screen on red.
+        Incorrect movements will cost you points.\n\nAvoid the wasps at all costs!
+        A wasp will stay in its lane, so swipe up or down to dodge it no matter the
+        color of the light.\n\nIf you lose a life, look out for the heart! It will
+        restore all lives lost. \n\nAn apple a day doesn\u2019t keep the wasps away,
+        but it will give you 5 extra points. That is, unless it is poisoned in which
+        case you lose 20."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7038243186625679716, guid: 61d87167fbfb4447992102b1937da629,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d87167fbfb4447992102b1937da629, type: 3}

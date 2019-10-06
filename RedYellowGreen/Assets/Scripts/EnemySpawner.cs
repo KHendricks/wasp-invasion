@@ -8,6 +8,8 @@ public class EnemySpawner : MonoBehaviour
     private GameObject player;
     private GameObject waspEnemy;
     private GameObject hearts;
+    private GameObject icePowerup;
+
     private GameObject extraPoints;
     private GameObject poisonApple;
     private GameObject shootingStar;
@@ -22,6 +24,8 @@ public class EnemySpawner : MonoBehaviour
     private bool spawningThreeWasps;
     public bool stopSpawning;
 
+    public HashSet<Vector3> objectLocations;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +39,7 @@ public class EnemySpawner : MonoBehaviour
         hearts = (GameObject)Resources.Load("Prefabs/ExtraLife", typeof(GameObject));
         extraPoints = (GameObject)Resources.Load("Prefabs/ExtraPoints", typeof(GameObject));
         poisonApple = (GameObject)Resources.Load("Prefabs/PoisonApple", typeof(GameObject));
+        icePowerup = (GameObject)Resources.Load("Prefabs/Ice", typeof(GameObject));
 
         flightLevels = new float[3];
         flightLevels[0] = -.5f;
@@ -57,8 +62,10 @@ public class EnemySpawner : MonoBehaviour
         spawningThreeWasps = false;
 
         // Spawn Bonus Points
-        InvokeRepeating("SpawnHearts", 5f, 17);
-        InvokeRepeating("SpawnExtraPoints", 5f, 10);
+        InvokeRepeating("SpawnHearts", 7f, 17);
+        InvokeRepeating("SpawnExtraPoints", 7f, 10);
+        InvokeRepeating("SpawnIce", 5, 3);
+        objectLocations = new HashSet<Vector3>();
     }
 
     // Update is called once per frame
@@ -76,15 +83,16 @@ public class EnemySpawner : MonoBehaviour
     void SpawnHearts()
     {
         int chance = Random.Range(0, 3);
+        Vector3 spawnLocation = new Vector3(player.transform.position.x + waspSpawnOffset,
+                                            flightLevels[Random.Range(0, 3)],
+                                            0);
 
         if (chance == 0)
         {
-            if (player.GetComponent<PlayerControls>().lives < 3)
+            if (player.GetComponent<PlayerControls>().lives < 3 && objectLocations.Add(spawnLocation))
             {
                 GameObject heart = Instantiate(hearts,
-                                               new Vector3(player.transform.position.x + waspSpawnOffset,
-                                                           flightLevels[Random.Range(0, 3)],
-                                                           0),
+                                               spawnLocation,
                                                Quaternion.identity);
             }
         }
@@ -93,22 +101,34 @@ public class EnemySpawner : MonoBehaviour
     void SpawnExtraPoints()
     {
         int chance = Random.Range(0, 10);
-
-        if (chance <= 5)
+        Vector3 spawnLocation = new Vector3(player.transform.position.x + waspSpawnOffset,
+                                    flightLevels[Random.Range(0, 3)],
+                                    0);
+        if (chance <= 5 && objectLocations.Add(spawnLocation))
         {
             GameObject points = Instantiate(extraPoints,
-                                           new Vector3(player.transform.position.x + waspSpawnOffset,
-                                                       flightLevels[Random.Range(0, 3)],
-                                                       0),
-                                           Quaternion.identity);
+                                            spawnLocation,
+                                            Quaternion.identity);
         }
-        else if (chance == 9)
+        else if (chance == 9 && objectLocations.Add(spawnLocation))
         {
             GameObject points = Instantiate(poisonApple,
-                               new Vector3(player.transform.position.x + waspSpawnOffset,
-                                           flightLevels[Random.Range(0, 3)],
-                                           0),
-                               Quaternion.identity);
+                                            spawnLocation,
+                                            Quaternion.identity);
+        }
+    }
+
+    void SpawnIce()
+    {
+        int chance = Random.Range(0, 10);
+        Vector3 spawnLocation = new Vector3(player.transform.position.x + waspSpawnOffset,
+                                            flightLevels[Random.Range(0, 3)],
+                                            0);
+        if (chance <= 10 && objectLocations.Add(spawnLocation))
+        {
+            GameObject ice = Instantiate(icePowerup,
+                                         spawnLocation,
+                                         Quaternion.identity);
         }
     }
 
@@ -145,14 +165,14 @@ public class EnemySpawner : MonoBehaviour
         if (Time.time - startTime < 35)
         {
             SetSpawnTimer(5, 10);
-            SpawnSingleWasp();
+            SpawnSingleWasp(1.5f);
         }
 
         // Speed up spawn rate of a single wasp
         else if (Time.time - startTime < 60)
         {
             SetSpawnTimer(1, 6);
-            SpawnSingleWasp();
+            SpawnSingleWasp(1.5f);
         }
 
         // Spawn two wasps slowly
@@ -167,8 +187,8 @@ public class EnemySpawner : MonoBehaviour
                 secondSpawnIndex = Random.Range(0, 3);
             } while (firstSpawnIndex == secondSpawnIndex);
 
-            SpawnSingleWasp(firstSpawnIndex);
-            SpawnSingleWasp(secondSpawnIndex);
+            SpawnSingleWasp(firstSpawnIndex, 1.5f);
+            SpawnSingleWasp(secondSpawnIndex, 1.5f);
         }
 
         // Spawn two wasps quickly
@@ -183,8 +203,8 @@ public class EnemySpawner : MonoBehaviour
                 secondSpawnIndex = Random.Range(0, 3);
             } while (firstSpawnIndex == secondSpawnIndex);
 
-            SpawnSingleWasp(firstSpawnIndex);
-            SpawnSingleWasp(secondSpawnIndex);
+            SpawnSingleWasp(firstSpawnIndex, 1.5f);
+            SpawnSingleWasp(secondSpawnIndex, 1.5f);
         }
 
         // Time to make the game hard
@@ -194,7 +214,7 @@ public class EnemySpawner : MonoBehaviour
 
             if (!spawningThreeWasps)
             {
-                StartCoroutine(SpawnThreeWasps(.9f));
+                StartCoroutine(SpawnThreeWasps(.9f, 1.5f));
             }
         }
 
@@ -205,12 +225,12 @@ public class EnemySpawner : MonoBehaviour
 
             if (!spawningThreeWasps)
             {
-                StartCoroutine(SpawnThreeWasps(.7f));
+                StartCoroutine(SpawnThreeWasps(.7f, 2f));
             }
         }
 
         // They're still alive?
-        else
+        else if (Time.time - startTime < 205)
         {
             SetSpawnTimer(2, 2);
 
@@ -219,7 +239,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 if (!spawningThreeWasps)
                 {
-                    StartCoroutine(SpawnThreeWasps(.5f));
+                    StartCoroutine(SpawnThreeWasps(.5f, 2.5f));
                 }
             }
             else if (spawnChoice == 1)
@@ -231,13 +251,39 @@ public class EnemySpawner : MonoBehaviour
                     secondSpawnIndex = Random.Range(0, 3);
                 } while (firstSpawnIndex == secondSpawnIndex);
 
-                SpawnSingleWasp(firstSpawnIndex);
-                SpawnSingleWasp(secondSpawnIndex);
+                SpawnSingleWasp(firstSpawnIndex, 2.5f);
+                SpawnSingleWasp(secondSpawnIndex, 2.5f);
+            }
+        }
+        // They're really still alive?
+        else
+        {
+            SetSpawnTimer(2, 2);
+
+            int spawnChoice = Random.Range(0, 2);
+            if (spawnChoice == 0)
+            {
+                if (!spawningThreeWasps)
+                {
+                    StartCoroutine(SpawnThreeWasps(.5f, 3f));
+                }
+            }
+            else if (spawnChoice == 1)
+            {
+                int firstSpawnIndex = Random.Range(0, 3);
+                int secondSpawnIndex;
+                do
+                {
+                    secondSpawnIndex = Random.Range(0, 3);
+                } while (firstSpawnIndex == secondSpawnIndex);
+
+                SpawnSingleWasp(firstSpawnIndex, 3f);
+                SpawnSingleWasp(secondSpawnIndex, 3f);
             }
         }
     }
 
-    GameObject SpawnSingleWasp()
+    void SpawnSingleWasp(float speed)
     {
         if (player.GetComponent<SpriteRenderer>().flipX)
         {
@@ -248,21 +294,23 @@ public class EnemySpawner : MonoBehaviour
             waspSpawnOffset = Mathf.Abs(waspSpawnOffset);
         }
 
-        GameObject wasp = Instantiate(waspEnemy,
-                                      new Vector3(player.transform.position.x + waspSpawnOffset,
-                                                  flightLevels[Random.Range(0, 3)],
-                                                  0),
-                                      Quaternion.identity);
-
-        if (waspSpawnOffset < 0)
+        if (!stopSpawning)
         {
-            wasp.GetComponent<SpriteRenderer>().flipX = false;
-        }
+            GameObject wasp = Instantiate(waspEnemy,
+                                          new Vector3(player.transform.position.x + waspSpawnOffset,
+                                                      flightLevels[Random.Range(0, 3)],
+                                                      0),
+                                          Quaternion.identity);
+            wasp.GetComponent<WaspEnemy>().SetSpeed(speed);
 
-        return wasp;
+            if (waspSpawnOffset < 0)
+            {
+                wasp.GetComponent<SpriteRenderer>().flipX = false;
+            }
+        }
     }
 
-    GameObject SpawnSingleWasp(int spawnIndex)
+    void SpawnSingleWasp(int spawnIndex, float speed)
     {
         if (player.GetComponent<SpriteRenderer>().flipX)
         {
@@ -273,21 +321,24 @@ public class EnemySpawner : MonoBehaviour
             waspSpawnOffset = Mathf.Abs(waspSpawnOffset);
         }
 
-        GameObject wasp = Instantiate(waspEnemy,
-                                      new Vector3(player.transform.position.x + waspSpawnOffset,
-                                                  flightLevels[spawnIndex],
-                                                  0),
-                                      Quaternion.identity);
-
-        if (waspSpawnOffset < 0)
+        if (!stopSpawning)
         {
-            wasp.GetComponent<SpriteRenderer>().flipX = false;
-        }
+            GameObject wasp = Instantiate(waspEnemy,
+                                          new Vector3(player.transform.position.x + waspSpawnOffset,
+                                                      flightLevels[spawnIndex],
+                                                      0),
+                                          Quaternion.identity);
+            wasp.GetComponent<WaspEnemy>().SetSpeed(speed);
 
-        return wasp;
+            if (waspSpawnOffset < 0)
+            {
+                wasp.GetComponent<SpriteRenderer>().flipX = false;
+            }
+
+        }
     }
 
-    IEnumerator SpawnThreeWasps(float delay)
+    IEnumerator SpawnThreeWasps(float delay, float speed)
     {
         spawningThreeWasps = true;
         int[] spawnIndexes = new int[3];
@@ -304,11 +355,11 @@ public class EnemySpawner : MonoBehaviour
         } while (spawnIndexes[2] == spawnIndexes[0] ||
                  spawnIndexes[2] == spawnIndexes[1]);
 
-        SpawnSingleWasp(spawnIndexes[0]);
+        SpawnSingleWasp(spawnIndexes[0], speed);
         yield return new WaitForSeconds(delay);
-        SpawnSingleWasp(spawnIndexes[1]);
+        SpawnSingleWasp(spawnIndexes[1], speed);
         yield return new WaitForSeconds(delay);
-        SpawnSingleWasp(spawnIndexes[2]);
+        SpawnSingleWasp(spawnIndexes[2], speed);
 
         spawningThreeWasps = false;
     }

@@ -6,13 +6,14 @@ public class PoisonApple : MonoBehaviour
 {
     private GameObject scriptManager;
     private GameObject pickupSound;
+    private GameObject enemySpawner;
 
     // Start is called before the first frame update
     void Start()
     {
         pickupSound = GameObject.Find("MunchSound");
         scriptManager = GameObject.Find("ScriptManager");
-        Destroy(gameObject, 60);
+        enemySpawner = GameObject.Find("EnemySpawner");
     }
 
     // Update is called once per frame
@@ -33,5 +34,12 @@ public class PoisonApple : MonoBehaviour
             gameObject.SetActive(false);
             scriptManager.GetComponent<PointController>().AddPoints(-20);
         }
+    }
+
+    IEnumerator RemoveFromList()
+    {
+        yield return new WaitForSeconds(60f);
+        enemySpawner.GetComponent<EnemySpawner>().objectLocations.Remove(gameObject.transform.position);
+        Destroy(gameObject);
     }
 }

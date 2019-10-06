@@ -30,6 +30,8 @@ public class TextPopup : MonoBehaviour
                                               "WASPS HATE EVERYTHING..."));
         StartCoroutine(DifficultyPopupMessage(177,
                                               "Oh, you're still alive?"));
+        StartCoroutine(DifficultyPopupMessage(203,
+                                              "They're moving faster now?"));
     }
 
     public void SendPopupText(float delay, string message)
@@ -59,8 +61,10 @@ public class TextPopup : MonoBehaviour
         StartCoroutine(LerpUp());
         difficultyText.GetComponent<TextMeshProUGUI>().text = message;
 
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(2f);
         enemySpawner.GetComponent<EnemySpawner>().stopSpawning = false;
+
+        yield return new WaitForSeconds(2f);
         difficultyText.transform.localScale = new Vector3(.5f, .5f, .5f);
         difficultyText.GetComponent<TextMeshProUGUI>().text = "";
         difficultyText.SetActive(false);

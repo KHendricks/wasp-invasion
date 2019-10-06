@@ -14,6 +14,7 @@ public class PlayerControls : MonoBehaviour
     private GameObject playerShield;
     private GameObject buttonPressSound;
     private GameObject injuredSound;
+    private GameObject icyTint;
 
     public GameObject[] playerLives;
     public int lives;
@@ -23,6 +24,8 @@ public class PlayerControls : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        icyTint = GameObject.Find("IcyTint");
+        icyTint.GetComponent<Image>().color = new Color32(105, 233, 255, 0);
         scriptManager = GameObject.Find("ScriptManager");
         Animator = gameObject.GetComponent<Animator>();
         playerLives = new GameObject[3];
@@ -242,11 +245,21 @@ public class PlayerControls : MonoBehaviour
         gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
 
         yield return new WaitForSeconds(.25f);
-        gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        gameObject.GetComponent<SpriteRenderer>().color = new Color32(255, 0, 0, 150);
         yield return new WaitForSeconds(.25f);
-        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        gameObject.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(.25f);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 150);
+
+        yield return new WaitForSeconds(.25f);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+
+        yield return new WaitForSeconds(.25f);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 150);
+
+        yield return new WaitForSeconds(.25f);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
         gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
         isInjured = false;
     }

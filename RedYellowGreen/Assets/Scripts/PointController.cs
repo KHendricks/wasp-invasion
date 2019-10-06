@@ -60,7 +60,7 @@ public class PointController : MonoBehaviour
         }
         else
         {
-            playerScore -= 1;
+            playerScore -= 3;
             pointText.GetComponent<Text>().text = playerScore.ToString();
         }
 

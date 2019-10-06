@@ -151,6 +151,7 @@
     <Compile Include="Assets\Scripts\ShootingStar.cs" />
     <Compile Include="Assets\Scripts\SpawnPlatform.cs" />
     <Compile Include="Assets\Scripts\Stats.cs" />
+    <Compile Include="Assets\Scripts\StopSpawningPowerup.cs" />
     <Compile Include="Assets\Scripts\SwipeManager.cs" />
     <Compile Include="Assets\Scripts\TextPopup.cs" />
     <Compile Include="Assets\Scripts\Tips.cs" />
