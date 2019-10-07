@@ -5,6 +5,8 @@ using UnityEngine;
 public class PredatorPowerup : MonoBehaviour
 {
     private GameObject player;
+    private GameObject scriptManager;
+
     public bool enablePredatorPowerup;
     private GameObject injuredSound;
 
@@ -13,6 +15,8 @@ public class PredatorPowerup : MonoBehaviour
     {
         injuredSound = GameObject.Find("WaspDeath");
         player = GameObject.FindWithTag("Player");
+        scriptManager = GameObject.Find("ScriptManager");
+
         enablePredatorPowerup = false;
     }
 
@@ -36,6 +40,7 @@ public class PredatorPowerup : MonoBehaviour
                 }
 
                 Destroy(collision.gameObject);
+                scriptManager.GetComponent<PointController>().AddPoints(10);
             }
         }
     }

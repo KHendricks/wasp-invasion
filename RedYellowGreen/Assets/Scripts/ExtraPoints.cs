@@ -26,14 +26,14 @@ public class ExtraPoints : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "GreenPowerup")
         {
             if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
             {
                 pickupSound.GetComponent<AudioSource>().Play();
             }
             PlayerPrefs.SetInt("appleCount", PlayerPrefs.GetInt("appleCount") + 1);
-            gameObject.SetActive(false);
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 0);
 
             scriptManager.GetComponent<PointController>().AddPoints(5);
         }

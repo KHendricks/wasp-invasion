@@ -29,7 +29,7 @@ public class StopSpawningPowerup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "GreenPowerup")
         {
             if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
             {
@@ -52,7 +52,16 @@ public class StopSpawningPowerup : MonoBehaviour
         Debug.Log("Stop Spawning");
         enemySpawner.GetComponent<EnemySpawner>().stopSpawning = true;
         player.GetComponent<SpriteRenderer>().color = new Color32(255, 173, 0, 255);
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(7f);
+
+        for (int i = 0; i < 3; i++)
+        {
+            player.GetComponent<SpriteRenderer>().color = Color.white;
+            yield return new WaitForSeconds(.5f);
+            player.GetComponent<SpriteRenderer>().color = new Color32(255, 173, 0, 255);
+            yield return new WaitForSeconds(.5f);
+        }
+
         player.GetComponent<SpriteRenderer>().color = Color.white;
         Debug.Log("Start Spawning");
         enemySpawner.GetComponent<EnemySpawner>().stopSpawning = false;

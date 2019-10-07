@@ -228,21 +228,12 @@ public class PlayerControls : MonoBehaviour
                 StartCoroutine(InjuredFlash());
             }
         }
-
-        if (collision.gameObject.tag == "Powerup")
-        {
-            if (collision.gameObject.name.Contains("Shield"))
-            {
-                playerShield.SetActive(true);
-            }
-        }
-
     }
 
     IEnumerator InjuredFlash()
     {
         isInjured = true;
-        gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
         yield return new WaitForSeconds(.25f);
         gameObject.GetComponent<SpriteRenderer>().color = new Color32(255, 0, 0, 150);
@@ -260,12 +251,22 @@ public class PlayerControls : MonoBehaviour
 
         yield return new WaitForSeconds(.25f);
         gameObject.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
-        gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+        gameObject.GetComponent<BoxCollider2D>().enabled = true;
         isInjured = false;
     }
 
     public float GetRunSpeed()
     {
         return runSpeed;
+    }
+
+    public bool GetIsInjured()
+    {
+        return isInjured;
+    }
+
+    public void SetIsInjured(bool val)
+    {
+        isInjured = val;
     }
 }

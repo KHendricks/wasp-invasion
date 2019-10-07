@@ -127,7 +127,7 @@ public class EnemySpawner : MonoBehaviour
         Vector3 spawnLocation = new Vector3(player.transform.position.x + waspSpawnOffset,
                                             flightLevels[Random.Range(0, 3)],
                                             0);
-        if (chance <= 1 && objectLocations.Add(spawnLocation))
+        if (chance <= 2 && objectLocations.Add(spawnLocation))
         {
             GameObject ice = Instantiate(icePowerup,
                                          spawnLocation,
@@ -141,7 +141,7 @@ public class EnemySpawner : MonoBehaviour
         Vector3 spawnLocation = new Vector3(player.transform.position.x + waspSpawnOffset,
                                             flightLevels[Random.Range(0, 3)],
                                             0);
-        if (chance <= 2 && objectLocations.Add(spawnLocation))
+        if (chance <= 4 && objectLocations.Add(spawnLocation))
         {
             GameObject ice = Instantiate(predatorPowerup,
                                          spawnLocation,

@@ -10,6 +10,8 @@ TagManager:
   - PlayerShield
   - MusicController
   - Items
+  - Predator
+  - GreenPowerup
   layers:
   - Default
   - TransparentFX

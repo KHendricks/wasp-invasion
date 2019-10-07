@@ -7,10 +7,12 @@ public class ExtraLife : MonoBehaviour
     private GameObject scriptManager;
     private GameObject pickupSound;
     private GameObject enemySpawner;
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
         pickupSound = GameObject.Find("BlipSound");
         scriptManager = GameObject.Find("ScriptManager");
         enemySpawner = GameObject.Find("EnemySpawner");
@@ -23,17 +25,17 @@ public class ExtraLife : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "GreenPowerup")
+        { 
             PlayerPrefs.SetInt("heartCount", PlayerPrefs.GetInt("heartCount") + 1);
             if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
             {
                 pickupSound.GetComponent<AudioSource>().Play();
             }
 
-            collision.gameObject.GetComponent<PlayerControls>().lives = 3;
+            player.GetComponent<PlayerControls>().lives = 3;
             scriptManager.GetComponent<PlayerStatusCheck>().UpdateLivesUI();
-            gameObject.SetActive(false);
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 0);
         }
     }
 
