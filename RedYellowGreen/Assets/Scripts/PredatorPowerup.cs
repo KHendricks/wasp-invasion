@@ -11,7 +11,7 @@ public class PredatorPowerup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        injuredSound = GameObject.Find("InjuredSound");
+        injuredSound = GameObject.Find("WaspDeath");
         player = GameObject.FindWithTag("Player");
         enablePredatorPowerup = false;
     }

@@ -50,8 +50,10 @@ public class PredatorPotion : MonoBehaviour
     IEnumerator BeginPowerUp(GameObject player)
     {
         predatorPowerup.GetComponent<PredatorPowerup>().enablePredatorPowerup = true;
+        player.GetComponent<BoxCollider2D>().isTrigger = true;
         player.GetComponent<SpriteRenderer>().color = new Color32(73, 182, 117, 255);
         yield return new WaitForSeconds(10f);
+        player.GetComponent<BoxCollider2D>().isTrigger = true;
         player.GetComponent<SpriteRenderer>().color = Color.white;
         predatorPowerup.GetComponent<PredatorPowerup>().enablePredatorPowerup = false;
     }

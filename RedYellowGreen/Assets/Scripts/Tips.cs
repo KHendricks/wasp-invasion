@@ -53,6 +53,11 @@ public class Tips : MonoBehaviour
 
     public void NextPage()
     {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
         descriptionText[0].SetActive(false);
         descriptionText[1].SetActive(true);
 
@@ -62,6 +67,11 @@ public class Tips : MonoBehaviour
 
     public void PrevPage()
     {
+        if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
+        {
+            buttonPressSound.GetComponent<AudioSource>().Play();
+        }
+
         descriptionText[0].SetActive(true);
         descriptionText[1].SetActive(false);
 
