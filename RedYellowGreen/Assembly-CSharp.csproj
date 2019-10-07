@@ -146,6 +146,8 @@
     <Compile Include="Assets\Scripts\PoisonApple.cs" />
     <Compile Include="Assets\Scripts\Powerup.cs" />
     <Compile Include="Assets\Scripts\PowerupSpawner.cs" />
+    <Compile Include="Assets\Scripts\PredatorPotion.cs" />
+    <Compile Include="Assets\Scripts\PredatorPowerup.cs" />
     <Compile Include="Assets\Scripts\Preferences.cs" />
     <Compile Include="Assets\Scripts\ShieldPowerup.cs" />
     <Compile Include="Assets\Scripts\ShootingStar.cs" />

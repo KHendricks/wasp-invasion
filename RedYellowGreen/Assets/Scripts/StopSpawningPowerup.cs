@@ -13,7 +13,7 @@ public class StopSpawningPowerup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pickupSound = GameObject.Find("IceCrunch");
+        pickupSound = GameObject.Find("Slurp");
         scriptManager = GameObject.Find("ScriptManager");
         enemySpawner = GameObject.Find("EnemySpawner");
         icyTint = GameObject.Find("IcyTint");
@@ -35,7 +35,7 @@ public class StopSpawningPowerup : MonoBehaviour
             {
                 pickupSound.GetComponent<AudioSource>().Play();
             }
-            StartCoroutine(BeginPowerUp());
+            StartCoroutine(BeginPowerUp(collision.gameObject));
             gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 0);
         }
     }
@@ -47,13 +47,13 @@ public class StopSpawningPowerup : MonoBehaviour
         Destroy(gameObject);
     }
 
-    IEnumerator BeginPowerUp()
+    IEnumerator BeginPowerUp(GameObject player)
     {
         Debug.Log("Stop Spawning");
         enemySpawner.GetComponent<EnemySpawner>().stopSpawning = true;
-        icyTint.GetComponent<Image>().color = new Color32(105, 233, 255, 155);
+        player.GetComponent<SpriteRenderer>().color = new Color32(255, 173, 0, 255);
         yield return new WaitForSeconds(10f);
-        icyTint.GetComponent<Image>().color = new Color32(105, 233, 255, 0);
+        player.GetComponent<SpriteRenderer>().color = Color.white;
         Debug.Log("Start Spawning");
         enemySpawner.GetComponent<EnemySpawner>().stopSpawning = false;
     }

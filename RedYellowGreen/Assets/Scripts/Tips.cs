@@ -6,12 +6,26 @@ public class Tips : MonoBehaviour
 {
     public GameObject tipsPanel;
     private GameObject buttonPressSound;
+    public GameObject[] descriptionText;
+
+    private GameObject nextButton;
+    private GameObject prevButton;
 
     // Start is called before the first frame update
     void Start()
     {
-        tipsPanel.SetActive(false);
         buttonPressSound = GameObject.Find("ButtonPress");
+
+        descriptionText = new GameObject[2];
+        descriptionText[0] = GameObject.Find("DescriptionText");
+        descriptionText[1] = GameObject.Find("DescriptionTextPg2");
+        nextButton = GameObject.Find("NextButton");
+        prevButton = GameObject.Find("PrevButton");
+
+        descriptionText[1].SetActive(false);
+        prevButton.SetActive(false);
+
+        tipsPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -35,5 +49,23 @@ public class Tips : MonoBehaviour
         {
             tipsPanel.SetActive(true);
         }
+    }
+
+    public void NextPage()
+    {
+        descriptionText[0].SetActive(false);
+        descriptionText[1].SetActive(true);
+
+        nextButton.SetActive(false);
+        prevButton.SetActive(true);
+    }
+
+    public void PrevPage()
+    {
+        descriptionText[0].SetActive(true);
+        descriptionText[1].SetActive(false);
+
+        nextButton.SetActive(true);
+        prevButton.SetActive(false);
     }
 }

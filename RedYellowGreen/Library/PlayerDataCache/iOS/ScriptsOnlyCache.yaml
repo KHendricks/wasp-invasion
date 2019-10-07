@@ -22,6 +22,8 @@ ScriptsOnlyBuild:
     - PlayerStatusCheck
     - PointController
     - PoisonApple
+    - PredatorPotion
+    - PredatorPowerup
     - Preferences
     - ShieldPowerup
     - ShootingStar
@@ -44,8 +46,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -194,15 +198,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10346}
     - Class: 114
-      Script: {instanceID: 10396}
+      Script: {instanceID: 10398}
     - Class: 114
-      Script: {instanceID: 10412}
+      Script: {instanceID: 10414}
     - Class: 114
-      Script: {instanceID: 10526}
+      Script: {instanceID: 10528}
     - Class: 114
-      Script: {instanceID: 10746}
+      Script: {instanceID: 10748}
     - Class: 114
-      Script: {instanceID: 10822}
+      Script: {instanceID: 10824}
+    - Class: 114
+      Script: {instanceID: 21124}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -319,27 +325,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10344}
     - Class: 114
-      Script: {instanceID: 10372}
+      Script: {instanceID: 10352}
     - Class: 114
-      Script: {instanceID: 10412}
+      Script: {instanceID: 10374}
     - Class: 114
-      Script: {instanceID: 10520}
+      Script: {instanceID: 10414}
     - Class: 114
-      Script: {instanceID: 10526}
+      Script: {instanceID: 10522}
     - Class: 114
-      Script: {instanceID: 10536}
+      Script: {instanceID: 10528}
     - Class: 114
-      Script: {instanceID: 10540}
+      Script: {instanceID: 10538}
     - Class: 114
-      Script: {instanceID: 10554}
+      Script: {instanceID: 10542}
     - Class: 114
-      Script: {instanceID: 10566}
+      Script: {instanceID: 10556}
     - Class: 114
-      Script: {instanceID: 10652}
+      Script: {instanceID: 10568}
     - Class: 114
-      Script: {instanceID: 10746}
+      Script: {instanceID: 10654}
     - Class: 114
-      Script: {instanceID: 34942}
+      Script: {instanceID: 10748}
+    - Class: 114
+      Script: {instanceID: 19776}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1141,6 +1149,12 @@ ScriptsOnlyBuild:
     className: EnemySpawner
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StopSpawningPowerup
+  - hash:
+      serializedVersion: 2
       Hash: f9a3fa795fdc45b44f33cc2a28c5a2ca
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1213,7 +1227,7 @@ ScriptsOnlyBuild:
     className: Victory
   - hash:
       serializedVersion: 2
-      Hash: 9af6ee11c44f905b53d0fee6ee7fc972
+      Hash: 10a5403baf5ea7f33f9afbd54a61fc84
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Tips
@@ -1294,7 +1308,13 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: StopSpawningPowerup
+    className: PredatorPotion
+  - hash:
+      serializedVersion: 2
+      Hash: 6f417cf6f576311949636b9bbcd209af
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PredatorPowerup
   platform: 9
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

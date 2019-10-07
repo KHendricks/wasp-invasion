@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
     private GameObject waspEnemy;
     private GameObject hearts;
     private GameObject icePowerup;
+    private GameObject predatorPowerup;
 
     private GameObject extraPoints;
     private GameObject poisonApple;
@@ -40,6 +41,7 @@ public class EnemySpawner : MonoBehaviour
         extraPoints = (GameObject)Resources.Load("Prefabs/ExtraPoints", typeof(GameObject));
         poisonApple = (GameObject)Resources.Load("Prefabs/PoisonApple", typeof(GameObject));
         icePowerup = (GameObject)Resources.Load("Prefabs/Ice", typeof(GameObject));
+        predatorPowerup = (GameObject)Resources.Load("Prefabs/Predator", typeof(GameObject));
 
         flightLevels = new float[3];
         flightLevels[0] = -.5f;
@@ -64,7 +66,8 @@ public class EnemySpawner : MonoBehaviour
         // Spawn Bonus Points
         InvokeRepeating("SpawnHearts", 7f, 17);
         InvokeRepeating("SpawnExtraPoints", 7f, 10);
-        InvokeRepeating("SpawnIce", 5, 3);
+        InvokeRepeating("SpawnIce", 155, 30);
+        InvokeRepeating("SpawnPredator", 85, 30);
         objectLocations = new HashSet<Vector3>();
     }
 
@@ -124,9 +127,23 @@ public class EnemySpawner : MonoBehaviour
         Vector3 spawnLocation = new Vector3(player.transform.position.x + waspSpawnOffset,
                                             flightLevels[Random.Range(0, 3)],
                                             0);
-        if (chance <= 10 && objectLocations.Add(spawnLocation))
+        if (chance <= 1 && objectLocations.Add(spawnLocation))
         {
             GameObject ice = Instantiate(icePowerup,
+                                         spawnLocation,
+                                         Quaternion.identity);
+        }
+    }
+
+    void SpawnPredator()
+    {
+        int chance = Random.Range(0, 10);
+        Vector3 spawnLocation = new Vector3(player.transform.position.x + waspSpawnOffset,
+                                            flightLevels[Random.Range(0, 3)],
+                                            0);
+        if (chance <= 2 && objectLocations.Add(spawnLocation))
+        {
+            GameObject ice = Instantiate(predatorPowerup,
                                          spawnLocation,
                                          Quaternion.identity);
         }
