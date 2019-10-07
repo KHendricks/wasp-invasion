@@ -233,25 +233,25 @@ public class PlayerControls : MonoBehaviour
     IEnumerator InjuredFlash()
     {
         isInjured = true;
-        gameObject.GetComponent<BoxCollider2D>().enabled = false;
-
+        gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+        Color32 curColor = gameObject.GetComponent<SpriteRenderer>().color;
         yield return new WaitForSeconds(.25f);
         gameObject.GetComponent<SpriteRenderer>().color = new Color32(255, 0, 0, 150);
         yield return new WaitForSeconds(.25f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+        gameObject.GetComponent<SpriteRenderer>().color = curColor;
 
         yield return new WaitForSeconds(.25f);
         gameObject.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 150);
 
         yield return new WaitForSeconds(.25f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+        gameObject.GetComponent<SpriteRenderer>().color = curColor;
 
         yield return new WaitForSeconds(.25f);
         gameObject.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 150);
 
         yield return new WaitForSeconds(.25f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
-        gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        gameObject.GetComponent<SpriteRenderer>().color = curColor;
+        gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
         isInjured = false;
     }
 

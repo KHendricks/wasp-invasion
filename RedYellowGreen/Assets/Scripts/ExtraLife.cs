@@ -25,7 +25,7 @@ public class ExtraLife : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "GreenPowerup")
+        if (collision.gameObject.tag == "GreenPowerup")
         { 
             PlayerPrefs.SetInt("heartCount", PlayerPrefs.GetInt("heartCount") + 1);
             if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
@@ -36,6 +36,7 @@ public class ExtraLife : MonoBehaviour
             player.GetComponent<PlayerControls>().lives = 3;
             scriptManager.GetComponent<PlayerStatusCheck>().UpdateLivesUI();
             gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 0);
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 

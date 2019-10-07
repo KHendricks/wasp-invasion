@@ -12,7 +12,6 @@ ScriptsOnlyBuild:
     - ExtraPoints
     - GameOver
     - GameOverAd
-    - GoogleMobileAds.Common.MobileAdsEventExecutor
     - LightController
     - MenuButtons
     - MobileAdsInit

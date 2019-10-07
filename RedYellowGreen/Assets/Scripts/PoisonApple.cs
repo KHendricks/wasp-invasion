@@ -24,7 +24,7 @@ public class PoisonApple : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "GreenPowerup")
         {
             if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
             {

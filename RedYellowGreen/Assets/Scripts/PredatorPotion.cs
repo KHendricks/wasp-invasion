@@ -9,6 +9,8 @@ public class PredatorPotion : MonoBehaviour
     private GameObject pickupSound;
     private GameObject enemySpawner;
     private GameObject predatorPowerup;
+    private GameObject player;
+
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +19,7 @@ public class PredatorPotion : MonoBehaviour
         scriptManager = GameObject.Find("ScriptManager");
         enemySpawner = GameObject.Find("EnemySpawner");
         predatorPowerup = GameObject.Find("PredatorPotion");
+        player = GameObject.FindWithTag("Player");
 
         StartCoroutine(RemoveFromList());
     }
@@ -29,14 +32,15 @@ public class PredatorPotion : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "GreenPowerup")
         {
             if (PlayerPrefs.GetInt("isSoundEnabled") == 1)
             {
                 pickupSound.GetComponent<AudioSource>().Play();
             }
-            StartCoroutine(BeginPowerUp(collision.gameObject));
+            StartCoroutine(BeginPowerUp());
             gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 0);
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 
@@ -47,19 +51,22 @@ public class PredatorPotion : MonoBehaviour
         Destroy(gameObject);
     }
 
-    IEnumerator BeginPowerUp(GameObject player)
+    IEnumerator BeginPowerUp()
     {
         predatorPowerup.GetComponent<PredatorPowerup>().enablePredatorPowerup = true;
+        player.GetComponent<BoxCollider2D>().enabled = false;
+        player.GetComponent<SpriteRenderer>().color = new Color32(73, 182, 117, 255);
 
         if (player.GetComponent<PlayerControls>().GetIsInjured())
         {
             player.GetComponent<PlayerControls>().SetIsInjured(false);
+            gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
             StopCoroutine("InjuredFlash");
         }
+        yield return new WaitForSeconds(1f);
 
-        player.GetComponent<BoxCollider2D>().enabled = false;
         player.GetComponent<SpriteRenderer>().color = new Color32(73, 182, 117, 255);
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(6.5f);
 
         for (int i = 0; i < 3; i++)
         {
@@ -69,8 +76,8 @@ public class PredatorPotion : MonoBehaviour
             yield return new WaitForSeconds(.5f);
         }
 
-        player.GetComponent<BoxCollider2D>().enabled = true;
         player.GetComponent<SpriteRenderer>().color = Color.white;
+        player.GetComponent<BoxCollider2D>().enabled = true;
         predatorPowerup.GetComponent<PredatorPowerup>().enablePredatorPowerup = false;
     }
 }
