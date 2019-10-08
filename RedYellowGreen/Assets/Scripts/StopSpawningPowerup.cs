@@ -36,6 +36,7 @@ public class StopSpawningPowerup : MonoBehaviour
                 pickupSound.GetComponent<AudioSource>().Play();
             }
             StartCoroutine(BeginPowerUp(collision.gameObject));
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
             gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 0);
         }
     }
